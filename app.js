@@ -972,7 +972,7 @@ class App {
                 <select onchange="app.handleDropdownSelect(${dIdx}, parseInt(this.value))" class="w-full sm:w-auto min-w-0 sm:min-w-[220px] bg-gray-800 border border-white/10 rounded-lg px-3 py-2.5 sm:py-2 text-xs sm:text-sm text-white focus:outline-none focus:border-indigo-500 cursor-pointer">
                   <option value="">-- Select option --</option>
                   ${dd.options.map((opt, oIdx) => `
-                    <option value="${oIdx}" ${userVal === oIdx ? 'selected' : ''}>${opt}${showExpl && oIdx === correctVal ? ' ✓' : ''}</option>
+                    <option value="${oIdx}" ${userVal === oIdx ? 'selected' : ''}>${this.escapeHtml(opt)}${showExpl && oIdx === correctVal ? ' ✓' : ''}</option>
                   `).join('')}
                 </select>
               </div>
@@ -996,7 +996,7 @@ class App {
               ${isCorrect ? 'Правильно!' : 'Неверно'}
             </h4>
             <span class="ml-auto text-xs text-gray-400 truncate max-w-[200px] sm:max-w-none text-right">
-              Правильный ответ: <strong class="text-white">${q.answer_display}</strong>
+              Правильный ответ: <strong class="text-white">${this.escapeHtml(q.answer_display)}</strong>
             </span>
           </div>
 
@@ -1125,7 +1125,8 @@ class App {
   }
 
   escapeHtml(str) {
-    return str
+    if (str === null || str === undefined) return '';
+    return String(str)
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
