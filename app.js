@@ -967,9 +967,9 @@ class App {
             }
 
             return `
-              <div class="p-4 rounded-xl bg-gray-900/60 border ${borderClass} flex flex-col sm:flex-row sm:items-center justify-between gap-3 transition">
-                <span class="text-sm text-gray-200 font-medium">${this.formatCodeSpans(dd.prompt)}</span>
-                <select onchange="app.handleDropdownSelect(${dIdx}, parseInt(this.value))" class="bg-gray-800 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500 cursor-pointer min-w-[200px]">
+              <div class="p-3 sm:p-4 rounded-xl bg-gray-900/60 border ${borderClass} flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-3 transition">
+                <span class="text-xs sm:text-sm text-gray-200 font-medium leading-relaxed">${this.formatCodeSpans(dd.prompt)}</span>
+                <select onchange="app.handleDropdownSelect(${dIdx}, parseInt(this.value))" class="w-full sm:w-auto min-w-0 sm:min-w-[220px] bg-gray-800 border border-white/10 rounded-lg px-3 py-2.5 sm:py-2 text-xs sm:text-sm text-white focus:outline-none focus:border-indigo-500 cursor-pointer">
                   <option value="">-- Select option --</option>
                   ${dd.options.map((opt, oIdx) => `
                     <option value="${oIdx}" ${userVal === oIdx ? 'selected' : ''}>${opt}${showExpl && oIdx === correctVal ? ' ✓' : ''}</option>
@@ -987,7 +987,7 @@ class App {
     if (showExpl) {
       const isCorrect = pAns.isCorrect;
       explanationHtml = `
-        <div class="mt-6 p-5 sm:p-6 rounded-2xl ${isCorrect ? 'bg-emerald-950/30 border border-emerald-500/30' : 'bg-rose-950/30 border border-rose-500/30'} animate-fade-in">
+        <div class="mt-5 sm:mt-6 p-4 sm:p-6 rounded-xl sm:rounded-2xl ${isCorrect ? 'bg-emerald-950/30 border border-emerald-500/30' : 'bg-rose-950/30 border border-rose-500/30'} animate-fade-in">
           <div class="flex items-center gap-2 mb-3">
             <span class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${isCorrect ? 'bg-emerald-500 text-white' : 'bg-rose-500 text-white'}">
               ${isCorrect ? '✓' : '✗'}
@@ -995,12 +995,12 @@ class App {
             <h4 class="font-bold text-sm sm:text-base ${isCorrect ? 'text-emerald-400' : 'text-rose-400'}">
               ${isCorrect ? 'Правильно!' : 'Неверно'}
             </h4>
-            <span class="ml-auto text-xs text-gray-400">
+            <span class="ml-auto text-xs text-gray-400 truncate max-w-[200px] sm:max-w-none text-right">
               Правильный ответ: <strong class="text-white">${q.answer_display}</strong>
             </span>
           </div>
 
-          <div class="text-sm text-gray-300 leading-relaxed space-y-2 border-t border-white/10 pt-3">
+          <div class="text-xs sm:text-sm text-gray-300 leading-relaxed space-y-2 border-t border-white/10 pt-3">
             <div class="font-semibold text-gray-200">Подробное объяснение:</div>
             <p>${this.formatCodeSpans(q.explanation)}</p>
           </div>
@@ -1009,36 +1009,36 @@ class App {
     }
 
     container.innerHTML = `
-      <div class="glass-card rounded-2xl p-5 sm:p-8 shadow-xl border border-white/10 relative transition-all">
+      <div class="glass-card rounded-2xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/10 relative transition-all">
         <!-- Top bar of question card -->
-        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
-          <div class="flex flex-wrap items-center gap-2">
-            <span class="px-3 py-1 rounded-lg text-xs font-bold bg-indigo-600/30 text-indigo-300 border border-indigo-500/30">
-              Вопрос ${q.number} / 245
+        <div class="flex items-center justify-between gap-2 mb-4 pb-3 sm:mb-5 sm:pb-4 border-b border-white/10">
+          <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
+            <span class="px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold bg-indigo-600/30 text-indigo-300 border border-indigo-500/30">
+              Вопрос ${q.number} / ${this.questions.length}
             </span>
-            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-gray-800 text-gray-400 border border-white/5">
+            <span class="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg text-[11px] sm:text-xs font-medium bg-gray-800 text-gray-400 border border-white/5">
               ${typeBadge}
             </span>
-            <span class="hidden sm:inline-block px-2.5 py-1 rounded-lg text-xs font-medium bg-gray-800/60 text-gray-400">
+            <span class="hidden md:inline-block px-2.5 py-1 rounded-lg text-xs font-medium bg-gray-800/60 text-gray-400 truncate max-w-xs">
               ${q.subtopic}
             </span>
           </div>
 
-          <div class="flex items-center gap-2">
-            <button onclick="app.toggleBookmark(${q.number})" title="${isBookmarked ? 'Удалить из избранного' : 'Добавить в избранное'}" class="p-2 rounded-lg bg-gray-800/80 hover:bg-gray-700 text-gray-400 transition">
-              <svg class="w-5 h-5 ${isBookmarked ? 'text-amber-400 fill-amber-400' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+            <button onclick="app.toggleBookmark(${q.number})" title="${isBookmarked ? 'Удалить из избранного' : 'Добавить в избранное'}" class="p-1.5 sm:p-2 rounded-lg bg-gray-800/80 hover:bg-gray-700 text-gray-400 transition">
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 ${isBookmarked ? 'text-amber-400 fill-amber-400' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
               </svg>
             </button>
-            <button onclick="app.resetCurrentQuestion()" title="Сбросить ответ" class="p-2 rounded-lg bg-gray-800/80 hover:bg-gray-700 text-gray-400 transition">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+            <button onclick="app.resetCurrentQuestion()" title="Сбросить ответ" class="p-1.5 sm:p-2 rounded-lg bg-gray-800/80 hover:bg-gray-700 text-gray-400 transition">
+              <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
             </button>
           </div>
         </div>
 
         <!-- Question Body -->
-        <div class="mb-6">
-          <div class="text-base sm:text-lg text-gray-100 font-medium leading-relaxed mb-4">
+        <div class="mb-5 sm:mb-6">
+          <div class="text-sm sm:text-base lg:text-lg text-gray-100 font-medium leading-relaxed mb-3 sm:mb-4">
             ${formattedPrompt}
           </div>
           ${imagesHtml}
@@ -1051,24 +1051,24 @@ class App {
         ${explanationHtml}
 
         <!-- Footer Navigation -->
-        <div class="flex flex-wrap items-center justify-between gap-3 mt-8 pt-5 border-t border-white/10">
-          <button onclick="app.prevQuestion()" ${currIdx === 0 ? 'disabled' : ''} class="px-4 py-2 rounded-xl text-sm font-medium bg-gray-800 hover:bg-gray-700 text-gray-300 disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center gap-1.5">
+        <div class="flex items-center justify-between gap-2 mt-6 sm:mt-8 pt-4 sm:pt-5 border-t border-white/10">
+          <button onclick="app.prevQuestion()" ${currIdx === 0 ? 'disabled' : ''} class="px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-gray-800 hover:bg-gray-700 text-gray-200 disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center gap-1 shrink-0">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
             <span>Назад</span>
           </button>
 
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-1.5 sm:gap-2">
             ${this.mode === 'practice' ? `
-              <button onclick="app.showHint()" class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 border border-indigo-500/20 transition">
-                💡 Показать ответ
+              <button onclick="app.showHint()" class="px-2.5 sm:px-3.5 py-2 sm:py-2.5 rounded-xl text-xs font-semibold bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 border border-indigo-500/20 transition flex items-center gap-1">
+                <span>💡</span> <span class="hidden sm:inline">Показать ответ</span><span class="sm:hidden">Ответ</span>
               </button>
-              <button onclick="app.randomQuestion()" title="Случайный вопрос" class="px-3 py-2 rounded-xl text-xs font-medium bg-gray-800 hover:bg-gray-700 text-gray-300 transition">
-                🎲 Случайный
+              <button onclick="app.randomQuestion()" title="Случайный вопрос" class="p-2 sm:px-3 sm:py-2.5 rounded-xl text-xs font-medium bg-gray-800 hover:bg-gray-700 text-gray-300 transition">
+                🎲<span class="hidden sm:inline ml-1">Случайный</span>
               </button>
             ` : ''}
           </div>
 
-          <button onclick="app.nextQuestion()" ${currIdx === list.length - 1 ? 'disabled' : ''} class="px-5 py-2 rounded-xl text-sm font-semibold bg-indigo-600 hover:bg-indigo-500 text-white disabled:opacity-40 disabled:cursor-not-allowed shadow-md shadow-indigo-600/25 transition flex items-center gap-1.5">
+          <button onclick="app.nextQuestion()" ${currIdx === list.length - 1 ? 'disabled' : ''} class="px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-indigo-600 hover:bg-indigo-500 text-white disabled:opacity-40 disabled:cursor-not-allowed shadow-md shadow-indigo-600/25 transition flex items-center gap-1 shrink-0">
             <span>Вперед</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
           </button>
@@ -1179,7 +1179,8 @@ class App {
   // Sidebar sections breakdown
   renderSectionsList() {
     const container = document.getElementById('sections-list');
-    if (!container) return;
+    const mobileContainer = document.getElementById('mobile-sections-list');
+    if (!container && !mobileContainer) return;
 
     // Group questions by section
     const secMap = {};
@@ -1210,12 +1211,12 @@ class App {
     // Sort by section number (1..6)
     const sortedSections = Object.values(secMap).sort((a, b) => parseInt(a.key) - parseInt(b.key));
 
-    container.innerHTML = sortedSections.map(data => {
+    const html = sortedSections.map(data => {
       const p = Math.round((data.answered / data.total) * 100);
       const isActive = this.activeFilter === `sec-${data.key}`;
       
       return `
-        <button onclick="app.applyFilter('sec-${data.key}')" 
+        <button onclick="app.applyFilter('sec-${data.key}'); document.getElementById('mobile-drawer')?.classList.add('hidden')" 
                 class="w-full text-left p-2.5 sm:p-3 rounded-xl transition group mb-1.5 flex flex-col gap-1.5 border ${isActive ? 'bg-indigo-500/10 border-indigo-500/40 shadow-sm' : 'hover:bg-white/5 border-transparent'}">
           <div class="flex items-center justify-between text-xs">
             <span class="font-semibold truncate pr-2 ${isActive ? 'text-indigo-400' : 'text-gray-300 group-hover:text-indigo-400'} transition">
@@ -1232,6 +1233,9 @@ class App {
         </button>
       `;
     }).join('');
+
+    if (container) container.innerHTML = html;
+    if (mobileContainer) mobileContainer.innerHTML = html;
   }
 
   updateStatsCounters() {

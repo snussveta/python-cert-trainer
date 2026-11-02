@@ -46,11 +46,7 @@
     "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables",
     "type": "dropdown",
     "question": "You create the following program to locate a conference room and display the room name. Line numbers are included for \nreference only. \n01 rooms = {1: 'Left Conference Room', 2: 'Right conference Room'} \n02 room = input('Enter the room number: ') \n03 if not room in rooms: \n04   print('Room does not exist.') \n05 else: \n06   print(\"The room name is \" + rooms[room]) \nColleagues report that the program sometimes produces incorrect results. You need to troubleshoot the program. Use the \ndrop-down menus to select the answer choice mat answers each question based on the information presented in the code \nsegment. \nWhich two data types are stored in the rooms list at line 01? [1] . \n \nWhat is the data type of room at line 02? [2] . \n \nWhy does line 03 fail to find the rooms? [3] .",
-    "images": [
-      "images/qimg_p2_1_25.jpeg",
-      "images/qimg_p2_2_26.png",
-      "images/qimg_p2_3_27.jpeg"
-    ],
+    "images": [],
     "answer_display": "[1]: int and string | [2]: string | [3]: Mismatched data type(s)",
     "explanation": "В словаре rooms ключи int, значения str. input() всегда возвращает str. Поиск 'room in rooms' ищет строку среди ключей int, что приводит к несовпадению типов данных (Mismatched data types).",
     "dropdowns": [
@@ -102,9 +98,7 @@
     "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables",
     "type": "dropdown",
     "question": "You are writing a program that calculates a user‟s year of birth. The program asks users for their age and the current year, \nthen outputs the user‟s year of birth. You write the following code. Line numbers are included for reference only. \n01 age = input(‛Enter your age: ‚) \n02 year = input(‚Enter the four digit year: ‛) \n03 born = eval(year) - eval(age) \n04 message = ‚You were born in ‚ + str(born) \n05 print(message) \n \nYou need to ensure that the program uses the appropriate data types. What data types are used? Use the drop-down menus \nto select the answer choice that answers each question based on the information presented in ¡ne code segment. \n \nWhat data type is age in line 01? \n \nWhat data type is born in line 03? \n \nWhat data type is message in line 04?",
-    "images": [
-      "images/qimg_p3_1_38.png"
-    ],
+    "images": [],
     "answer_display": "age: str | born: int | message: str",
     "explanation": "age введен через input() -> str. eval(year)-eval(age) вычисляет разность целых чисел -> int. message получается конкатенацией со str(born) -> str.",
     "dropdowns": [
@@ -464,10 +458,8 @@
     "section": "1. Operations using Data Types and Operators",
     "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables",
     "type": "dropdown",
-    "question": "You are writing a function that returns the data type of the value that is passed in. You write the following code. Line \nnumbers are included for reference only. \n01 def checkType(value): \n02    dataType = type(value) \n03    return dataType \n04 print(checkType(True)) \n05 print(checkType(1.0)) \n06 print(checkType(1)) \n07 print(checkType(‛True‛)) \n \nUse the drop-down menus to select the answer choice that answers each question based on the information presented in \nthe code segment. \n \nWhat is printed at line 04?  \n \nWhat is printed at line 05? \n \nWhat is printed at line 06? \n \nWhat is printed at line 07? \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n1.2 Perform and analyze data and data type operations \n• Data type conversion, indexing, slicing, construct data structures, lists, list operations (including sorting, merging, \nappending, inserting, removing, finding maximum and minimum, and reversing)",
-    "images": [
-      "images/qimg_p5_1_49.png"
-    ],
+    "question": "You are writing a function that returns the data type of the value that is passed in. You write the following code. Line numbers are included for reference only.\n01 def checkType(value):\n02    dataType = type(value)\n03    return dataType\n04 print(checkType(True))\n05 print(checkType(1.0))\n06 print(checkType(1))\n07 print(checkType('True'))\n\nUse the drop-down menus to select the answer choice that answers each question based on the information presented in the code segment.",
+    "images": [],
     "answer_display": "<class 'bool'>, <class 'float'>, <class 'int'>, <class 'str'>",
     "explanation": "Функция type() возвращает тип данных объекта: type(True) возвращает <class 'bool'> (логический), type(1.0) возвращает <class 'float'> (с плавающей точкой), type(1) возвращает <class 'int'> (целое число), type('True') возвращает <class 'str'> (строка).",
     "dropdowns": [
@@ -633,9 +625,7 @@
     "subtopic": "1.2 Perform and analyze data and data type operations",
     "type": "dropdown",
     "question": "You write the following code: \na = 'Config1' \nprint(a) \nb = a \na += 'Config2' \nprint(a) \nprint(b) \nUse the drop-down menus to select the answer choice that answers each question based \non the information presented in the code segment. \nAnswer Area \nWhat is displayed after the first print? [1] \n \nWhat is displayed after the second print? [2] \n \nWhat is displayed after the third print? [3]",
-    "images": [
-      "images/qimg_p7_1_59.png"
-    ],
+    "images": [],
     "answer_display": "1: Config1, 2: Config1Config2, 3: Config1",
     "explanation": "a='Config1'. Первое print(a) выводит 'Config1'. b=a сохраняет ссылку на 'Config1'. a += 'Config2' создает новую строку 'Config1Config2'. Строки неизменяемы, поэтому b остается 'Config1'.",
     "dropdowns": [
@@ -964,9 +954,7 @@
     "subtopic": "1.2 Perform and analyze data and data type operations",
     "type": "dropdown",
     "question": "You have the following list structure:\nalph = 'abcdefghijklmnopqrstuvwxyz'\n\nYou need to evaluate the result of performing various slicing operations. Match each slicing operation to its result.",
-    "images": [
-      "images/qimg_p9_3_69.png"
-    ],
+    "images": [],
     "answer_display": "[1]: defghijklmno, [2]: dgjm, [3]: \"\", [4]: pmjg, [5]: \"\", [6]: zwtqnkheb",
     "explanation": "alph[3:15] возвращает символы с индексами от 3 ('d') до 14 ('o'). alph[3:15:3] берет символы с шагом 3 (d, g, j, m). При несовпадении направления индексов и знака шага возвращается пустая строка. alph[15:3:-3] идет назад от 'p' с шагом 3 (p, m, j, g). alph[::-3] разворачивает всю строку с шагом 3.",
     "matches": [
@@ -1929,11 +1917,7 @@
       1
     ],
     "answer_display": "[1]: b*c, [2]: addition, [3]: (a + (b*c)) - d",
-    "images": [
-      "images/qimg_p19_1_101.png",
-      "images/qimg_p19_2_102.png",
-      "images/qimg_p19_3_103.png"
-    ],
+    "images": [],
     "explanation": "Оператор умножения * имеет приоритет выше сложения и вычитания, поэтому b*c вычисляется первым. Сложение + и вычитание - имеют одинаковый приоритет и выполняются слева направо: вторым действием будет сложение a + (b*c). Итоговый порядок выражается как (a + (b*c)) - d.",
     "dropdowns": [
       {
@@ -2333,9 +2317,7 @@
       0
     ],
     "answer_display": "[1]: 5, [2]: False, [3]: True, [4]: True",
-    "images": [
-      "images/qimg_p23_2_120.png"
-    ],
+    "images": [],
     "explanation": "1) 0 or 5 возвращает 5 (первое истинное значение). 2) bool(0) возвращает False. 3) None is None возвращает True. 4) Цепное сравнение -5 < 0 < 5 истинно (True).",
     "dropdowns": [
       {
@@ -2815,9 +2797,7 @@
       3
     ],
     "answer_display": "Line 01: if grade >= 90:, Line 03: elif grade >= 80:, Line 05: elif grade >= 70:, Line 07: elif grade >= 65:",
-    "images": [
-      "images/qimg_p29_1_140.png"
-    ],
+    "images": [],
     "explanation": "При проверке диапазона оценок сверху вниз первой строкой идет if grade >= 90:. Затем следуют ветки elif grade >= 80:, elif grade >= 70: и elif grade >= 65:. Для всех остальных оценок сработает блок else: letter = 'F'.",
     "dropdowns": [
       {
@@ -2940,9 +2920,7 @@
       2
     ],
     "answer_display": "[1]: if a >= 0:, [2]: else:, [3]: if a % 2 == 0:, [4]: else:",
-    "images": [
-      "images/qimg_p30_2_150.png"
-    ],
+    "images": [],
     "explanation": "Сначала проверяем if a >= 0:. Если число отрицательное, переходим в else:, внутри которого проверяем четность степени if a % 2 == 0:, а в противном случае (else:) возвращаем действительный нечетный корень -(-a)**(1/b).",
     "dropdowns": [
       {
@@ -3007,9 +2985,7 @@
       2
     ],
     "answer_display": "[1]: if a >= 0:, [2]: else:, [3]: if a % 2 == 0:, [4]: else:",
-    "images": [
-      "images/qimg_p31_2_150.png"
-    ],
+    "images": [],
     "explanation": "Сначала проверяем if a >= 0:. Если число отрицательное, переходим в else:, внутри которого проверяем четность степени if a % 2 == 0:, а в противном случае (else:) возвращаем действительный нечетный корень -(-a)**(1/b).",
     "dropdowns": [
       {
@@ -3072,9 +3048,7 @@
       3
     ],
     "answer_display": "1: :rating = 'A', 2: age < 18 : rating = 'T', 3: age== None:rating = 'C'",
-    "images": [
-      "images/qimg_p31_3_154.png"
-    ],
+    "images": [],
     "explanation": "В соответствии с правилами градации возраста проверяются граничные условия, присваивая правильный буквенный рейтинг.",
     "dropdowns": [
       {
@@ -3147,11 +3121,7 @@
       0
     ],
     "answer_display": "Line 03: != \"n\":, Line 06: == \"Sunday\":, Line 08: == \"Thursday\":",
-    "images": [
-      "images/qimg_p32_3_159.png",
-      "images/qimg_p32_4_160.png",
-      "images/qimg_p32_5_161.png"
-    ],
+    "images": [],
     "explanation": "Для продолжения работы цикла проверяется while more != 'n':. Для проверки дня недели используется оператор сравнения строк == 'Sunday': и == 'Thursday':.",
     "dropdowns": [
       {
@@ -3242,11 +3212,7 @@
       0
     ],
     "answer_display": "[1]: if num > -10 and num < 10:, [2]: elif num > -100 and num < 100:, [3]: else:",
-    "images": [
-      "images/qimg_p34_2_169.png",
-      "images/qimg_p34_3_170.png",
-      "images/qimg_p34_4_171.png"
-    ],
+    "images": [],
     "explanation": "Числа из одной цифры лежат в диапазоне от -9 до 9 (num > -10 and num < 10). Числа из двух цифр проверяются в ветке elif num > -100 and num < 100:. Все остальные числа попадают в else:.",
     "dropdowns": [
       {
@@ -3295,11 +3261,7 @@
       2
     ],
     "answer_display": "Line 02: if age >= 5 and school == True:, Line 04: elif age >= 5 and school == False:, Line 05: if age <= 17:",
-    "images": [
-      "images/qimg_p34_5_172.png",
-      "images/qimg_p34_6_173.png",
-      "images/qimg_p34_7_174.png"
-    ],
+    "images": [],
     "explanation": "Для учащихся от 5 лет плата 10 USD (if age >= 5 and school == True:). Если человек не учится в школе, срабатывает elif age >= 5 and school == False:. Внутри проверяется возраст до 17 лет (if age <= 17:) со стоимостью 20 USD, а старше 17 (else:) — 50 USD.",
     "dropdowns": [
       {
@@ -3347,9 +3309,7 @@
       2
     ],
     "answer_display": "[1]: if numList == alphaList:, [2]: else:",
-    "images": [
-      "images/qimg_p35_2_178.png"
-    ],
+    "images": [],
     "explanation": "Для проверки равенства списков используется оператор if numList == alphaList:. Ветка отрицания оформляется блоком else: с двоеточием.",
     "dropdowns": [
       {
@@ -3491,10 +3451,7 @@
       1
     ],
     "answer_display": "Line 03: while (index < 10) :, Line 06: if numbers[index] == 6 :",
-    "images": [
-      "images/qimg_p37_1_185.png",
-      "images/qimg_p37_2_186.jpeg"
-    ],
+    "images": [],
     "explanation": "В строке 03 не хватало двоеточия после условия: while (index < 10):. В строке 06 доступ к элементам списка должен производиться через квадратные скобки numbers[index], операция сравнения должна использовать ==, и строка должна заканчиваться двоеточием: if numbers[index] == 6:.",
     "dropdowns": [
       {
@@ -3595,9 +3552,7 @@
     "subtopic": "2.2 Construct and analyze code segments that perform iteration",
     "type": "dropdown",
     "question": "You are creating a Python program that will let a user guess a number from 1 to 10. The user is allowed up to three guesses. You write the following code. Line numbers are included for reference only.\n01 from random import randint\n02 target = randint(1, 10)\n03 chance = 1\n04 print(\"Guess an integer from 1 to 10. You will have 3 chances.\")\n05\n06 guess = int(input(\"Guess an integer: \"))\n07 if guess > target:\n08     print(\"Guess is too high\")\n09 elif guess < target:\n10     print(\"Guess is too low\")\n11 else:\n12     print(\"Guess is just right!\")\n13\n14\n\nThe program must allow three guesses. If the user guesses the correct number, the program must stop asking for guesses.\nHow should you complete lines 05, 13, and 14?",
-    "images": [
-      "images/qimg_p38_1_191.png"
-    ],
+    "images": [],
     "answer_display": "Line 05: while chance <= 3:, Line 13: break, Line 14: chance += 1",
     "explanation": "В строке 05 запускается цикл while chance <= 3: (даётся ровно 3 попытки при начальном значении chance = 1). В строке 13 при правильном ответе (блок else) цикл прерывается инструкцией break. В строке 14 счётчик попыток увеличивается на единицу: chance += 1.",
     "options": [
@@ -3665,10 +3620,7 @@
       1
     ],
     "answer_display": "[1]: while, [2]: break",
-    "images": [
-      "images/qimg_p39_2_195.png",
-      "images/qimg_p39_3_196.png"
-    ],
+    "images": [],
     "explanation": "Для выполнения цикла с условием (index < 10): используется ключевое слово while. Для немедленного выхода из цикла при нахождении нужного элемента используется инструкция break.",
     "dropdowns": [
       {
@@ -3709,10 +3661,7 @@
       3
     ],
     "answer_display": "[1]: word in word_list:, [2]: letter in word:",
-    "images": [
-      "images/qimg_p39_4_197.png",
-      "images/qimg_p39_5_198.png"
-    ],
+    "images": [],
     "explanation": "Цикл перебирает каждое слово в списке: for word in word_list:. Затем проверяется наличие искомой буквы в текущем слове: if letter in word:.",
     "dropdowns": [
       {
@@ -3781,11 +3730,7 @@
       0
     ],
     "answer_display": "[1]: float(input(...)), [2]: print(...), [3]: format(average, '.2f'))",
-    "images": [
-      "images/qimg_p40_2_202.png",
-      "images/qimg_p40_3_203.png",
-      "images/qimg_p40_4_204.png"
-    ],
+    "images": [],
     "explanation": "Для ввода чисел с плавающей точкой используется float(input(...)). Вывод в консоль производится через print(). Для форматирования до 2 знаков после запятой используется format(average, '.2f').",
     "dropdowns": [
       {
@@ -3956,10 +3901,7 @@
       1
     ],
     "answer_display": "[1]: %-20s, [2]: %4.1f",
-    "images": [
-      "images/qimg_p43_2_215.png",
-      "images/qimg_p43_3_216.png"
-    ],
+    "images": [],
     "explanation": "Флаг '-' выравнивает по левому краю с заполнением пробелами справа до 20 символов для строки: %-20s. Формат %4.1f задает вещественное число с одним знаком после запятой.",
     "dropdowns": [
       {
@@ -4000,10 +3942,7 @@
       0
     ],
     "answer_display": "Line 05: (len(employee_pay)):, Line 08: sum/count",
-    "images": [
-      "images/qimg_p43_4_217.png",
-      "images/qimg_p43_5_218.png"
-    ],
+    "images": [],
     "explanation": "Функция range(len(employee_pay)) создает диапазон индексов от 0 до len-1 включительно. Среднее арифметическое вычисляется делением суммы на количество элементов: sum / count.",
     "dropdowns": [
       {
@@ -4043,10 +3982,7 @@
       1
     ],
     "answer_display": "[1]: for index in range(len(salary_list)):, [2]: continue",
-    "images": [
-      "images/qimg_p44_2_222.png",
-      "images/qimg_p44_3_223.png"
-    ],
+    "images": [],
     "explanation": "Для обновления элементов списка по индексу необходим цикл for index in range(len(salary_list)):. Если зарплата сотрудника >= 150000, он не получает прибавку — команда continue пропускает остаток тела цикла и переходит к следующему сотруднику.",
     "dropdowns": [
       {
@@ -4457,12 +4393,7 @@
       2
     ],
     "answer_display": "[1]: os.path.isfile('myFile.txt'):, [2]: print(file.read()), [3]: open('myFile.txt', 'a'), [4]: file.write",
-    "images": [
-      "images/qimg_p49_2_241.png",
-      "images/qimg_p49_3_242.png",
-      "images/qimg_p49_4_243.png",
-      "images/qimg_p49_5_244.png"
-    ],
+    "images": [],
     "explanation": "os.path.isfile проверяет наличие файла. Метод file.read() читает всё содержимое файла. Режим 'a' открывает файл для добавления в конец, а метод file.write() записывает строку в файл.",
     "dropdowns": [
       {
@@ -4836,9 +4767,7 @@
       1
     ],
     "answer_display": "[1]: float, [2]: float",
-    "images": [
-      "images/qimg_p54_2_260.png"
-    ],
+    "images": [],
     "explanation": "Для максимальной точности вычислений скорости значения расстояния и времени преобразуются из пользовательского ввода в числа с плавающей точкой float.",
     "dropdowns": [
       {
@@ -4942,9 +4871,7 @@
       2
     ],
     "answer_display": "[1]: {0:10}, [2]: {1:5.1f}, [3]: {2:7.2f}",
-    "images": [
-      "images/qimg_p56_1_267.png"
-    ],
+    "images": [],
     "explanation": "Спецификатор {0:10} задает ширину столбца 10 символов для первой переменной (строки по умолчанию выравниваются влево). {1:5.1f} задает ширину 5 символов и 1 десятичный знак для веса. {2:7.2f} задает ширину 7 символов и 2 десятичных знака для цены.",
     "dropdowns": [
       {
@@ -4997,11 +4924,7 @@
       1
     ],
     "answer_display": "Line 01: employee_number = \"\", Line 02: while employee_number != \"sentinel\":, Line 03: valid = True",
-    "images": [
-      "images/qimg_p56_3_268.png",
-      "images/qimg_p56_4_269.png",
-      "images/qimg_p56_5_270.png"
-    ],
+    "images": [],
     "explanation": "Изначально employee_number = \"\" для входа в цикл. Условие работы цикла while employee_number != \"sentinel\":. На каждой итерации флаг валидности сбрасывается в valid = True перед проверкой формата.",
     "dropdowns": [
       {
@@ -5285,11 +5208,7 @@
       1
     ],
     "answer_display": "[1]: def update_score, [2]: (current, value):, [3]: return current",
-    "images": [
-      "images/qimg_p60_5_287.png",
-      "images/qimg_p60_6_288.png",
-      "images/qimg_p60_7_289.png"
-    ],
+    "images": [],
     "explanation": "Определение функции начинается с ключевого слова def, за которым следует имя update_score. Параметры перечисляются в скобках с двоеточием (current, value):. Результат возвращается инструкцией return current.",
     "dropdowns": [
       {
@@ -5359,10 +5278,7 @@
       3
     ],
     "answer_display": "[1]: range(len(backwards_name)-1, -1, -1):, [2]: backwards_name[index]",
-    "images": [
-      "images/qimg_p61_2_293.png",
-      "images/qimg_p61_3_294.png"
-    ],
+    "images": [],
     "explanation": "Для обхода строки задом наперед диапазон индексов задается от последнего символа len - 1 до 0 включительно с шагом -1: range(len(backwards_name)-1, -1, -1):. Символ извлекается по текущему индексу: backwards_name[index].",
     "dropdowns": [
       {
@@ -5403,10 +5319,7 @@
       0
     ],
     "answer_display": "Line 02: if numerator is None or denominator is None:, Line 04: elif denominator == 0:",
-    "images": [
-      "images/qimg_p61_4_295.png",
-      "images/qimg_p61_5_296.png"
-    ],
+    "images": [],
     "explanation": "Для проверки отсутствующих параметров используется оператор идентичности is None с объединением через or. Для проверки деления на ноль используется оператор равенства elif denominator == 0:.",
     "dropdowns": [
       {
@@ -5447,10 +5360,7 @@
       2
     ],
     "answer_display": "[1]: for row in range(2, 13):, [2]: for col in range(2, 13):",
-    "images": [
-      "images/qimg_p62_2_300.png",
-      "images/qimg_p62_3_301.png"
-    ],
+    "images": [],
     "explanation": "Функция range(start, stop) не включает значение stop. Чтобы включить таблицу от 2 до 12, верхняя граница должна быть 13: range(2, 13). Вложенные циклы for row in range(2, 13): и for col in range(2, 13): перебирают все комбинации от 2x2 до 12x12.",
     "dropdowns": [
       {
@@ -5840,9 +5750,7 @@
       2
     ],
     "answer_display": "Line 02: try:, Line 05: except:",
-    "images": [
-      "images/qimg_p67_2_318.png"
-    ],
+    "images": [],
     "explanation": "Код, способный вызвать ошибку int(...), помещается в защищенный блок try:. Перехват конкретного исключения ValueError осуществляется ключевым словом except:.",
     "dropdowns": [
       {
