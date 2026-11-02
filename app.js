@@ -698,9 +698,11 @@ class App {
     const q = this.getCurrentQuestion();
     if (!q || q.type !== 'dropdown') return;
 
+    const val = isNaN(selectedOptionIdx) ? null : selectedOptionIdx;
+
     if (this.mode === 'exam') {
       let cur = this.exam.answers[q.number] || new Array(q.dropdowns.length).fill(null);
-      cur[ddIndex] = selectedOptionIdx;
+      cur[ddIndex] = val;
       this.exam.answers[q.number] = cur;
       this.renderQuestionPalette();
       this.renderCurrentQuestion();
@@ -708,10 +710,10 @@ class App {
       return;
     }
 
-    let cur = this.practiceAnswers[q.number]?.selected || new Array(q.dropdowns.length).fill(null);
-    cur[ddIndex] = selectedOptionIdx;
+    let cur = this.practiceAnswers[q.number]?.selected ? [...this.practiceAnswers[q.number].selected] : new Array(q.dropdowns.length).fill(null);
+    cur[ddIndex] = val;
 
-    const allAnswered = cur.every(x => x !== null && x !== "");
+    const allAnswered = cur.length === q.dropdowns.length && cur.every(x => x !== null && x !== undefined && !isNaN(x));
     const isCorrect = allAnswered ? this.checkIfAnswerCorrect(q, cur) : false;
 
     this.practiceAnswers[q.number] = {
@@ -743,12 +745,15 @@ class App {
     
     if (!this.practiceAnswers[q.number]) {
       this.practiceAnswers[q.number] = {
-        selected: [],
-        isCorrect: false,
+        selected: (q.type === 'dropdown' || q.type === 'yes_no') ? [...q.correct_answer] : (q.type === 'single' ? [q.correct_answer[0]] : [...q.correct_answer]),
+        isCorrect: true,
         showExplanation: true
       };
     } else {
       this.practiceAnswers[q.number].showExplanation = true;
+      if (q.type === 'dropdown' && (!this.practiceAnswers[q.number].selected || this.practiceAnswers[q.number].selected.some(x => x === null || isNaN(x)))) {
+        this.practiceAnswers[q.number].selected = [...q.correct_answer];
+      }
     }
     this.renderCurrentQuestion();
     sounds.click();
@@ -932,17 +937,17 @@ class App {
             const correctVal = dd.correct;
             let borderClass = 'border-white/10';
 
-            if (showExpl && userVal !== null && userVal !== undefined) {
-              borderClass = (userVal === correctVal) ? 'border-emerald-500 bg-emerald-500/5' : 'border-rose-500 bg-rose-500/5';
+            if (showExpl && userVal !== null && userVal !== undefined && !isNaN(userVal)) {
+              borderClass = (userVal === correctVal) ? 'border-emerald-500 bg-emerald-500/10' : 'border-rose-500 bg-rose-500/10';
             }
 
             return `
-              <div class="p-4 rounded-xl bg-gray-900/60 border ${borderClass} flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <span class="text-sm text-gray-300 font-medium">${dd.prompt}</span>
-                <select onchange="app.handleDropdownSelect(${dIdx}, parseInt(this.value))" class="bg-gray-800 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
-                  <option value="">-- Выберите вариант --</option>
+              <div class="p-4 rounded-xl bg-gray-900/60 border ${borderClass} flex flex-col sm:flex-row sm:items-center justify-between gap-3 transition">
+                <span class="text-sm text-gray-200 font-medium">${this.formatCodeSpans(dd.prompt)}</span>
+                <select onchange="app.handleDropdownSelect(${dIdx}, parseInt(this.value))" class="bg-gray-800 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500 cursor-pointer min-w-[200px]">
+                  <option value="">-- Select option --</option>
                   ${dd.options.map((opt, oIdx) => `
-                    <option value="${oIdx}" ${userVal === oIdx ? 'selected' : ''}>${opt}</option>
+                    <option value="${oIdx}" ${userVal === oIdx ? 'selected' : ''}>${opt}${showExpl && oIdx === correctVal ? ' ✓' : ''}</option>
                   `).join('')}
                 </select>
               </div>

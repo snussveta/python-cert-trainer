@@ -1,1 +1,6701 @@
-window.QUESTIONS_DATA = [{"id": 1, "number": 1, "section": "1. Operations using Data Types and Operators", "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables", "type": "single", "question": "Consider the following python code: \n1) age=0 \n2) minor=False \n3) name='Durga' \n \nThe types of age,minor and name variables respectively:", "options": ["A) int, bool, str", "B) bool, bool, str", "C) int, bool, char", "D) float, bool, str"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "В Python целое число 0 имеет тип int, False — тип bool, а строка в кавычках 'Durga' — тип str. Порядок: int, bool, str."}, {"id": 2, "number": 2, "section": "1. Operations using Data Types and Operators", "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables", "type": "single", "question": "Consider the following python code: \nweight = 62.4 \nzip='880098' \nvalue=+23E4 \n \nThe types of weight, zip and value variables respectively:", "options": ["A) float, str, str", "B) int, str, float", "C) double, str, float", "D) float, str, float"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "weight=62.4 — вещественное число float; zip='880098' — строка str; value=+23E4 — экспоненциальная запись числа (230000.0), тип float."}, {"id": 3, "number": 3, "section": "1. Operations using Data Types and Operators", "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables", "type": "dropdown", "question": "You create the following program to locate a conference room and display the room name. Line numbers are included for \nreference only. \n01 rooms = {1: 'Left Conference Room', 2: 'Right conference Room'} \n02 room = input('Enter the room number: ') \n03 if not room in rooms: \n04   print('Room does not exist.') \n05 else: \n06   print(\"The room name is \" + rooms[room]) \nColleagues report that the program sometimes produces incorrect results. You need to troubleshoot the program. Use the \ndrop-down menus to select the answer choice mat answers each question based on the information presented in the code \nsegment. \nWhich two data types are stored in the rooms list at line 01? [1] . \n \nWhat is the data type of room at line 02? [2] . \n \nWhy does line 03 fail to find the rooms? [3] .", "images": ["images/qimg_p2_1_25.jpeg", "images/qimg_p2_2_26.png", "images/qimg_p2_3_27.jpeg"], "answer_display": "[1]: int and string | [2]: string | [3]: Mismatched data type(s)", "explanation": "В словаре rooms ключи int, значения str. input() всегда возвращает str. Поиск 'room in rooms' ищет строку среди ключей int, что приводит к несовпадению типов данных (Mismatched data types).", "dropdowns": [{"prompt": "Which two data types are stored in the rooms list at line 01? [1]", "options": ["bool and string", "float and bool", "int and string", "float and int"], "correct": 2}, {"prompt": "What is the data type of room at line 02? [2]", "options": ["bool", "float", "int", "string"], "correct": 3}, {"prompt": "Why does line 03 fail to find the rooms? [3]", "options": ["Invalid syntax", "Mismatched data type(s)", "Misnamed variable(s)"], "correct": 1}], "options": ["[1] Which two data types are stored in the rooms list at line 01? [1]: int and string", "[2] What is the data type of room at line 02? [2]: string", "[3] Why does line 03 fail to find the rooms? [3]: Mismatched data type(s)"], "correct_answer": [2, 3, 1]}, {"id": 4, "number": 4, "section": "1. Operations using Data Types and Operators", "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables", "type": "dropdown", "question": "You are writing a program that calculates a user‟s year of birth. The program asks users for their age and the current year, \nthen outputs the user‟s year of birth. You write the following code. Line numbers are included for reference only. \n01 age = input(‛Enter your age: ‚) \n02 year = input(‚Enter the four digit year: ‛) \n03 born = eval(year) - eval(age) \n04 message = ‚You were born in ‚ + str(born) \n05 print(message) \n \nYou need to ensure that the program uses the appropriate data types. What data types are used? Use the drop-down menus \nto select the answer choice that answers each question based on the information presented in ¡ne code segment. \n \nWhat data type is age in line 01? \n \nWhat data type is born in line 03? \n \nWhat data type is message in line 04?", "images": ["images/qimg_p3_1_38.png"], "answer_display": "age: str | born: int | message: str", "explanation": "age введен через input() -> str. eval(year)-eval(age) вычисляет разность целых чисел -> int. message получается конкатенацией со str(born) -> str.", "dropdowns": [{"prompt": "What data type is age in line 01?", "options": ["int", "float", "str", "bool"], "correct": 2}, {"prompt": "What data type is born in line 03?", "options": ["int", "float", "str", "bool"], "correct": 0}, {"prompt": "What data type is message in line 04?", "options": ["int", "float", "str", "bool"], "correct": 2}], "options": ["[1] What data type is age in line 01?: str", "[2] What data type is born in line 03?: int", "[3] What data type is message in line 04?: str"], "correct_answer": [2, 0, 2]}, {"id": 5, "number": 5, "section": "1. Operations using Data Types and Operators", "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables", "type": "yes_no", "question": "During school holidays, you volunteer to explain some basic programming concepts to your younger siblings. \nYou want to introduce the concept of data types in Python. You create the following three code segments: \n# Code segment 1 \nx1 = \"20\" \ny1 = 3 \na = x1 * y1 \n# Code segment 2 \nx2 = 6 \ny2 = 4 \nb = x2 / y2 \n# Code segment 3 \nx3 = 2.5 \ny3 = 1 \nc = x3 / y3 \n \nYou need to evaluate the code segments. \nFor each of the following statements, select Yes if the statement is true. Otherwise, select No. \n \n Yes No \nAfter executing code segment 1, the data type of variable a is str.    〇 〇 \nAfter executing code segment 2, the data type of variable b is float. 〇 〇 \nAfter executing code segment 3, the data type of variable c is int.     〇 〇", "images": [], "answer_display": "1: Yes, 2: Yes, 3: No", "explanation": "1) '20'*3 = '202020' (str) -> Yes. 2) 6/4 = 1.5 (деление / всегда дает float) -> Yes. 3) 2.5/1 = 2.5 (тип float, не int) -> No.", "statements": ["After executing code segment 1, the data type of variable a is str.", "After executing code segment 2, the data type of variable b is float.", "After executing code segment 3, the data type of variable c is int."], "options": ["Yes", "No"], "correct_answer": ["Yes", "Yes", "No"]}, {"id": 6, "number": 6, "section": "1. Operations using Data Types and Operators", "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables", "type": "matching", "question": "Match the data type to the type operations. To answer, drag the appropriate data type to the correct type operation. Each \ndata type may be used once, more than once, or not at all.", "images": ["images/qimg_p4_1_44.jpeg"], "answer_display": "type(+1E10)->float, type(5.0)->float, type('True')->str, type(False)->bool", "explanation": "+1E10 и 5.0 — вещественные числа float; 'True' в кавычках — str; False — bool.", "matches": [{"item": "type (+1E10)", "options": ["int", "float", "str", "bool"], "correct": "float"}, {"item": "type (5.0)", "options": ["int", "float", "str", "bool"], "correct": "float"}, {"item": "type (\"True\")", "options": ["int", "float", "str", "bool"], "correct": "str"}, {"item": "type (False)", "options": ["int", "float", "str", "bool"], "correct": "bool"}], "options": ["type (+1E10) -> float", "type (5.0) -> float", "type (\"True\") -> str", "type (False) -> bool"], "correct_answer": ["float", "float", "str", "bool"]}, {"id": 7, "number": 7, "section": "1. Operations using Data Types and Operators", "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables", "type": "matching", "question": "You are writing a Python program. The program collects customer data and stores it in a database. The program handles a \nwide variety of data. You need to ensure that the program handles the data correctly so that it can be stored in the database \ncorrectly.Match the data type to the code segment. To answer, drag the appropriate data type from the column on the left \nto its code segment on the right. Each data type may be used once, more than once, or not at all.", "images": ["images/qimg_p4_2_45.jpeg"], "answer_display": "age=2 -> int, minor=False -> bool, name='Contoso' -> str, weight=123.5 -> float, zip='81000' -> str", "explanation": "2 — int; False — bool; 'Contoso' и '81000' — str; 123.5 — float.", "matches": [{"item": "age = 2", "options": ["bool", "float", "int", "str"], "correct": "int"}, {"item": "minor = False", "options": ["bool", "float", "int", "str"], "correct": "bool"}, {"item": "name = \"Contoso\"", "options": ["bool", "float", "int", "str"], "correct": "str"}, {"item": "weight = 123.5", "options": ["bool", "float", "int", "str"], "correct": "float"}, {"item": "zip = \"81000\"", "options": ["bool", "float", "int", "str"], "correct": "str"}], "options": ["age = 2 -> int", "minor = False -> bool", "name = \"Contoso\" -> str", "weight = 123.5 -> float", "zip = \"81000\" -> str"], "correct_answer": ["int", "bool", "str", "float", "str"]}, {"id": 8, "number": 8, "section": "1. Operations using Data Types and Operators", "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables", "type": "multiple", "question": "Consider the Variable declarations: \na='5' \nb='2' \n \nWhich of the following expressions are of type str", "options": ["A) a+b", "B) a*b", "C) a-b", "D) a*2"], "correct_answer": [0, 0, 3, 3], "answer_display": "A and D", "images": [], "explanation": "Правильный ответ: A and D."}, {"id": 9, "number": 9, "section": "1. Operations using Data Types and Operators", "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables", "type": "single", "question": "You are writing a Python program. You required to handle data types properly. \nConsider the code segment: \n \n1) a=10+20 \n2) b='10'+'20' \n3) c='10'*3 \n \nIdentify the types of a,b and c?", "options": ["A) a is of int type,b is of str type and c is of str type", "B) a is of int type,b is of str type and c is of int type", "C) a is of int type,b is of int type and c is of int type", "D) a is of int type ,b and c are invalid declarations"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "a=10+20 дает 30 (int). b='10'+'20' дает строку '1020' (str). c='10'*3 дает строку '101010' (str)."}, {"id": 10, "number": 10, "section": "1. Operations using Data Types and Operators", "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables", "type": "dropdown", "question": "You are writing a function that returns the data type of the value that is passed in. You write the following code. Line \nnumbers are included for reference only. \n01 def checkType(value): \n02    dataType = type(value) \n03    return dataType \n04 print(checkType(True)) \n05 print(checkType(1.0)) \n06 print(checkType(1)) \n07 print(checkType(‛True‛)) \n \nUse the drop-down menus to select the answer choice that answers each question based on the information presented in \nthe code segment. \n \nWhat is printed at line 04?  \n \nWhat is printed at line 05? \n \nWhat is printed at line 06? \n \nWhat is printed at line 07? \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n1.2 Perform and analyze data and data type operations \n• Data type conversion, indexing, slicing, construct data structures, lists, list operations (including sorting, merging, \nappending, inserting, removing, finding maximum and minimum, and reversing)", "images": ["images/qimg_p5_1_49.png"], "answer_display": "<class 'bool'>, <class 'float'>, <class 'int'>, <class 'str'>", "explanation": "type(True) -> <class 'bool'>, type(1.0) -> <class 'float'>, type(1) -> <class 'int'>, type('True') -> <class 'str'>.", "dropdowns": [{"prompt": "What is printed at line 04? (checkType(True))", "options": ["<class 'bool'>", "<class 'float'>", "<class 'int'>", "<class 'str'>"], "correct": 0}, {"prompt": "What is printed at line 05? (checkType(1.0))", "options": ["<class 'bool'>", "<class 'float'>", "<class 'int'>", "<class 'str'>"], "correct": 1}, {"prompt": "What is printed at line 06? (checkType(1))", "options": ["<class 'bool'>", "<class 'float'>", "<class 'int'>", "<class 'str'>"], "correct": 2}, {"prompt": "What is printed at line 07? (checkType('True'))", "options": ["<class 'bool'>", "<class 'float'>", "<class 'int'>", "<class 'str'>"], "correct": 3}], "options": ["[1] What is printed at line 04? (checkType(True)): <class 'bool'>", "[2] What is printed at line 05? (checkType(1.0)): <class 'float'>", "[3] What is printed at line 06? (checkType(1)): <class 'int'>", "[4] What is printed at line 07? (checkType('True')): <class 'str'>"], "correct_answer": [0, 1, 2, 3]}, {"id": 11, "number": 11, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "You have the following code: \n \n1) a=bool([False]) \n2) b=bool(3) \n3) c=bool(\"\") \n4) d=bool(' ') \n \nWhich of the variables will represent False:", "options": ["A) a", "B) b", "C) c", "D) d"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "bool([False]) равен True (непустой список); bool(3) равен True; bool('') равен False (пустая строка); bool(' ') равен True (строка с пробелом не пустая)."}, {"id": 12, "number": 12, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "Consider the following variable declarations: \n1) a= bool([]) \n2) b= bool(()) \n3) c= bool(range(0)) \n4) d= bool({}) \n5) e= bool(set()) \n \nWhich of the above variables represent True ?", "options": ["A) c", "B) a ,b, c, d", "C) All Variables represent True", "D) None of the variables represents True"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Все пустые коллекции: [], (), range(0), {}, set() при приведении к bool возвращают False. Ни одна переменная не равна True."}, {"id": 13, "number": 13, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "1) a=bool(0) \n2) b=bool(3) \n3) c=bool(0.5) \n4) d=bool(0.0) \n \nWhich variables represent True?", "options": ["A) a,b", "B) b,c", "C) c,d", "D) d,a", "E) All Variables"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "bool(0) -> False; bool(3) -> True; bool(0.5) -> True; bool(0.0) -> False. Истинными являются b и c."}, {"id": 14, "number": 14, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "You are writing a Python program to read two int values from the keyboard and print the sum. \n1) x=input('Enter First Number:') \n2) y=input('Enter Second Number:') \n3) #Line-1 \n \nWhich of the following code we have to write at Line-1 to print sum of given numbers?", "options": ["A) print('The Result:'+(int(x)+int(y)))", "B) print('The Result:'+(int(x+y)))", "C) print('The Result:'+str(int(x)+int(y)))", "D) print('The Result:'+str(int(x+y)))"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "x и y — строки после input(). Для сложения их чисел нужно int(x)+int(y), а для вывода со строкой 'The Result:' сумму нужно обернуть в str()."}, {"id": 15, "number": 15, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "Consider the python code: \n1) result=str(bool(1) + float(10)/float(2)) \n2) print(result) \n \nWhat is the output?", "options": ["A) SyntaxError", "B) TypeError", "C) 6", "D) 6.0"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 16, "number": 16, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "dropdown", "question": "You write the following code: \na = 'Config1' \nprint(a) \nb = a \na += 'Config2' \nprint(a) \nprint(b) \nUse the drop-down menus to select the answer choice that answers each question based \non the information presented in the code segment. \nAnswer Area \nWhat is displayed after the first print? [1] \n \nWhat is displayed after the second print? [2] \n \nWhat is displayed after the third print? [3]", "images": ["images/qimg_p7_1_59.png"], "answer_display": "1: Config1, 2: Config1Config2, 3: Config1", "explanation": "a='Config1'. Первое print(a) выводит 'Config1'. b=a сохраняет ссылку на 'Config1'. a += 'Config2' создает новую строку 'Config1Config2'. Строки неизменяемы, поэтому b остается 'Config1'.", "dropdowns": [{"prompt": "What is displayed after the first print? [1]", "options": ["Config1", "Config2", "Config1Config2"], "correct": 0}, {"prompt": "What is displayed after the second print? [2]", "options": ["Config1", "Config2", "Config1Config2"], "correct": 2}, {"prompt": "What is displayed after the third print? [3]", "options": ["Config1", "Config2", "Config1Config2"], "correct": 0}], "options": ["[1] What is displayed after the first print? [1]: Config1", "[2] What is displayed after the second print? [2]: Config1Config2", "[3] What is displayed after the third print? [3]: Config1"], "correct_answer": [0, 2, 0]}, {"id": 17, "number": 17, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "You develop an application for your school. A list named colors contains 200 colors. You need to slice the list to display \nevery other color starting with the second color. \nWhich code should you use?", "options": ["A) colors[1:2]", "B) colors [::2]", "C) colors[2:2]", "D) colors [1::2]"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Срез list[start:stop:step]. Второй элемент имеет индекс 1 (start=1). Каждый второй элемент — шаг 2 (step=2). Итого colors[1::2]."}, {"id": 18, "number": 18, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "multiple", "question": "You develop an application for your company. A list named employees contains 200 employee names, the last five being \ncompany management. You need to slice the list to display all employees excluding management. Which two code \nsegments should you use? Each correct answer presents a complete solution. Choose two.", "options": ["A) employees[0:-4]", "B) employees [1:-5]", "C) employees [:-5]", "D) employees [0:-5]", "E) employees [1:-4]"], "correct_answer": [2, 3], "answer_display": "C, D", "images": [], "explanation": "Чтобы исключить последних 5 сотрудников, срез должен заканчиваться на индексе -5: employees[:-5] или employees[0:-5]."}, {"id": 19, "number": 19, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "multiple", "question": "You are developing a python application for your company. A list named employees contains 600 employee names,the \nlast 3 being company management. You need to slice employees to display all employees excluding management. Which \ntwo code segments we should use?", "options": ["A) employees[1:-2]", "B) employees[:-3]", "C) employees[1:-3]", "D) employees[0:-2]", "E) employees[0:-3]"], "correct_answer": [1, 4], "answer_display": "B, E", "images": [], "explanation": "Чтобы исключить последних 3 менеджеров: employees[:-3] или employees[0:-3]."}, {"id": 20, "number": 20, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "You are developing a python application for your company. A list named employees contains 500 employee names,the \nlast 3 being company management. Which of the following represents only management employees.", "options": ["A) employees[497:]", "B) employees[-3:]", "C) employees[497:500]", "D) All the above"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "В списке из 500 элементов последние 3 — это элементы с индексами 497, 498, 499. Срезы employees[497:], employees[-3:] и employees[497:500] дают одинаковый результат. Ответ: All the above."}, {"id": 21, "number": 21, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "You write the following code: \nlist_1 = [1, 2] \nlist_2 = [3, 4] \nlist_3 = list_1 + list_2 \nlist_4 = list_3 * 3 \nprint(list_4) \nYou run the code. \nWhat is the output value?", "options": ["A) [3, 6, 9, 12]", "B) [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]", "C) [[1, 2], [3, 4], [1, 2], [3, 4], [1, 2], [3, 4]]", "D) [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4]]"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "list_1 + list_2 объединяет списки: [1, 2, 3, 4]. list_3 * 3 повторяет элементы списка три раза: [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]."}, {"id": 22, "number": 22, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "multiple", "question": "Woodgrove Bank must generate a report that shows the average balance for all customers each day. The report must \ntruncate the decimal portion of the balance. Which two code segments should you use? Each correct answer presents a \ncomplete solution. Choose two.", "options": ["A) average_balance = total_deposits**number_of_customers", "B) average_balance = total_deposits//number_of_customers", "C) average_balance = int(total_deposits/number_of_customers)", "D) average_balance = float(total_deposits//number_of_customers)"], "correct_answer": [1, 2], "answer_display": "B, C", "images": [], "explanation": "Целочисленное деление // отбрасывает дробную часть: total_deposits // number_of_customers. Также функция int() отсекает дробную часть: int(total_deposits / number_of_customers)."}, {"id": 23, "number": 23, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "ordering", "question": "You are creating a script to evaluate input and check for upper and lower case. Which four code segments should you use \nto develop the solution? To answer, move the appropriate code segment from the list of code segments to the answer area \nand arrange them in the correct order.", "images": ["images/qimg_p9_1_67.jpeg"], "answer_display": "1: input name, 2: if lower, 3: elif upper, 4: else mixed", "explanation": "Сначала считывается ввод name=input(...), затем проверяется if name.lower() == name, затем elif name.upper() == name, и в конце else: mixed case.", "order": ["name = input(\"Enter your name: \")", "if name.lower() == name:\n    print(name, \"is all lower case.\")", "elif name.upper() == name:\n    print(name, \"is all upper case.\")", "else:\n    print(name, \"is mixed case.\")"], "options": ["name = input(\"Enter your name: \")", "if name.lower() == name:\n    print(name, \"is all lower case.\")", "elif name.upper() == name:\n    print(name, \"is all upper case.\")", "else:\n    print(name, \"is mixed case.\")"], "correct_answer": [0, 1, 2, 3]}, {"id": 24, "number": 24, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "matching", "question": "You are writing a Python program to perform arithmetic operations. You create the following code: \na = 11 \nb = 4 \nWhat is the result of each arithmetic expression? To answer, drag the appropriate expression from the column on the left \nto its result on the right. Each expression may be used once, more than once, or not at all.", "images": ["images/qimg_p9_2_68.jpeg"], "answer_display": "2 -> print(a // b), 3 -> print(a % b), 2.75 -> print(a / b)", "explanation": "11 // 4 = 2 (целочисленное деление); 11 % 4 = 3 (остаток от деления); 11 / 4 = 2.75 (обычное деление).", "matches": [{"item": "2", "options": ["print(a / b)", "print(a // b)", "print(a % b)"], "correct": "print(a // b)"}, {"item": "3", "options": ["print(a / b)", "print(a // b)", "print(a % b)"], "correct": "print(a % b)"}, {"item": "2.75", "options": ["print(a / b)", "print(a // b)", "print(a % b)"], "correct": "print(a / b)"}], "options": ["2 -> print(a // b)", "3 -> print(a % b)", "2.75 -> print(a / b)"], "correct_answer": ["print(a // b)", "print(a % b)", "print(a / b)"]}, {"id": 25, "number": 25, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "matching", "question": "You have the following list structure: \nalph = ‚abcdefghijklnnopqrstuvwxyz‛ \nYou need to evaluate the result of performing various slicing operations. Match the result to the slicing operation. To \nanswer, drag the appropriate result from the column on the left to its slicing operation on the right. Each result may be \nused once, more than once, or not at all. \n \n \nA. zwtqnkheb  \nB. pmjg  \nC. defghijklmno  \nD. ponmlkjihgfe  \nE. defghijklmnop  \nF. dgjm  \nG. olif  \nH. “”", "images": ["images/qimg_p9_3_69.png"], "answer_display": "alph[3:15]->defghijklmno, alph[3:15:3]->dgjm, alph[3:15:-3]->\"\", alph[15:3:-3]->olif, alph[15:3]->\"\", alph[::-3]->zwtqnkheb", "explanation": "alph[3:15] берет символы с 3 по 14 ('defghijklmno'); alph[3:15:3] с шагом 3 дает 'dgjm'; alph[15:3:-3] идет назад от 15 до 4 с шагом 3 ('olif'); alph[::-3] разворачивает строку с шагом 3 ('zwtqnkheb').", "matches": [{"item": "[1] alph[3:15]", "options": ["zwtqnkheb", "pmjg", "defghijklmno", "ponmlkjihgfe", "defghijklmnop", "dgjm", "olif", "\"\""], "correct": "defghijklmno"}, {"item": "[2] alph[3:15:3]", "options": ["zwtqnkheb", "pmjg", "defghijklmno", "ponmlkjihgfe", "defghijklmnop", "dgjm", "olif", "\"\""], "correct": "dgjm"}, {"item": "[3] alph[3:15:-3]", "options": ["zwtqnkheb", "pmjg", "defghijklmno", "ponmlkjihgfe", "defghijklmnop", "dgjm", "olif", "\"\""], "correct": "\"\""}, {"item": "[4] alph[15:3:-3]", "options": ["zwtqnkheb", "pmjg", "defghijklmno", "ponmlkjihgfe", "defghijklmnop", "dgjm", "olif", "\"\""], "correct": "olif"}, {"item": "[5] alph[15:3]", "options": ["zwtqnkheb", "pmjg", "defghijklmno", "ponmlkjihgfe", "defghijklmnop", "dgjm", "olif", "\"\""], "correct": "\"\""}, {"item": "[6] alph[::-3]", "options": ["zwtqnkheb", "pmjg", "defghijklmno", "ponmlkjihgfe", "defghijklmnop", "dgjm", "olif", "\"\""], "correct": "zwtqnkheb"}], "options": ["[1] alph[3:15] -> defghijklmno", "[2] alph[3:15:3] -> dgjm", "[3] alph[3:15:-3] -> \"\"", "[4] alph[15:3:-3] -> olif", "[5] alph[15:3] -> \"\"", "[6] alph[::-3] -> zwtqnkheb"], "correct_answer": ["defghijklmno", "dgjm", "\"\"", "olif", "\"\"", "zwtqnkheb"]}, {"id": 26, "number": 26, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "What is a variable defined outside a function referred to as?", "options": ["A) A static variable", "B) A global variable", "C) A local variable", "D) An automatic variable"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Переменная, определенная вне функций, называется глобальной переменной (global variable)."}, {"id": 27, "number": 27, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "What will be the output of the following Python code? \na = 10 \nb = 20 \n \ndef change(): \n   global b \n   a = 45 \n   b = 56 \n \nchange() \nprint(a)   \nprint(b)", "options": ["A) 10,56", "B) 45,56", "C) 10, 20", "D) Syntax Error"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Внутри change() объявлено global b, поэтому изменяется глобальная переменная b (становится 56). Переменная a=45 локальна для функции. Внешняя a остается 10. print(a) -> 10, print(b) -> 56."}, {"id": 28, "number": 28, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "What will be the output of the following Python code? \n \ndef change(i=1, j=2):   \n    i = i + j \n    j = j + 1 \n    print(i, j) \n \nchange(j=1, i=2)", "options": ["A) An exception is thrown because of conflicting values", "B) 1 2", "C) 3 3", "D) 3 2"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Функция change(j=1, i=2): аргументы переданы по ключевым именам (i=2, j=1). i = 2 + 1 = 3, j = 1 + 1 = 2. Выводится: 3 2."}, {"id": 29, "number": 29, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "What will be the output of the following python code? \n \nnames=[‘itvedant’,’Thane’,’Andheri’,’Navi Mumbai’] \nprint(names[-1][-1])", "options": ["A) Navi Mumbai", "B) Mumbai", "C) i", "D) a"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "names[-1] — последний элемент списка ('Navi Mumbai'). names[-1][-1] — последний символ строки 'Navi Mumbai', то есть 'i'."}, {"id": 30, "number": 30, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "What is the return type of the function id()?", "options": ["A) int", "B) float", "C) bool", "D) str"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Функция id() возвращает целочисленный уникальный идентификатор объекта в памяти, тип int."}, {"id": 31, "number": 31, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "What will be the output of the following python code? \n \nf=lambda x:bool(x%2) \nprint(f(20), f(21))", "options": ["A) False True", "B) False False", "C) True True", "D) True False"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "f(20): 20%2 = 0, bool(0) -> False. f(21): 21%2 = 1, bool(1) -> True. Результат: False True."}, {"id": 32, "number": 32, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "Consider the following lists: \n \nn1=[10,20,30,40,50] \nN2=[10,20,30,40,50] \nprint(n1 is n2) \nprint(n1 == n2) \n \nWhat is the output?", "options": ["A) False, False", "B) True, True", "C) True, False", "D) False, True"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "n1 и n2 — два независимых списка в памяти. Оператор is проверяет идентичность ссылок (False). Оператор == проверяет равенство значений (True)."}, {"id": 33, "number": 33, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "Consider the following lists: \n1) n1=[10,20,30,40,50] \n2) n2=[10,20,30,40,50] \n3) print(n1 is n2) \n4) print(n1 == n2) \n5) n1=n2 \n6) print(n1 is n2) \n7) print(n1 == n2) \n \nWhat is the result?", "options": ["A) False, False, True, True", "B) False, True, False, True", "C) False, True, True, True", "D) True, False, True, False"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "До присваивания: n1 is n2 -> False, n1 == n2 -> True. После n1=n2 обе переменные ссылаются на один и тот же объект, поэтому n1 is n2 -> True, n1 == n2 -> True."}, {"id": 34, "number": 34, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "Consider the lists: \n \n1) numbers=[10,20,30,40,50] \n2) alphabets=['a','b','c','d','e'] \n3) print( numbers is alphabets) \n4) print( numbers == alphabets) \n5) numbers=alphabets \n6) print( numbers is alphabets) \n7) print( numbers == alphabets) \n \nWhat is the result?", "options": ["A) False, False, True, True", "B) False, True, False, True", "C) True, False, True, False", "D) False, True, True, True"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Изначально numbers и alphabets разные списки с разными значениями: is -> False, == -> False. После numbers=alphabets ссылки совпадают: is -> True, == -> True."}, {"id": 35, "number": 35, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "Consider the code: \n \ns='AB CD' \nlist=list(s) \nlist.append('EF') \nprint(list) \n \nWhat is the result?", "options": ["A) ['A', 'B', 'C', 'D', 'E', 'F']", "B) {'A', 'B', '', 'C', 'D', 'EF'}", "C) ['A', 'B', '', 'C', 'D', 'EF']", "D) ('A', 'B', '', 'C', 'D', 'EF')"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 36, "number": 36, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "Consider the code: \n1) x='ACROTE' \n2) y='APPLE' \n3) z='TOMATO' \n \nWhich of the following won't print 'CAT' to the console", "options": ["A) print(x[1]+y[0]+z[0])", "B) print(x[2]+y[1]+z[1])", "C) print(x[-5]+y[0]+z[0])", "D) print(x[-5]+y[0]+z[-2])"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 37, "number": 37, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "Consider the code: \n1) s='Python is easy' \n2) s1=s[-7:] \n3) s2=s[-4:] \n4) print(s1+s2) \n \nWhat is the result?", "options": ["A) is easyeasy", "B) easyeasy", "C) iseasyeasy", "D) s easyeasy", "E) is easy easy"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 38, "number": 38, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "Consider the code: \n1) s='Python is easy' \n2) s1=s[6:-4] \n3) #Line-1 \n4) print(len(s2)) \n \nTo print 2 as output,which code we have to insert at Line-1", "options": ["A) s2 = s1.lstrip()", "B) s2 = s1.rstrip()", "C) s2 = s1.lrstrip()", "D) s2 = s1.strip()"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 39, "number": 39, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "Consider the code: \nt=([10,20],10,False) \n \nWhich line of the code assigns <class 'list'> to x", "options": ["A) x= type(t)", "B) x= type(t[0])", "C) x= type(t[1])", "D) x= type(t[0:])"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 40, "number": 40, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "multiple", "question": "Consider the variable declaration \nb = 'BANANA' \n \nWhich of the following lines will print 'AA' to the console?", "options": ["A) print(b[1]+b[2])", "B) print(b[1]+b[3])", "C) print(b[1]+b[5])", "D) print(b[3]+b[5])"], "correct_answer": [1, 2, 0, 3, 3], "answer_display": "B,C and D", "images": [], "explanation": "Правильный ответ: B,C and D."}, {"id": 41, "number": 41, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "Consider the list: \nlist = ['Apple', 'Banana', 'Carrot', 'Mango'] \nWhitch of the following are the valid ways of accessing 'Mango': \n \nOption A : list[3] \nOption B: list[4] \nOption C: list[-1] \nOption D: list[0]", "options": ["A) A and B", "B) B and D", "C) A and C", "D) All options"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "'Mango' находится на последней позиции: положительный индекс 3 (Option A) или отрицательный индекс -1 (Option C). Верно: A and C."}, {"id": 42, "number": 42, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "You are given the following Python code snippet: \nx = 'TEXT' \nWhich line of code will assign the string 'TT' to the variable output?", "options": ["A) output = x[1] + x[1]", "B) output = x[1] + x[4]", "C) output = x[0] + x[2]", "D) output = x[0] + x[-1]"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "В строке x='TEXT' буква 'T' находится на индексе 0 и на индексе -1 (или 3). x[0] + x[-1] дает 'TT'."}, {"id": 43, "number": 43, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "Consider the Python code: \n \na=['a','b','c','d'] \nfor i in a:", "options": ["A) append(i.upper()) \nprint(a) \n \nWhat is the result?", "A) ['A', 'B', 'C', 'D']", "B) ['a', 'b', 'c', 'd']", "C) SyntaxError", "D) MemoryError thrown at runtime"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Цикл for i in a добавляет новые элементы в список a во время итерации по нему. Цикл никогда не завершится, что приведет к переполнению памяти (MemoryError)."}, {"id": 44, "number": 44, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "Which of the following statements are valid? Choose all that apply \n                                                                                                                        Valid    Invalid \nOption A.                                                                                                            〇      〇 \nresult = 456 + 456.0 \ntype of result is int \n \nOption B.                                                                                                            〇      〇 \ns = \"Durga Sir's Python Classes are Good\" \nIt causes an error because we can't use double quotes and single quotes \n \nOption C.                                                                                                            〇      〇 \nThe following line will print result: 4.5 \nprint((7/2) + (False or True) + (9%3)) \n \nOption D.                                                                                                            〇      〇 \nThe following expression evaluates to 12 \nb = False+5-True+35//4", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "Option C, Option D", "images": [], "explanation": "Option C: 7/2=3.5, False or True=True=1, 9%3=0 -> 3.5+1+0=4.5 (Valid). Option D: False+5-True+35//4 = 0+5-1+8 = 12 (Valid). A неверно, т.к. 456+456.0 имеет тип float. B неверно, т.к. одинарная кавычка внутри двойных допустима."}, {"id": 45, "number": 45, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "Consider the code: \n \nt=([10,20],10,False) \n \nWhitch line of the code assigns <class 'list'> to x?", "options": ["A) x = type(t)", "B) x = type(t[0])", "C) x=type(t[1])", "D) x = type(t[0:1])"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "t=([10,20],10,False). Элемент t[0] — это список [10, 20]. Поэтому type(t[0]) возвращает <class 'list'>."}, {"id": 46, "number": 46, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "Consider the code \n \n1) count=input('Enter the number of customers of the bank:') \n2) #Line-1 \n3) print(output) \n \nWhich code inserted at Line-1 will print 20 to the console if we pass 15 as count value from the console?", "options": ["A) output=int(count)+5", "B) output=count+5", "C) output=str(count)+5", "D) output=float(count)+5"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 47, "number": 47, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "single", "question": "In which of the following cases we will get <class 'int'> as output?", "options": ["A) B)", "C) D) \n1) x=47.0 \n2) print(type(x)) \n1) x='47' \n2) print(type(x)) \n1) x=10+20j \n2) print(type(x)) \n1) x=2**2**2 \n2) print(type(x))"], "correct_answer": [0], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 48, "number": 48, "section": "1. Operations using Data Types and Operators", "subtopic": "1.2 Perform and analyze data and data type operations", "type": "multiple", "question": "Which of the following are valid statements?", "options": ["A) 5+False evaluates to False", "B) True+1 evaluates to 2", "C) True and False evaluates to False", "D) True or False evaluates to False", "E) type('') is <class 'bool'>"], "correct_answer": [1, 2], "answer_display": "B,C", "images": [], "explanation": "Правильный ответ: B,C."}, {"id": 49, "number": 49, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Consider the code \n1) a=15 \n2) b=5 \n3) print(a/b) \n \nWhat is the result ?", "options": ["A) 3", "B) 3.0", "C) 0", "D) 0.0"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "15 / 5 в Python 3 возвращает вещественное число 3.0 (обычное деление всегда возвращает float)."}, {"id": 50, "number": 50, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Consider the code \n1) a=21 \n2) b=6 \n3) print(a/b) \n4) print(a//b) \n5) print(a%b) \n \nWhat is the result?", "options": ["A) 3  3  3", "B) 3.5  3  3", "C) 3.0  3  3", "D) 3.5  3.5  3"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "21 / 6 = 3.5; 21 // 6 = 3 (целочисленное деление); 21 % 6 = 3 (остаток 21 - 18 = 3). Результат: 3.5 3 3."}, {"id": 51, "number": 51, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "You have the following code: \n1) a=3 \n2) b=5 \n3) a += 2**3 \n4) a -=b//2//3 \n5) print(a) \n \nWhat is the result?", "options": ["A) 13", "B) 12", "C) 11", "D) 10"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "a = 3 + 2**3 = 3 + 8 = 11. b//2//3 = 5//2//3 = 2//3 = 0. a -= 0 -> a остается 11."}, {"id": 52, "number": 52, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Consider the following expression \n1) result=8//6%5+2**3-2 \n2) print(result) \n \nWhat is the result?", "options": ["A) 6", "B) 7", "C) 8", "D) 9"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Приоритет операций: 2**3 = 8. Затем слева направо: 8 // 6 = 1; 1 % 5 = 1. Итого: 1 + 8 - 2 = 7."}, {"id": 53, "number": 53, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Which of the following expression will generate max value?", "options": ["A) 8%3*4", "B) 8-3*4", "C) 8//3*4", "D) 8/3*4"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 54, "number": 54, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Which expression would evaluate to 2?", "options": ["A) 3**2", "B) 22%5", "C) 13//4", "D) 11/2"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 55, "number": 55, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Consider the code \na=7 \nb=3 \nc=5 \nd=1 \n \nWhich line of the code assigns 9 to the output?", "options": ["A) output=a%c+1", "B) output=a+c//d", "C) output=c*d-1", "D) output=a+d*2"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 56, "number": 56, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Consider the code \n1) x=3 \n2) x +=1 \n3) #Line-1 \n \nWhich line should be inserted at Line-1 so that x value will become 16?", "options": ["A) x+=2", "B) x-=2", "C) x*=2", "D) x**=2"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 57, "number": 57, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Which expression evaluates to 4?", "options": ["A) 7/2*3", "B) 7%2+3", "C) 7//2-3", "D) 7-2*3"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 58, "number": 58, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Consider the following expression: \n \n6//4%5+2**3-2//3 \n \nThis expression results to:", "options": ["A) 9", "B) 3", "C) -1", "D) 25"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 59, "number": 59, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Consider the code \n \n1) x=2 \n2) y=6 \n3) x+=2**3 \n4) x//=y//2//3 \n5) print(x) \n \nWhat is the output?", "options": ["A) 0", "B) 9", "C) 10", "D) 7"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 60, "number": 60, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Consider the Code \n \n1) x=3/3+3**3-3 \n2) print(x) \n \nWhat is the output?", "options": ["A) 25", "B) 32", "C) 0.11", "D) 25.0"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 61, "number": 61, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "In which of the following cases, True will be printed to the console ?\n\n```python\nE \n1) a=45 \n2) b=45 \n3) print(a is not b) \n1) s1='Python' \n2) s2='Python'.upper() \n3) print(s1 is s2) \n1) x=[1,2,3] \n2) y=[1,2,3] \n3) print(x is y) \nprint('r' in 'durga') print('is' in 'This IS a Fake News')\n```", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "'r' in 'durga' вернет True, так как буква 'r' содержится в строке 'durga'. Операторы is для новых списков дают False, 'Python'.upper() создает новую строку."}, {"id": 62, "number": 62, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "You evaluate the following code: \nnumList = [0,1,2,3,4] \nprint(5 in numList) \nWhat is the output of the print statement?", "options": ["A) 4", "B) False", "C) True", "D) 5"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "not 3 > 4: 3 > 4 дает False, not False дает True."}, {"id": 63, "number": 63, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "You develop an application for your company. You have the following code. Line numbers are ¡included for reference \nonly. \n01 def main(a,b,c,d): \n02    value = a+b*c-d \n03    return value \nUse the drop-down menus to select the answer choice that answers each question based on the information presented in \nthe code segment. \n \nWhich part of the expression will be evaluated first? [1] . \n \nWhich operation will be evaluated second? [2] . \n \nWhich expression is equivalent to the expression in the function? [3] .", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: True, 2: False, 3: False", "images": ["images/qimg_p19_1_101.png", "images/qimg_p19_2_102.png", "images/qimg_p19_3_103.png"], "explanation": "print(s1 is s2) -> True (одинаковые строковые литералы интернируются); print(l1 is l2) -> False (разные списки); print(t1 is t2) -> False (разные кортежи, созданные отдельно)."}, {"id": 64, "number": 64, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Consider the expession: \n \nresult=a-b*c+d \n \nWhich of the following are valid?", "options": ["A) First b*c will be evaluated followed by subtraction and addition", "B) First b*c will be evaluated followed by addition and subtraction", "C) First a-b will be evaluated followed by multiplication and addition", "D) The above expession is equivalent to a-(b*c)+d"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "x = 4; y = 2. x // y дает 2. x % y дает 0. x / y дает 2.0."}, {"id": 65, "number": 65, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Consider the code \n1) a=2 \n2) a += 1 \n3) # Line-1 \n \nTo make a value as 9,which expression required to place at Line-1", "options": ["A) a*=2", "B) a**=2", "C) a+=2", "D) a-=2"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Выражение (10 + 20) * 3 / 2: 30 * 3 / 2 = 90 / 2 = 45.0 (тип float)."}, {"id": 66, "number": 66, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Consider the python code \n1) a=1 \n2) b=3 \n3) c=5 \n4) d=7 \n \nIn Which of the following cases the result value is 0?", "options": ["A) result = a+b*2", "B) result = a%b-1", "C) result = a-b//d", "D) result = a**d-1"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Вычисление степени ** имеет наивысший приоритет среди арифметических операторов."}, {"id": 67, "number": 67, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "multiple", "question": "In which of the following cases we will get same result", "options": ["A) 23%5", "B) 3**1", "C) 11/3", "D) 13//4"], "correct_answer": [0, 1, 3], "answer_display": "A,B,D", "images": [], "explanation": "Правильный ответ: A,B,D."}, {"id": 68, "number": 68, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Consider the code \n1) a=1 \n2) b=2 \n3) c=4 \n4) d=6 \n \nWhich of the following expression results -4?", "options": ["A) (a+b)//c%d", "B) (b+c)//a%d", "C) (a+b)//c*d", "D) (a+b)//d-c"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 69, "number": 69, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "You are developing a Python application for your company. \nYou write the following code: \n \nnumList = [1,2,3,4,5] \nalphaList = [\"a\",\"b\",\"c\",\"d\",\"e\"] \nprint(numList is alphaList) \nprint(numList == alphaList) \nnumList = alphaList \nprint(numList is alphaList) \nprint(numList == alphaList) \n \nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "True, True, False, True", "images": ["images/qimg_p21_1_110.jpeg"], "explanation": "print(a is b) для чисел до 256 интернируется (True). print(a == b) проверяет значения (True)."}, {"id": 70, "number": 70, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "multiple", "question": "1) subjects=['java','python','sap'] \n2) more_subjects=['java','python','sap'] \n3) extra_subjects=more_subjects \n \nIn which cases True will be printed to the console?", "options": ["A) print(extra_subjects is more_subjects)", "B) print(subjects is more_subjects)", "C) print(subjects is extra_subjects)", "D) print(subjects == extra_subjects)"], "correct_answer": [0, 0, 3, 3], "answer_display": "A and D", "images": [], "explanation": "Правильный ответ: A and D."}, {"id": 71, "number": 71, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Consider the python code \n1) numbers=[10,20,30,40] \n2) x=0 \n \nIn which of the following cases 10 will be printed to the console?\n\n```python\n1) for i in (30,40,50): \n2)    if i in numbers: \n3)       x=x+5 \n4) print(x) \n1) for i in (30,40,50): \n2)    if i not in numbers: \n3)       x=x+5 \n4) print(x) \n1) for i in (30,40,50): \n2)    if i not in numbers: \n3)       x=x+10 \n4) print(x) \n1) for i in (30,40,50): \n2)    if i in numbers: \n3)       x=x+10 \n4) print(x)\n```", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "В варианте A: for i in (30,40,50): 30 и 40 есть в numbers, x увеличивается дважды на 5 (5 + 5 = 10)."}, {"id": 72, "number": 72, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Which of the following code snippet will produce the output: \nBoy \nCat \nDog\n\n```python\n1) l=['Apple','Boy','Cat','Dog'] \n2) for x in l: \n3)    if len(x) == 3: \n4)       print(x) \n1) l=['Apple','Boy','Cat','Dog'] \n2) for x in l: \n3)    if len(x) != 3: \n4)       print(x) \n1) l=['Apple','Boy','Cat', \n'Dog'] \n2) for x in l: \n3)    print(x) \n1) l=['Apple','Boy','Cat','Dog'] \n2) l1=l[1:] \n3) for x in l1: \n4)    print(x)\n```", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "В списке ['Apple','Boy','Cat','Dog'] трехбуквенными являются 'Boy', 'Cat', 'Dog' (len(x) == 3). Вариант A выведет именно их."}, {"id": 73, "number": 73, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "The ABC company is converting an existing application to Python. You are creating documentation that will be used by \nseveral interns who are working on the team. \nYou need to ensure that arithmetic expressions are coded correctly. What is the correct order of operations for the six \nclasses of operations ordered from first to last in order of precedence? To answer, move all operations from the list of \noperations to the answer area and arrange them in the correct order.", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "D", "images": ["images/qimg_p22_1_114.png"], "explanation": "Порядок вычислений арифметических выражений: сначала выражения в скобках (), затем возведение в степень **, затем умножение *, деление /, остаток %, затем сложение + и вычитание -."}, {"id": 74, "number": 74, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "You are writing a Python program that evaluates an arithmetic formula. The formula is described as b equals a multiplied \nby negative one, then raised to the second power, where a is the value that will be input and b is the result. \nYou create the following code segment Line numbers are included for reference only. \n01 a = eval(input(‚Enter a number for the equation: ‚)) \n02 b = \nYou need to ensure that the result is correct. \nHow should you complete the code on line 02? To answer, drag the appropriate code segment to the correct location. Each \ncode segment may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll \nto view content.", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "C", "images": ["images/qimg_p22_2_115.jpeg"], "explanation": "Выражение (a % b) // c вычисляет остаток от деления a на b, а затем делит нацело на c."}, {"id": 75, "number": 75, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "You are developing a Python program that compares numbers. You need to ensure that you are using the correct \ncomparison operators. Evaluate each expression and indicate the correct result. To answer, drag the appropriate result \nfrom the column on the left to its expression on the right. Each result may be used once, more than once, or not at all. \n \n[1] \n 0 or 5 \n[2] \n bool(0) \n[3] \n None is None \n[4] \n -5 < 0 < 5 \n \n[1]:\n   [2]:\n   [3]:\n    [4]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "B", "images": ["images/qimg_p23_1_119.png", "images/qimg_p23_2_120.png"], "explanation": "Код выполняет безопасное деление: проверяет делитель на ноль перед делением."}, {"id": 76, "number": 76, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "What will be the value of X in the following Python expression? \nX = 2+9*((3*12)-8)/10", "options": ["A) 30.0", "B) 30.8", "C) 28.4", "D) 27.2"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Оператор % возвращает остаток от деления целых чисел."}, {"id": 77, "number": 77, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Operators with the same precedence are evaluated in which manner?", "options": ["A) Left to Right", "B) Right to Left", "C) Can‟t say", "D) None of the mentioned"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Выражение оценивается согласно стандартному приоритету операторов Python."}, {"id": 78, "number": 78, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "You are writing a python program that evaluates an arithmetic expression. \nThe expression is described as b is equals a multiplied by negative one, then raised to \nthe second power, where a is the value which will be input and b is result. \n \na=eval(input('Enter a number for the expression:')) \n \nWhich of the following is valid expression for the given requirement?", "options": ["A) b = (a) ** -2", "B) b = (-a) ** 2", "C) b = (a-) ** 2", "D) b = -(a) ** 2"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Выражение с логическими и арифметическими операторами: сначала вычисляются скобки, затем арифметика, затем логические операторы."}, {"id": 79, "number": 79, "section": "1. Operations using Data Types and Operators", "subtopic": "1.3 Determine the sequence of execution based on operator precedence", "type": "single", "question": "Which expression evaluates to 4?", "options": ["A) 7//2-3", "B) 7%2+3", "C) 7/2*3", "D) 7-2*3 \n \n\n1.4 Select operators to achieve the intended results \n• Assignment (=, +=, -=, /=, %=, //=, **=), comparison (==, >=, <=, !=), logical (and, or, not), logical, arithmetic (+, -, /, \n//, %, **, unary + and -), identity (is), containment (in)"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "7 % 2 + 3: 7 % 2 = 1, 1 + 3 = 4. Вариант B дает 4."}, {"id": 80, "number": 80, "section": "1. Operations using Data Types and Operators", "subtopic": "1.4 Select operators to achieve the intended results", "type": "single", "question": "Evaluate the following arithmetic expression: \n(3*(1+2)**2 - (2**2)*3) \nWhat is the result?", "options": ["A) 3", "B) 13", "C) 15", "D) 69"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "(3*(1+2)**2 - (2**2)*3) = 3*(3)**2 - 4*3 = 3*9 - 12 = 27 - 12 = 15."}, {"id": 81, "number": 81, "section": "1. Operations using Data Types and Operators", "subtopic": "1.4 Select operators to achieve the intended results", "type": "single", "question": "Consider the following expression \nresult=(2*(3+4)**2-(3**3)*3) \nWhat is result value?", "options": ["A) 17", "B) 16", "C) 18", "D) 19"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "(2*(3+4)**2 - (3**3)*3) = 2*(7**2) - 27*3 = 2*49 - 81 = 98 - 81 = 17."}, {"id": 82, "number": 82, "section": "1. Operations using Data Types and Operators", "subtopic": "1.4 Select operators to achieve the intended results", "type": "single", "question": "Which of the following expressions results in an error?", "options": ["A) float(„10‟)", "B) int(„10‟)", "C) float(‟10.8‟)", "D) int(‟10.8‟"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "int('10.8') вызывает ValueError, так как int() не может напрямую преобразовать строку с точкой в целое число (нужно сначала float('10.8'))."}, {"id": 83, "number": 83, "section": "1. Operations using Data Types and Operators", "subtopic": "1.4 Select operators to achieve the intended results", "type": "single", "question": "Consider the code \nx='10' \ny='20' \n \nThe type of x+y ?", "options": ["A) int", "B) float", "C) str", "D) complex"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 84, "number": 84, "section": "1. Operations using Data Types and Operators", "subtopic": "1.4 Select operators to achieve the intended results", "type": "single", "question": "Consider the code \na=float('123.456') \n \nWhich expression evaluates to 2?", "options": ["A) int(a)+False", "B) bool(a)+True", "C) str(a)", "D) bool(a)"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 85, "number": 85, "section": "1. Operations using Data Types and Operators", "subtopic": "1.4 Select operators to achieve the intended results", "type": "single", "question": "Consider the following code \n \n1) x= 'Durga' \n2) y= 'Durga' \n3) result=condition \n4) print(result) \n \nFor which of the following condition True will be printed to the console?", "options": ["A) x is y", "B) x is not y", "C) x != y", "D) x < y"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 86, "number": 86, "section": "1. Operations using Data Types and Operators", "subtopic": "1.4 Select operators to achieve the intended results", "type": "single", "question": "Consider the code: \n1) x= 8 \n2) y= 10 \n3) result= x//3*3/2+y%2**2 \n4) print(result) \n \nWhat is the result?", "options": ["A) 5", "B) 5.0", "C) 6.0", "D) 7.0"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 87, "number": 87, "section": "1. Operations using Data Types and Operators", "subtopic": "1.4 Select operators to achieve the intended results", "type": "single", "question": "Consider the Python code: \n1) l1=['sunny','bunny','chinny','vinny'] \n2) l2=['sunny','bunny','chinny','vinny'] \n3) print(l1 is not l2) \n4) print(l1 != l2) \n5) l1=l2 \n6) print(l1 is not l2) \n7) print(l1 != l2) \n \nWhat is the result?", "options": ["A) B)", "C) D) \nTrue \nTrue \nFalse \nFalse \nTrue \nFalse \nTrue \nFalse \nTrue \nFalse \nFalse \nTrue \nTrue \nFalse \nFalse \nFalse"], "correct_answer": [0], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 88, "number": 88, "section": "1. Operations using Data Types and Operators", "subtopic": "1.4 Select operators to achieve the intended results", "type": "single", "question": "Consider the Python Code \n1) l1=['sunny','bunny','chinny','vinny'] \n2) l2=['sunny','bunny','chinny','vinny'] \n3) print(l1 is l2) \n4) print(l1 == l2) \n5) l1=l2 \n6) print(l1 is l2) \n7) print(l1 == l2) \n \nWhat is the result?", "options": ["A) B)", "C) D) \nFalse \nTrue \nTrue \nTrue \nFalse \nFalse \nTrue \nTrue \nFalse \nTrue \nFalse \nTrue \nFalse \nTrue \nTrue \nFalse"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "l1 и l2 — разные списки: print(l1 is l2) -> False. print(l1 == l2) -> True. После l1=l2 обе переменные указывают на один список: is -> True, == -> True."}, {"id": 89, "number": 89, "section": "1. Operations using Data Types and Operators", "subtopic": "1.4 Select operators to achieve the intended results", "type": "single", "question": "Consider the python code: \n1) print(10==10 and 20!=20) \n2) print(10==10 or 20!=20) \n3) print( not 10==10) \n \nWhat is the result?", "options": ["A) B)", "C) D) \nTrue \nTrue \nFalse \nFalse \nTrue \nTrue \nFalse \nTrue \nTrue \nFalse \nFalse \nFalse"], "correct_answer": [0], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 90, "number": 90, "section": "1. Operations using Data Types and Operators", "subtopic": "1.4 Select operators to achieve the intended results", "type": "single", "question": "Consider the code: \n \n1) print(not 0) \n2) print(not 10) \n3) print(not '') \n4) print(not 'durga') \n5) print(not None) \nWhat is the result?", "options": ["A) B)", "C) D) \nTrue \nFalse \nFalse \nFalse \nTrue \nTrue \nFalse \nTrue \nFalse \nTrue \nFalse \nFalse \nTrue \nFalse \nTrue \nTrue \nFalse \nTrue \nFalse \nFalse"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 91, "number": 91, "section": "1. Operations using Data Types and Operators", "subtopic": "1.4 Select operators to achieve the intended results", "type": "single", "question": "Consider the code: \n \n1) lst = [7, 8, 9] \n2) b = lst[:] \n3) print(b is lst) \n4) print(b == lst) \n \nWhat is the result?", "options": ["A) B)", "C) D) \nFalse \nTrue \nFalse \nFalse \nTrue \nFalse \nTrue \nTrue"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 93, "number": 93, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "A classmate has asked you to debug the following code: \nx = 4 \n  while x >= 1: \n    if x % 4 == 0: \n      print (\"party\") \n    elif x - 2 < 0: \n      print(\"cake\") \n    elif x / 3 == 0: \n      print(\"greeting\") \n    else: \n      print(\"birthday\") \n    x = x - 1 \n \n \n \nWhat is the output that is printed to the screen?", "options": ["A) B.", "C) D. \nbirthday \nparty \ngreeting \ncake \nparty \nbirthday \nbirthday \ncake \nparty \ngreeting \nbirthday \ncake \nbirthday \ngreeting \nparty \ncake"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "При x=4: 4%4==0 -> 'party'; x=3: 'birthday'; x=2: 'birthday'; x=1: 'birthday'. Итог: party, birthday, birthday, cake при x=0."}, {"id": 94, "number": 94, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "You are writing a Python application for a dance studio. The studio wants to encourage youth and seniors to sign up. \nMinors and seniors must receive a 10% discount. \nYou write the following code. Line numbers are included for reference only. \n \n01 def get_discount(minor, senior): \n02 discount = .1 \n03  \n04    discount = 0 \n05 return discount \n \nYou need to complete the code. Which code should you add on line 03?", "options": ["A) if not (minor and senior):", "B) if not (minor or senior):", "C) if (not minor) and senior:", "D) if (not minor) or senior:"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Требуется условие: клиент НЕ является ни minor, ни senior. В булевой логике это выражается как if not (minor or senior): (закон де Моргана)."}, {"id": 95, "number": 95, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "yes_no", "question": "You are creating a Python program that compares numbers. \nYou create the following code. Line numbers are included for reference only. \n01 num1 = eval(input(\"Please enter the first number: \")) \n02 num2 = eval(input(\"Please enter the second number: \")) \n03 if num1 == num2: \n04    print(\"The two numbers are equal. \") \n05 if num1 <= num2: \n06    print(\"Number 1 is less than number 2. \") \n07 if num1 > num2: \n08    print(\"Number 1 is greater than number 2. \") \n09 if num2 = num1: \n10    print(\"The two numbers are the same. \") \nYou need to ensure that the comparisons are accurate. \nFor each of the following statements, select Yes if the statement is true. Otherwise, select No. \nYes No \nThe print statement at line 04 will only print if the two numbers are equal in value.〇 〇 \nThe print statement at line 06 will only print if num1 is less than num2.                  〇 〇 \nThe print statement at line 08 will only print if num1 is greater than num2.             〇 〇 \nThe statement at line 09 is an invalid comparison.                                                    〇 〇", "images": [], "answer_display": "1: Yes, 2: No, 3: Yes, 4: Yes", "explanation": "1) num1 == num2 истинно только при равенстве значений (Yes). 2) num1 <= num2 истинно и при меньше, и при равно, а не только меньше (No). 3) num1 > num2 истинно только когда больше (Yes). 4) num2 = num1 в условии if недопустимо, так как = это присваивание, а не сравнение (Yes).", "statements": ["The print statement at line 04 will only print if the two numbers are equal in value.", "The print statement at line 06 will only print if num1 is less than num2.", "The print statement at line 08 will only print if num1 is greater than num2.", "The statement at line 09 is an invalid comparison."], "options": ["Yes", "No"], "correct_answer": ["Yes", "No", "Yes", "Yes"]}, {"id": 96, "number": 96, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "We are developing loan collection agent application. Consider the code: \n \n1) collected_amount=3000 \n2) commission=0 \n3) if collected_amount <= 2000: \n4)    commission=50 \n5) elif collected_amount> 2500 and collected_amount<3000: \n6)    commission=100 \n7) elif collected_amount>2500: \n8)    commission=150 \n9) if collected_amount>=3000: \n10)   commission+=200 \n \nWhat will be the value of commission?", "options": ["A) 350", "B) 200", "C) 150", "D) 100"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 97, "number": 97, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "You are developing online shopping application. \nConsider the code: \n01 order_value = 1500 \n02 state = 'ap' \n03 delivery_charge = 0 \n \n04 if state in ['up', 'mp', 'ts']: \n05    if order_value <= 1000: \n06       delivery_charge = 50 \n07    elif 1000 < order_value < 2000: \n08       delivery_charge = 100 \n09    else: \n10        delivery_charge = 150 \n11 else: \n12    delivery_charge = 25 \n \n13 if state in ['lp', 'kp', 'ap']: \n14    if order_value > 1000: \n15        delivery_charge += 20 \n16    if order_value < 2000 and state in ['kp', 'ap']: \n17        delivery_charge += 30 \n18    else: \n19        delivery_charge += 15 \n20 print(delivery_charge) \n \nWhat is the result?", "options": ["A) 65", "B) 75", "C) 85", "D) 55"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 98, "number": 98, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "You are designing a decision structure to convert a student‟s numeric grade to a letter grade. The program must assign a \nletter grade as specified in the following table: \n \n \n \nFor example, if the user enters a 90, the output should be, “Your letter grade is \nA.” Likewise, if a user enters an 89, the output should be “Your letter grade is B.”  \n \nHow should you complete the code? To answer, select the appropriate code \nsegments in the answer area. \n \n \n#Letter Grade converter \ngrade = int(input(\"Enter a numeric grade\")) \n[1] \n \n    letter_grade = 'A' \n[2] \n \n    letter_grade = 'B' \n[3] \n \n    letter_grade = 'C' \n[4] \n \n    letter_grade = 'D' \nelse: \n    letter_grade = 'F' \nprint(\"Your letter grade is : \", letter_grade) \n \n[1]:\n   [2]:\n  [3]:\n  [4]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: if, 2: elif, 3: else", "images": ["images/qimg_p29_1_140.png", "images/qimg_p29_2_119.png", "images/qimg_p29_3_141.png", "images/qimg_p29_4_142.png", "images/qimg_p29_5_143.png", "images/qimg_p29_6_144.png"], "explanation": "Правильная цепочка ветвления: начинается с if, промежуточные условия проверяются через elif, альтернативная ветвь — else."}, {"id": 99, "number": 99, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "You are writing a python script to convert student marks into grade. The grades are defined as follows: \n90 through 100 --> A grade \n80 through 89 -> B grade \n70 through 79 --> C grade \n65 through 69 --> D grade  \n0 through 64 --> E grade \n \nAnd developed application is: \n#Grade converter \nmarks=int(input(\"Enter Student marks:\")) \nif marks >=90: \n    grade = 'A' \nif marks >=80: \n    grade = 'B' \nif marks >=70: \n    grade = 'C' \nif marks >=65: \n    grade = 'D' \nelse: \n    grade = 'E' \nprint(\"Your grade is : \", grade) \n \n \n \nWhitch of the following changes should be performed to fulfill the \nrequirement?", "options": ["A) Line 3 should be replaced with if marks <= 90:", "B) Line 5 should be replaced with if marks>=80 and marks <= 90:", "C) Line 7 should be replaced with if marks>=70 and marks <= 80:", "D) No changes are required."], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "В коде несколько независимых операторов if вместо if-elif. Если marks=95, выполнятся все if. Нужно использовать elif или проверку диапазона marks >= 80 and marks < 90."}, {"id": 100, "number": 100, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "We are developing one school automation application. If student marks between 80 and 100,then we have to offer 'A' \ngrade. Which code block we have to use?", "options": ["A) B)", "C) D) \n1) if marks>=80 and marks>=100: \n2) grade='A' \n1) if marks>=80 or marks<=100: \n2) grade='A' \n1) if 80<=marks<=100: \n2) grade='A' \n1) if marks>80: \n2) grade='A'"], "correct_answer": [0], "answer_display": "C", "images": [], "explanation": "Выражение проверяет диапазон чисел с использованием операторов сравнения и логического and."}, {"id": 101, "number": 101, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "Consider the following code: \n \n1) marks=[30,40,50,45,50,100] \n2) average=sum(marks)//len(marks) \n3) grades={1:'A',2:'B',3:'C',4:'D'} \n4) if average>=90 and average<=100: \n5)    key=1 \n6) elif average>=80 and average<90: \n7)    key=2 \n8) elif average>=50 and average<80: \n9)    key=3 \n10) else: \n11)   key=4 \n12) print(grades[key]) \n \nWhich grade will be printed to the console?", "options": ["A) A", "B) B", "C) C", "D) D"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 102, "number": 102, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "You are coding a math utility by using Python. You are writing a function to compute roots. The function must meet the \nfollowing requirements: \n \nIf a is non-negative, return a**(1/b) \n \nIf a is negative and even, return “Result is an imaginary number” \n \nIf a is negative and odd, return -(-a)**(1/b) \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \ndef safe_root(a, b): \n   [1] \n \n      answer = a**(1/b) \n   [2] \n \n      [3] \n \n         answer = \"Result is an imaginary number\" \n      [4] \n \n         answer = -(-a)**(1/b) \n   return answer \n \n[1]:\n  [2]:\n  [3]:\n   [4]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: if, 2: elif, 3: else", "images": ["images/qimg_p30_1_119.png", "images/qimg_p30_2_150.png"], "explanation": "Структура ветвления if / elif / else в Python."}, {"id": 103, "number": 103, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "You are coding a math utility by using Python. You are writing a function to compute roots. The function must meet the \nfollowing requirements: \n \nIf a is non-negative, return a**(1/b) \n \nIf a is negative and even, return “Result is an imaginary number” \n \nIf a is negative and odd, return -(-a)**(1/b) \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \ndef safe_root(a, b): \n   [1] \n \n      answer = a**(1/b) \n   [2] \n \n      [3] \n \n         answer = \"Result is an imaginary number\" \n      [4] \n \n         answer = -(-a)**(1/b) \n   return answer \n \n[1]:\n  [2]:\n  [3]:\n   [4]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "[1]: if a >= 0: | [2]: elif a < 0 and b % 2 == 0: | [3]: | [4]: else:", "images": ["images/qimg_p31_1_119.png", "images/qimg_p31_2_150.png"], "explanation": "Если a >= 0, вычисляется корень. Если a отрицательно и b четное (b % 2 == 0), ответ мнимый. Иначе (a отрицательно и b нечетное) — действительный отрицательный корень."}, {"id": 104, "number": 104, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "You work for a company that distributes media for all ages. \nYou are writing a function that assigns a rating based on a user‟s age. The function must meet the following requirements: \n \nAnyone 18 years old or older receives a rating of “A”. \n \nAnyone 13 or older, but younger than 18, receives a rating of “T‟. \n \nAnyone 12 years old or younger receives a rating of “C”. \n \nIf the age is unknown, the rating is set to “C‟. \nYou need to complete the code to meet the requirements. \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \ndef get_rating(age): \n  rating = \"\" \n  if [1]\n \n  elif [2]\n \n  elif [3]\n \n  else [4]\n \n  return rating \n \n[1]: \n   [2]: \n    [3]: \n    [4]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "[1]: age >= 18: rating = 'A' | [2]: age >= 13: rating = 'T' | [3]: age <= 12: rating = 'C' | [4]: rating = 'C'", "images": ["images/qimg_p31_3_154.png"], "explanation": "Для возраста >= 18 рейтинг 'A', для 13..17 рейтинг 'T', для <= 12 рейтинг 'C', иначе 'C'."}, {"id": 105, "number": 105, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "You work for a company that distributes media for all ages. \nYou are writing a function that assigns a rating based on a user's age.The function must meet the following requirements. \n \nAnyone 18 years old or older receives a rating of \"A\" \n \nAnyone 13 or older,but younger than 18, receives a rating of \"T\" \n \nAnyone 12 years old or younger receives a rating of \"C\" \n \nIf the age is unknown ,the rating is set to \"C\" \nWhich of the following code meets above requirements:\n\n```python\ndef get_rating(age): \n   if age>=18: \n       rating=\"A\" \n   elif age>=13: \n      rating=\"T\" \n   else: \n      rating=\"C\" \n   return rating \ndef get_rating(age): \n   if age>=18: \n      rating=\"A\" \n   if age>=13: \n      rating=\"T\" \n   else: \n      rating=\"C\" \n   return rating \ndef get_rating(age): \n   if age>18: \n        rating=\"A\" \n   elif age>13: \n        rating=\"T\" \n   else: \n        rating=\"C\" \n   return rating \ndef get_rating(age): \n   if age>=18: \n        rating=\"A\" \n   elif age>=13: \n       rating=\"T\" \n   else: \n       rating=\"C\" \n   pass rating\n```", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [4, 1, 4, 0], "answer_display": "1: while, 2: break", "images": [], "explanation": "Цикл while с условием выхода через break при достижении целевого значения."}, {"id": 106, "number": 106, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "Southridge Video needs a way to determine the cost that a customer will pay for renting a DVD. The cost is dependent on \nthe time of day the DVD is returned. However, there are also special rates on Thursdays and Sundays. The fee structure is \nshown in the following list: \n \nThe cost is $1.59 per night. \n \nIf the DVD is returned after 8 PM, the customer will be charged an extra day. \n \nIf the video is rented on a Sunday, the customer gets 30% off for as long as they keep the video. \n \nIf the video is rented on a Thursday, the customer gets 50% off for as long as they keep the video. \nYou need to write code to meet the requirements. \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \n#Southridge Video, DVD Rental calculator \nontime = input(\"Was video returned before 8 pm? y or n\").lower() \ndays_rented = int(input(\"How many days was video rented? \")) \nday_rented = input(\"What day was the video rented?\").capitalize() \ncost_per_day = 1.59 \nif ontime [1]\n \n  days_rented +=1 \nif day_rented [2]\n \n  total = (days_rented * cost_per_day) * .7 \nelif day_rented [3]\n \n  total = (days_rented * cost_per_day) * .5 \nelse: \n  total = days_rented * cost_per_day \nprint(\"Cost of the END rental is : $\", total) \n \n[1]:\n   [2]:\n   [3]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: for, 2: in", "images": ["images/qimg_p32_1_119.png", "images/qimg_p32_2_158.png", "images/qimg_p32_3_159.png", "images/qimg_p32_4_160.png", "images/qimg_p32_5_161.png"], "explanation": "Синтаксис цикла for element in collection: в Python."}, {"id": 107, "number": 107, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "The XYZ Book Company needs a way to determine the cost that a student will pay for renting a Book. \n● The Cost is dependent on the time of the Book is returned. \n● However there are also special rates on Saturday and Sundays. \n● The Fee Structure is shown in the following list: \n● The cost is $3.00 per night. \nIf the Book is returned after 9PM, the student will be charged an extra day. If the Book is rented on a Sunday,the student \nwill get 50% off for as long as they the keep the book. \nIf the Book is rented on a Saturday,the student will get 30% off for as long as they keep the book. \nWe need to write the code to meet this requirements. \n \n# XYZ Book Rented Amount Calculator \nontime = input(\"Was Book returned before 9 pm? y or n\").lower() \ndays_rented = int(input(\"How many days was video rented? \")) \nday_rented = input(\"What day was the video rented?\").capitalize() \ncost_per_day = 3.00 \nif ontime == 'n' \n  days_rented = days_rented + 1 \nif day_rented == 'Sunday' \n  total = (days_rented * cost_per_day) *0.5 \nelif day_rented == 'Saturday' \n  total = (days_rented * cost_per_day) *0.7 \nelse: \n  total = days_rented * cost_per_day \nprint(\"The Cost of the Book rental is : $\", total) \n \nIf the Book rented on 'Sunday',the number of days Book rented is 5 and Book returned after 9PM then what is the result?", "options": ["A) The Cost of Book Rental is: $7.0", "B) The Cost of Book Rental is: $8.0", "C) The Cost of Book Rental is: $9.0", "D) The Cost of Book Rental is: $10.0"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "5 дней аренды + 1 день штрафа (возврат после 21:00) = 6 дней. 6 * $3.00 = $18.00. Скидка 50% в воскресенье: $18.00 * 0.5 = $9.0."}, {"id": 108, "number": 108, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "We are developing gold loan application for XYZ company. \n \n1) amount=float(input('Enter Loan Amount:')) \n2) interest_rate=0 \n3) if amount > 0 and amount<= 50000: \n4)    interest_rate = 10 \n5) \n6) elif amount > 50000 and amount<100000: \n7)    interest_rate = 12 \n8) \n9) elif amount >= 100000 and amount<150000: \n10)   interest_rate = 16 \n11) \n12) else: \n13)   interest_rate = 22 \n \nFor which of the following user input interest_rate will be 12.", "options": ["A) 50000", "B) 50001", "C) 100000", "D) 100001", "E) 150000"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 109, "number": 109, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "You are writing a Python program to ask the user to enter a number and determine if the number is 1 digit 2 digits, or \nmore than 2 digits long. You need to write the program. \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \nnum = int(input(\"Enter a number with 1 or 2 digits: \")) \ndigits = 0; \n[1]\n \n   digits = \"1\" \n[2]\n \n   digits = 2 \n[3]\n \n   digits = \">2\" \nprint(digits + \" digits.\") \n[1]: \n    [2]: \n    [3]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: while, 2: if", "images": ["images/qimg_p34_1_119.png", "images/qimg_p34_2_169.png", "images/qimg_p34_3_170.png", "images/qimg_p34_4_171.png"], "explanation": "Итерация через цикл while с проверкой условий внутри."}, {"id": 110, "number": 110, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "You are creating a function to calculate admission fees by using Python. Admission fees are calculated based on the \nfollowing rules: \n \nAnyone under age 5 = free admission \n \nAnyone age 5 or older who is in school = 10 USD \n \nAnyone age 5 to 17 who is not in school = 20 USD \n \nAnyone older than age 17 who is not in school = 5O USD \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \ndef admission_fee(age, school): \n  rate = 0 \n  [1]\n \n    rate = 10 \n  [2]\n \n    [3]\n \n      rate = 20 \n    else: \n      rate = 50 \n  return rate \n \n[1]:\n   [2]:\n    [3]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: if, 2: else", "images": ["images/qimg_p34_5_172.png", "images/qimg_p34_6_173.png", "images/qimg_p34_7_174.png"], "explanation": "Условный оператор if с блоком else."}, {"id": 111, "number": 111, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "You develop a Python application for your company. How should you complete the code so that the print statements are \naccurate? To answer, select the appropriate code segments in the answer area. \n \nnumList = [1,2,3,4,5] \nalphaList = [\"a\",\"b\",\"c\",\"d\",\"e\"] \n[1]\n \n   print(\"The values in numList are equal to alphaList\") \n[2]\n \n   print(\"The values in numList are not equal to alphaList\") \n \n[1]:\n    [2]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: for, 2: range", "images": ["images/qimg_p35_1_119.png", "images/qimg_p35_2_178.png"], "explanation": "Цикл for i in range(start, stop): для перебора чисел."}, {"id": 112, "number": 112, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "Consider the Python code: \na=5 \nb=10 \nc=2 \nd=True \n \nx=a+b*c \ny=a+b/d \n \nif(condition): \n   print('Valid') \nelse: \n   print('Invalid') \n \nTo print 'Valid' to the console, whitch condition we have to take for if statement?", "options": ["A) x > y", "B) x == y", "C) x < y", "D) x <= y"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "a=5, b=10, c=2, d=True. x = 5 + 10*2 = 25. y = 5 + 10/1 = 15.0. 25 > 15.0 истинно (x > y)."}, {"id": 113, "number": 113, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "We are developing a online shopping application. Consider the code: \nd = input('Enter day of the week:')  \ndiscount_percentage = 3 \nif d == 'Monday': \n   discount_percentage+=5 \nelif d == 'Tuesday': \n   discount_percentage+=7 \nelif d == 'Saturday': \n   discount_percentage+=10 \nelif d == 'Sunday': \n   discount_percentage+=20 \nelse: \n   discount_percentage+=2 \n \nTo get 5 as discount_percentage, whitch of the following input \nshould be provided end user?", "options": ["A) Monday", "B) Tuesday", "C) Thursday", "D) Saturday", "E) Sunday"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 114, "number": 114, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "Which of the following is True about else block?", "options": ["A) else block will be executed if there is no exception is try bloack", "B) without writing except block we can't write else block", "C) for the same try we can write atmost one else block", "D) All the above"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 115, "number": 115, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "We are developing an application for leave approval in XYZ Company. \n \ndays=int(input('Enter number of days for leave:')) cause=input('Enter the cause:') \nif days==1: \n   print('Leave will be approved immediately') \nelif days>1 and days<=3: \n   if cause=='Sick\": \n      print('Leave will be approved immediately') \n   else: \n      print('Needs Lead Approval') \nelif days>3 and days<5: \n   if cause=='Sick': \n      print('Needs Manager Approval') \n   else: \n      print(\"Needs Director Approval') \nelif days>=5 and days<=10: \n   print('Needs Director Approval') \n \nIn which of the following cases 'Needs Director Approval' will be printed to the console?", "options": ["A) days = 2 and cause='sick'", "B) days = 3 and cause='personal'", "C) days = 4 and cause='sick'", "D) days = 4 and cause='official'"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 116, "number": 116, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.1 Construct and analyze code segments that use branching statements", "type": "single", "question": "Consider the code \n \na=12 \nb=4 \ns='He shall not be happy if he does not work' \n \nIn which of the following cases result value will become 9", "options": ["A) result=3 if None else a/b", "B) result=s.find('not') if s else None", "C) result=s.rfind('not') if s else None", "D) result=5 if len(s)>4 else 6"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 117, "number": 117, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "You find errors while evaluating the following code. Line numbers are included for reference only. \n01 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] \n02 index = 0 \n03 while (index < 10) \n04    print(numbers[index]) \n05 \n06    if numbers(index) = 6 \n07      break \n08    else: \n09      index += 1 \n \nYou need to correct the code at line 03 and line 06. \nHow should you correct the code? Use the drop-down menus to select the answer choice that answers each question based \non the information presented in the code segment. \nWhich code segment should you use at line 03? \n \nWhich code segment should you use at line 06?", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: while, 2: count += 1", "images": ["images/qimg_p37_1_185.png", "images/qimg_p37_2_186.jpeg"], "explanation": "Счетчик и условие продолжения цикла while."}, {"id": 118, "number": 118, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "You are building a Python program that displays all of the prime numbers from 2 to 100. \nHow should you complete the code? To answer, drag the appropriate code segments to the correct location. Each code \nsegment may be used once, more than once, or not at all. \nYou may need to drag the split bar between panes or scroll to view content.", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "p = 2; while p <= 100: is_prime = True; for i in range(2, p): if p % i == 0: is_prime = False; break; if is_prime: print(p); p += 1", "images": ["images/qimg_p37_3_187.jpeg"], "explanation": "Классический алгоритм поиска простых чисел от 2 до 100 с проверкой деления через остаток p % i == 0 и выходом через break."}, {"id": 119, "number": 119, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "yes_no", "question": "You are creating a Python program that will let a user guess a number from 1 to 10. The user is allowed up to three \nguesses. You write the following code. Line numbers are included for reference only. \n01 from random import randint \n02 target = randint(1, 10) \n03 chance = 1 \n04 print(\"Guess an integer from 1 to 10. You will have 3 chances.\") \n05 \n06 guess = int(input(\"Guess an integer: \")) \n07 if guess > target: \n08     print(\"Guess is too high\") \n09 elif guess < target: \n10     print(\"Guess is too low\") \n11 else: \n12     print(\"Guess is just right!\") \n13 \n14 \n \nThe program must allow three guesses. If the user guesses the correct number, the program must stop asking for guesses. \nHow should you complete lines 05, 13, and 14? To answer, drag the appropriate code segments to the correct locations. \nEach code segment may be used once, more than once, or not at all. \nYou may need to drag the split bar between panes or scroll to view content \n \n1. Which code segement should you use at line 05? \n \n2. Which code segement should you use at line 13? \n \n3. Which code segement should you use at line 05?", "images": ["images/qimg_p38_1_191.png"], "answer_display": "1: Yes, 2: No, 3: Yes, 4: No", "explanation": "Анализ работы цикла и вывода значений переменных на каждой итерации.", "statements": ["The program will display all even numbers from 2 to 10.", "The while loop will execute exactly 10 times.", "The variable i will equal 12 after the loop terminates.", "Changing the increment to i += 1 will still only print even numbers."], "options": ["Yes", "No"], "correct_answer": ["Yes", "No", "Yes", "No"]}, {"id": 120, "number": 120, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "You are developing a Python application for an online product distribution company. You need the program to iterate \nthrough a list of products and escape when a target product ID is found. \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \nproductldList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] \nindex = 0 \n[1]\n(index < 10) : \n    print(productldList[index]) \n    if productldList[index) == 6 : \n        [2]\n \n    else : \n        [3]\n \n \n[1]: \n  [2]: \n  [3]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: for, 2: in", "images": ["images/qimg_p39_1_119.png", "images/qimg_p39_2_195.png", "images/qimg_p39_3_196.png"], "explanation": "Итерация по элементам последовательности."}, {"id": 121, "number": 121, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "Luceme Publishing Company needs a way to find the count of particular letters in their publications to ensure that there is \na good balance. It seems that there have been complaints about overuse of the letter e. You need to create a function to \nmeet the requirements. \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \n#Function accepts list of words from a file, \n#and letter to search for. \n#Returns count of a particular letter in that list. \ndef count_letter(letter, word_list): \n  count=0 \n  for [1]\n \n    if [2]\n \n      count += 1 \n  return count \nword_list =[] \n#word_list is populated a from file, code not shown. \nletter = input(\"which letter would you like to count\") \nletter_count= count_letter(letter, word_list) \nprint(\"There are: \" letter_count, \" instances of \" + letter) \n \n[1]: \n   [2]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: while, 2: break", "images": ["images/qimg_p39_4_197.png", "images/qimg_p39_5_198.png"], "explanation": "Цикл while и прерывание break."}, {"id": 122, "number": 122, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "yes_no", "question": "Consider the following Python Code: \n \n1) def count_letter(letter,word_list): \n2)   count=0 \n3)   for word in word_list: \n4)     if letter in word: \n5)       count +=1 \n6)   return count \n7) word_list=['apple','pears','orange','mango'] \n8) letter=input('Enter some alphabet symbol:') \n9) letter_count=count_letter(letter,word_list) \n10) print(letter_count) \n \nIf the user provides input 'a' then what is the result? \nA) 1 \nB) 2 \nC) 3 \nD) 4", "images": [], "answer_display": "1: Yes, 2: Yes, 3: No, 4: Yes", "explanation": "Проверка условий в теле цикла и обновление счетчика.", "statements": ["The code will print numbers in increasing order.", "The loop terminates when x reaches 0.", "The loop body contains an infinite loop.", "The variable x is decremented on each iteration."], "options": ["Yes", "No"], "correct_answer": ["Yes", "Yes", "No", "Yes"]}, {"id": 123, "number": 123, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "Best For You Organics Company needs a simple program that their call center will use to enter survey data for a new \ncoffee variety. The program must accept input and return the average rating based on a five-star scale. \nThe output must be rounded to two decimal places. You need to complete the code to meet the requirements. \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \nsum = count = done = 0 \naverage = 0.0 \nwhile (done != -1): \n   rating = [1]\n \n   if rating == -1: \n      break \n   sum+= rating \n   count+=1 \naverage = float(sum/count) \n[2]\n+ [3]\n \n \n[1]:\n [2]:\n    [3]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: for, 2: in", "images": ["images/qimg_p40_1_119.png", "images/qimg_p40_2_202.png", "images/qimg_p40_3_203.png", "images/qimg_p40_4_204.png"], "explanation": "Конструкция for-in для обхода элементов."}, {"id": 124, "number": 124, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "The XYZ organics company needs a simple program that their call center will use to enter survey data for a new coffee \nvariety. The program must accept input and return the average rating based on a five-star scale.The output must be \nrounded to two decimal places. \nConsider the code: \n \n1) sum=count=done=0 \n2) average=0.0 \n3) while(done != -1): \n4)   rating=float(input('Enter Next Rating(1-5),-1 for done')) \n5)   if rating == -1: \n6)     break \n7)   sum+=rating \n8)   count+=1 \n9) average=float(sum/count) \n10) #Line-1 \n \nWhich of the following print() statement should be placed at Line-1 to meet requirement?", "options": ["A) print('The average star rating for the new coffee is:{:.2f}'.format(average))", "B) print('The average star rating for the new coffee is:{:.2d}'.format(average))", "C) print('The average star rating for the new coffee is:{:2f}'.format(average))", "D) print('The average star rating for the new coffee is:{:2.2d}'.format(average))"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 125, "number": 125, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "Consider the code: \n \n1) l=[10,20,[30,40],[50,60]] \n2) count=0 \n3) for i in range(len(l)): \n4)   if type(l[i])==list: \n5)     count=count+1 \n6) print(count) \n \n \nWhat is the result?", "options": ["A) 1", "B) 2", "C) 3", "D) 4"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 126, "number": 126, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "Consider the code: \n1) l=[10,(20,),{30},{},{},[40,50]] \n2) count=0 \n3) for i in range(len(l)): \n4)   if type(l[i])==list: \n5)     count+=1 \n6)   elif type(l[i])==tuple: \n7)     count+=2 \n8)   elif type(l[i])==set: \n9)     count+=3 \n10)  elif type(l[i])==dict: \n11)    count+=4 \n12)  else: \n13)    count+=5 \n14) print(count) \n \n \n \nWhat is the result?", "options": ["A) 17", "B) 18", "C) 19", "D) 20"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 127, "number": 127, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "Consider the code: \n1) t = (2,4,6,8,10,12) \n2) d = {1:'A',2:'B',3:'C',4:'D',5:'E',6:'F'} \n3) result=1 \n4) for t1 in t: \n5)   if t1 in d: \n6)     result+=t1 \n7) print(result) \n \nWhat is the result?", "options": ["A) 12", "B) 13", "C) 19", "D) 6"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 128, "number": 128, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "Consider the code: \n1) t = (2,4,6,8,10,12) \n2) d = {1:'A',2:'B',3:'C',4:'D',5:'E',6:'F'} \n3) result=1 \n4) for t1 in t: \n5)   if t1 in d: \n6)     continue \n7)   else: \n8)     result+=t1 \n9) print(result) \n \nWhat is the result?", "options": ["A) 29", "B) 30", "C) 31", "D) 32"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 129, "number": 129, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "Consider the code: \n \n1) values = [[3, 4, 5, 1], [33, 6, 1, 2]] \n2) \n3) v = values[0][0] \n4) for lst in values: \n5)   for element in lst: \n6)     if v > element: \n7)       v = element \n8) \n9) print(v) \n \nWhat is the result?", "options": ["A) 3", "B) 2", "C) 1", "D) 4"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 130, "number": 130, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "Tailspin Toys is building a basketball court for its employees to improve company morale. You are creating a Python \nprogram that employees can use to keep track of their average score. The program must allow users to enter their name \nand current scores. The program will output the user name and the users average score. The output must meet the \nfollowing requirements: \n \nThe user name must be left-aligned. \n \nIf the user name has fewer than 20 characters, additional space must be added to the right. \n \nThe average score must have three places to the left of the decimal point and one place to the right of the decimal \n(XXX.X). \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \nname = input(\"What is your name? \") \nscore = 0 \ncount = 0 \nsum = 0 \nwhile(score != -1): \n   score = int(input(\"Enter your scores: (-1 to end) \")) \n   if score == -1: \n      break \n   sum += score \n   count += 1 \naverage_score = sum / count \nprint(\"[1]\n , your average score is: [2]\n \" %(name, average)) \n \n[1]:\n  [2]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: while, 2: if", "images": ["images/qimg_p43_1_119.png", "images/qimg_p43_2_215.png", "images/qimg_p43_3_216.png"], "explanation": "Цикл while с условным переходом."}, {"id": 131, "number": 131, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "Relecloud Virtual Learning asks you to debug some code that is causing problems with their payroll. They ask you to find \nthe source of the payroll errors. The following variables have been declared: \nemployee_pay = [15000, 120000, 35000, 45000] \ncount = 0 \nsum = 0 \nThere are two errors in the following code: \nfor index in range(0, len(employee_pay)-1)): \n   count += 1 \n   sum += employee_pay[index] \naverage = sum//count \nprint(\"The total payroll is: \", sum ) \nprint(\"The average salary is: \", average) \nWhich code should you use to fix the errors? To answer, select the appropriate code segments in the answer area. \n \n \nfor index in range [1]\n \n   count += 1 \n   sum += employee_pay[index] \naverage = [2]\n \nprint(\"The total payroll is: \", sum ) \nprint(\"The average salary is: \", average) \n \n \n[1]: \n   [2]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: for, 2: in", "images": ["images/qimg_p43_4_217.png", "images/qimg_p43_5_218.png"], "explanation": "Цикл for по коллекции."}, {"id": 132, "number": 132, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "Adventure Works Cycles sales are so exceptional that they decide to give a bonus to all employees who do not make more \nthan S150,000. The following formula applies to each employee based on their base salary and a flat bonus: \nNew salary = current salary x 3% + a $500 bonus. \nYou write code that reads the employee salaries into a variable named salary_list. \nYou need to complete the code that applies an increase to each eligible employee‟s salary. \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \n#Each salary in the list is updated based on increase. Employees making. \n#$150,000 or more will not get a raise. \n#Salary list is populated from employee database, code not shown. \n[1]\n \n   if salary_list[index] >= 150000: \n      [2]\n \n      salary_list[index] = (salary_list[index] * 1.03) + 500 \n \n[1]: \n    [2]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: while, 2: break", "images": ["images/qimg_p44_1_119.png", "images/qimg_p44_2_222.png", "images/qimg_p44_3_223.png"], "explanation": "Цикл while с оператором break."}, {"id": 133, "number": 133, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "What will be the output of the following Python code? \n \nTrue = False \nwhile True: \n    print(True) \n    break", "options": ["A) True", "B) False", "C) None", "D) none of the mentioned"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "В Python 3 True является зарезервированным ключевым словом, и присваивание True = False вызывает SyntaxError (none of the mentioned)."}, {"id": 134, "number": 134, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "What will be the output of the following Python code? \n \nx=123  \nfor i in x: \n  print(i)", "options": ["A) 1 2 3", "B) 123", "C) error", "D) none of the mentioned"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "x = 123 — это целое число (int). Числа в Python не являются итерируемыми объектами, поэтому цикл for i in x: вызовет ошибку TypeError: 'int' object is not iterable."}, {"id": 135, "number": 135, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "What will be the output of the following Python code? \n \nfor i in range(5): \n    if i == 5: \n        break \n    else: \n        print(i) \nelse: \n    print(\"Here\")", "options": ["A) 0 1 2 3 4 Here", "B) 0 1 2 3 4 5 Here", "C) 0 1 2 3 4", "D) 1 2 3 4 5"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Цикл range(5) перебирает 0, 1, 2, 3, 4. Условие i == 5 никогда не выполняется, break не срабатывает. Поэтому выполняется ветка else цикла, выводя 'Here'. Итог: 0 1 2 3 4 Here."}, {"id": 136, "number": 136, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "What will be the output of the following Python code? \n \nfor i in range(0): \nprint(i)", "options": ["A) 0", "B) no output", "C) error", "D) None of the mentioned."], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "range(0) пуст, тело цикла не выполнится ни разу. Ничего не выводится (no output)."}, {"id": 137, "number": 137, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "What will be the output of the following python code. \na = [0, 1, 2, 3] \ni = -2 \nfor i not in a: \n   print(i) \n   i += 1", "options": ["A) -2 -1", "B) 0", "C) error", "D) none of the mentioned"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Синтаксис 'for i not in a:' некорректен (for требует 'for i in ...'). Возникает ошибка SyntaxError."}, {"id": 138, "number": 138, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "What will be the output of the following Python code? \n \nx = 1567 \nfor i in x: \n   print(i)", "options": ["A) 1 5 6 7", "B) 1567", "C) error", "D) none of the mentioned"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "x = 1567 — это число int. Числа не являются итерируемыми объектами (TypeError: 'int' object is not iterable)."}, {"id": 139, "number": 139, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "Consider the code: \nl=[10, (20,), {30}, {}, {}, [48,50]] \ncount=0 \nfor i in range(len(1)): \n   if type(1[i])==list: \n      count+=1 \n   elif type(1[i])==tuple: \n      count+=2 \n   elif type(1[i])==set: \n      count+=3 \n   elif type(1[i])==dict: \n      count+=4 \n   else: \n      count+=5 \nprint(count) \n \nWhat is the result?", "options": ["A) 17", "B) 18", "C) 19", "D) 20"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "len(l)=6. 10 (else +5), (20,) (tuple +2), {30} (set +3), {} (dict +4), {} (dict +4), [48,50] (list +1). Итого: 5 + 2 + 3 + 4 + 4 + 1 = 19."}, {"id": 140, "number": 140, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "You are writing a python program that displays all prime numbers from 2 to 200. \nWhich of the following is the proper code to fulfilling our requirement? \n \nCode A \nCode B \nCode C \nCode D \np = 2 \nis_prime = True \nwhile p <= 200: \n  for i in range(2, p): \n    if p % i == 0: \n      is_prime = False \n      break \n  if is_prime == True: \n    print(p) \n  p = p + 1  \np = 2 \nwhile p <= 200: \n  is_prime = True   \n  for i in range(2, p): \n    if p % i == 0: \n      is_prime = False \n      break \n  if is_prime == True: \n    print(p) \n  p = p + 1 \np = 2 \nwhile p <= 200: \n  is_prime = True \n  for i in range(2, p): \n    if p % i == 0: \n      is_prime = False \n        break \n  if is_prime == False:   \n    print(p) \n  p = p + 1 \np = 2 \nwhile p <= 200: \n  is_prime = True \n  for i in range(2, p): \n    if p % i == 0: \n      is_prime = False \n        break \n  if is_prime == True: \n    print(p)", "options": ["A) Code A", "B) Code B", "C) Code C", "D) Code D \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n3. Input and Output Operations \n3.1 Construct and analyze code segments that perform file input and output operations \n• open, close, read, write, append, check existence, delete, with statement"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Флаг is_prime = True должен сбрасываться внутри внешнего цикла while на каждой итерации (Code B), иначе после первого составного числа флаг навсегда останется False."}, {"id": 141, "number": 141, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "You are writing a program to automate inventory. Your first task is to read a file of inventory transactions. The file \ncontains sales from the previous day, including the item id, price, and quantity. \nThe following shows a sample of data from the file: \n10, 200, 5 \n20, 100, 1 \nThe code must meet the following requirements: \n \nEach line of the file must be read and printed \n \nIf a blank line is encountered, it must be ignored \n \nWhen all lines have been read, the file must be closed \nYou create the following code. Line numbers are included for reference only. \n01 inventory = open(\"inventory.txt\", 'r') \n02 eof = False \n03 while eof == False: \n04   line = inventory.readline() \n05 \n06 \n07       print(line) \n08     else: \n09       print(\"End of file\") \n10       eof = True \n11 inventory.close() \nWhich code should you write for line 05 and line 06?", "options": ["A) B.", "C) D. \n05 if line != '': \n06    if line !=\"\": \n05 if line != '\\n': \n06    if line != None: \n05 if line != '\\n': \n06    if line != \"\": \n05 if line != '': \n06    if line != \"\\n\":"], "correct_answer": [0], "answer_display": "D", "images": [], "explanation": "readline() возвращает пустую строку '' при достижении конца файла EOF (line != ''), и строку с переносом '\\n' для пустых строк (line != '\\n')."}, {"id": 142, "number": 142, "section": "2. Flow Control with Decisions and Loops", "subtopic": "2.2 Construct and analyze code segments that perform iteration", "type": "single", "question": "We are creating a function that reads a data file and prints each line of that file. Consider the following code: \n1) import os \n2) def read_file(file): \n3)   line=None \n4)   if os.path.isfile(file): \n5)     data=open(file,'r') \n6)   while line != '': \n7)     line=data.readline() \n8)     print(line) \nThe code attempts to read the file even if the file does not exist. \nYou need to correct the code. which lines having identation \nproblems?", "options": ["A) First 3 Lines inside function", "B) Last 3 Lines inside function", "C) Last 2 Lines inside function", "D) There is no indentation problem"], "correct_answer": [1], "answer_display": "B:", "images": [], "explanation": "Правильный ответ: B:."}, {"id": 143, "number": 143, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "single", "question": "You develop a Python application for your school. You need to read and write data to a text file. If the file does not exist it \nmust be created. If the file has content the content must be removed. \nWhich code should you use?", "options": ["A) open(\"local_data\", \"r+\")", "B) open(\"local_data\", \"w+\")", "C) open(\"local_data\", \"r\")", "D) open(\"local_data\", \"w\")"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Режим открытия 'r' открывает текстовый файл только для чтения (read only)."}, {"id": 144, "number": 144, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "single", "question": "You develop a python application for your school. You need to read and write data to a text file. If the file does not exist, \nit must be created. If the file has the content, the content must be removed. Which code we have to use?", "options": ["A) open('abc.txt', 'w+')", "B) open('abc.txt', 'r')", "C) open('abc.txt', 'a')", "D) open('abc.txt', 'r+')"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Режим 'w+' открывает файл для чтения и записи. Если файл существует, он перезаписывается (содержимое удаляется). Если файла нет, он создается."}, {"id": 145, "number": 145, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "multiple", "question": "You are creating a function that reads a data file and prints each line of the file. You write the following code. Line \nnumbers are included for reference only. \n \n01 import os \n02 def read_file(file): \n03     line = None \n04     if os.path.isfile(file): \n05         data = open(file, 'r') \n06         while line != '': \n07             line = data.readline() \n08             print(line) \n \nThe code attempts to read the file even if the file does not exist. You need to correct the code. Which three lines have \nindentation problems? Each correct answer presents part of the solution. Choose three.", "options": ["A) Line 01", "B) Line 02", "C) Line 03", "D) Line 04", "E) Line 05 \nF. Line 06 \nG. Line 07 \nH. Line 08"], "correct_answer": [4], "answer_display": "E,F,G", "images": [], "explanation": "Строки 05, 06, 07 должны иметь отступ внутри блока if os.path.isfile(file):, чтобы файл открывался и читался только тогда, когда он существует."}, {"id": 146, "number": 146, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "single", "question": "You are writing a function that works with files. You need \nto ensure that the function returns None if the file does not \nexist. If the file does exist, the function must return the first \nline. You write the following code: \n \nimport os \ndef get_first_line(filename, mode): \n \nIn which order should you arrange the code segments to \ncomplete the function? To answer, move all code segments \nfrom the list of code segments to the answer area and \narrange them in the correct order.", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "with open(filename, 'r') as file: return file.readline() else: return None", "images": ["images/qimg_p48_1_236.jpeg"], "explanation": "Контекстный менеджер with open() гарантирует закрытие файла после чтения readline()."}, {"id": 147, "number": 147, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "multiple", "question": "Consider the following code. \n1) import os \n2) def get_data(filename,mode): \n3)   if os.path.isfile(filename): \n4)     with open(filename,'r') as file: \n5)       return file.readline() \n6)   else: \n7)     return None \n \nWhich of the following are valid about this code?", "options": ["A) This function returns the first line of the file if it is available", "B) This function returns None if the file does not exist", "C) This function returns total data present in the file", "D) This function returns last line of the file"], "correct_answer": [0, 0, 3, 1], "answer_display": "A and B", "images": [], "explanation": "Режим 'a' (append) открывает файл для добавления в конец, не удаляя существующие данные."}, {"id": 148, "number": 148, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "single", "question": "Northwind Electric Cars needs help updating their file system using Python code. You must create a simple file \nmanipulation program that performs the following actions: \n \nChecks to see if a file exists. \n \nIf the file exists, displays its contents. \n \nIf the file does not exist, creates a file using the specified name. \n \nAppends the phrase, “End of listing” to the file. \nYou need to complete the code to meet the requirements. \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \nimport os \nif [1]\n \n   file = open('myFile.txt') \n[2]\n \n   file.close() \nfile= [3]\n \n[4]\n (\"End of listing\") \n \n[1]: \n    [2]: \n    [3]: \n    [4]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: os.path.exists(path), 2: open(path, 'r')", "images": ["images/qimg_p49_1_119.png", "images/qimg_p49_2_241.png", "images/qimg_p49_3_242.png", "images/qimg_p49_4_243.png", "images/qimg_p49_5_244.png"], "explanation": "Перед открытием файла рекомендуется проверить его существование через os.path.exists() или os.path.isfile()."}, {"id": 149, "number": 149, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "single", "question": "Which of the following statements are true?", "options": ["A) When you open a file for reading, if the file does not exist, an error occurs", "B) When you open a file for writing, if the file does not exist, a new file is created", "C) When you open a file for writing, if the file exists, the existing file is overwritten with \nthe new file", "D) All of the mentioned"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Все утверждения верны: режим чтения 'r' вызывает FileNotFoundError при отсутствии файла; режим записи 'w' создает новый файл или перезаписывает существующий."}, {"id": 150, "number": 150, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "single", "question": "To read the entire remaining contents of the file as a string from a file object infile, we use ____", "options": ["A) infile.read(2)", "B) infile.read()", "C) infile.readline()", "D) infile.readlines()"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Метод file.read() считывает всё оставшееся содержимое файла в виде одной строки."}, {"id": 151, "number": 151, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "single", "question": "What is the use of tell() method in python?", "options": ["A) tells you the current position within the file", "B) tells you the end position within the file", "C) tells you the file is opened or not", "D) none of the mentioned"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Метод tell() возвращает текущую позицию указателя в файле (в байтах)."}, {"id": 152, "number": 152, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "single", "question": "Which of the following string declarations spans more than one line and considers whitespace properly when the string is \nprinted to the console?", "options": ["A) B)", "C) D) \n1) s1='durga \n2) software \n3) solutions' \n1) s1=\"durga \n2) software \n3) solutions\" \n1) s1='durga\\n \n2) software\\n \n3) solutions' \n1) s1='''durga \n2) software \n3) solutions'''"], "correct_answer": [0], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 153, "number": 153, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "single", "question": "Consider the following code: \n \nprint(type(input('Enter some value:'))) \n \nif we enter 10 and 10.0 individually for every run what is the output?", "options": ["A) B)", "C) D) \n1) <class 'str'> \n2) <class 'str'> \n1) <class 'int'> \n2) <class 'float'> \n1) <class 'int'> \n2) <class 'int'> \n1) <class 'float'> \n2) <class 'float'>"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 154, "number": 154, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "single", "question": "Consider the following code: \n \nprint(type(eval(input('Enter some value:')))) \n \nif we enter 10 and 10.0 individually for every run what is the output?", "options": ["A) B)", "C) D) \n1) <class 'str'> \n2) <class 'str'> \n1) <class 'int'> \n2) <class 'float'> \n1) <class 'int'> \n2) <class 'int'> \n1) <class 'float'> \n2) <class 'float'>"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 155, "number": 155, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "multiple", "question": "Which of the following statements are valid? \n \n                                                                                                                                          Valid    Invalid", "options": ["A) s=\"Durga Sir's Python Classes are Good\" \nIt causes error because we cannot use double quotes and single quotes simultaneously     〇      〇", "B) result=456+456.0 \ntype of result is int                                                                                                                 〇      〇", "C) The followng expression evaluates to 12                                                                          〇      〇 \nb=False+5-True+35//4", "D) The following line will print result:4.5                                                                              〇      〇 \nprint('result:',(7/2)+(False or True)+(9%3))"], "correct_answer": [2, 3], "answer_display": "C,D", "images": [], "explanation": "Правильный ответ: C,D."}, {"id": 156, "number": 156, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "single", "question": "Conside the file abc.txt: \n \nabc.txt: \n-------- \nDurga:10 \nRavi:20 \nShiva:30 \nPavan:40 \n \nConsider the python code which is present in the same location of the file \ntest.py: \n-------- \n1) values=0 \n2) try: \n3)   f=open('abc.txt','r') \n4)   content=f.readlines() \n5)   for line in content: \n6)     values+=float(line.split(':')[1]) \n7)   f.close() \n8) except Exception: \n9)   print('Unable to open the file') \n10) print(values) \n \nWhat is the result?", "options": ["A) Unable to open the file", "B) 100", "C) 100.0", "D) 10.0"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 157, "number": 157, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "single", "question": "To write 'Python Certificaton' to abc.txt file, which of the following is valid code?", "options": ["A) B)", "C) D) \nf=open('abc.txt','b') \nf.write('Python Certificaton') \nf.close() \nf=open('abc.txt','r') \nf.write('Python Certificaton') \nf.close() \nf=open('abc.txt') \nf.write('Python Certificaton') \nf.close() \nf=open('abc.txt','w') \nf.write('Python Certificaton') \nf.close()"], "correct_answer": [0], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 158, "number": 158, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "single", "question": "Consider the data present in the file: abc.txt \n \nDURGASOFT,50,60,70,80,90 \nMICROSOFT,10,20,30,40,50 \n \nWhich of the following is valid code to read total data from the file?", "options": ["A) B)", "C) D) \n1with open('abc.txt','r') f: \ndata=f.read() \nwith open('abc.txt') as f: \ndata=f.read() \nwith open('abc.txt','w') as f: \ndata=f.read() \nwith open('abc.txt') as f: \ndata=f.readline()"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 159, "number": 159, "section": "3. Input and Output Operations", "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations", "type": "single", "question": "Assume that we are writing python code for some voting application. \nYou need to open the file voters_list.txt and add new voters info and print total data to the console? \n1) with open('voters_list.txt','a+') as f: \n2)   f.write('New voters info') \n3)   #Line-1 \n4)   data=f.read() \n5)   print(data) \n \nWhich Line should be inserted at Line-1 ?", "options": ["A) f.seek(0)", "B) f.flush()", "C) f.begin()", "D) f.close()"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 160, "number": 160, "section": "3. Input and Output Operations", "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations", "type": "single", "question": "You write the following code: \nimport datetime \nd = datetime.datetime(2017, 4, 7) \nprint('{:%B-%d-%y}'.format(d)) \n \nnum=1234567.890 \nprint('{:, .4f}'.format(num)) \nYou run the program. \nWhat is the output?", "options": ["A) 2017--April--07 \n     1,234,567.890 \n     Press any key to continue...", "B) Apr--07--2017 \n     1,234,567,8900 \n     Press any key to continue...", "C) April--07--17 \n     1,234,567.8900 \n     Press any key to continue...", "D) April--07--17 \n     1234567.89 \n     Press any key to continue..."], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "d.format('{:%B-%d-%y}') выводит 'April-07-17'. '{:,.4f}'.format(1234567.890) форматирует число с запятой как разделителем тысяч и 4 знаками после запятой: 1,234,567.8900."}, {"id": 161, "number": 161, "section": "3. Input and Output Operations", "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations", "type": "single", "question": "Northwind Traders has hired you as an intern on the coding team that creates e-commerce applications. \nYou must write a script that asks the user for a value. The value must be used as a whole number in a calculation, even if \nthe user enters a decimal value. You need to write the code to meet the requirements. \nWhich code segment should you use?", "options": ["A) totalltems = int(input(”How many items would you like?”))", "B) totalltems = str(input(”How many items would you like?”))", "C) totalltems = float(input(”How many items would you like?”))", "D) totalltems = input(”How many items would you like?”)"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "int(input(...)) преобразует введенную строку в целое число (whole number) для расчетов."}, {"id": 162, "number": 162, "section": "3. Input and Output Operations", "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations", "type": "single", "question": "You develop a Python application for your company. \nYou need to accept input from the user and print that information to the user screen. \nYou have started with the following code. Line numbers are included for reference only. \n \n01 print(‚What is your name?‛) \n02 \n03 print(name) \n \nWhich code should you write at line 02?", "options": ["A) name = input", "B) input(name)", "C) name = input()", "D) input(”name”)"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Чтобы считать имя пользователя с клавиатуры в переменную name: name = input()."}, {"id": 163, "number": 163, "section": "3. Input and Output Operations", "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations", "type": "multiple", "question": "If the user enters 12345 as input,Which of the following code will print 12346 to the console?", "options": ["A) 1) count=input('Enter count value:') \n2) print(count+1)", "C) 1) count=eval(input('Enter count value:')) \n2) print(count+1)", "B) 1) count=input('Enter count value:') \n2) print(int(count)+1)", "D) 1) count=int(input('Enter count value:')) \n2) print(count+1)"], "correct_answer": [1, 2, 3], "answer_display": "B,C,D", "images": [], "explanation": "Правильный ответ: B,C,D."}, {"id": 164, "number": 164, "section": "3. Input and Output Operations", "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations", "type": "single", "question": "You are creating a program that shows a congratulation message to employees on their service anniversary. \nYou need to calculate the number of years of service and print a congratulatory message. \nYou have written the following code. Line numbers are included for reference only. \n01 start = input(\"How old were you on your start date?\") \n02 end = input(\"How old are you today?\") \n03 \nYou need to complete the program. \nWhich code should you use at line 03?", "options": ["A) print(“congratulations on “ + int(end - start) + “ years of service!”)", "B) print(“congratulations on “ + (int(end) - int(start)) + “ years of service!”)", "C) print(“congratulations on “ + str(end - start) + “ years of service!”)", "D) print(”congratulations on “ + str(int(end) - int(start)) + “ years of service!”)"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "start и end являются строками. Чтобы вычесть их, нужно преобразовать в int: int(end) - int(start), а для конкатенации со строками результат нужно обернуть в str()."}, {"id": 165, "number": 165, "section": "3. Input and Output Operations", "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations", "type": "single", "question": "You are an intern for Northwind Electric Cars. You must create a function that calculates the average velocity of their \nvehicles on a 1320 foot (1/4 mile) track. The output must be as precise as possible. \nHow should you complete the code? To answer, select the appropriate code segments in the answer area \n \n#Speed calculator \ndistance = [1]\n(input(‛Enter the distance traveled in feet‛)) \ndistance_miles = distance/5280     #convert to miles \ntime = [2]\n(input(‛Enter the time elapsed in seconds‛)) \ntime_hours = time/3600             #convert to hours \nvelocity = distance_miles/time_hours \nprint(\"The average velocity is : \", velocity, \" miles/hour\") \n \n[1]: \n        [2]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: float, 2: float", "images": ["images/qimg_p54_1_119.png", "images/qimg_p54_2_260.png"], "explanation": "Для максимально точного расчета скорости distance и time должны быть числами с плавающей точкой float."}, {"id": 166, "number": 166, "section": "3. Input and Output Operations", "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations", "type": "single", "question": "You are intern for XYZ Cars Company.You have to create a function that calculates the average velocity of vehicle on a \n2640 foot(1/2 mile)track. Consider the python code: \n \n1) distance=xxx(input('Enter the distance travelled in feet:')) #Line-1 \n2) distance_miles=distance/5280 \n3) time=yyy(input('Enter the time elapsed in seconds:')) #Line-2 \n4) time_hours=time/3600 \n5) velocity=distance_miles/time_hours \n6) print('The average Velocity:',velocity,'miles/hour') \n \nTo generate most precise output, which modifications should be done at Line-1 and atLine-2.", "options": ["A) xxx should be replaced with float and yyy should be replaced with float", "B) xxx should be replaced with float and yyy should be replaced with int", "C) xxx should be replaced with int and yyy should be replaced with float", "D) xxx should be replaced with int and yyy should be replaced with int"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 167, "number": 167, "section": "3. Input and Output Operations", "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations", "type": "multiple", "question": "You are creating an ecommerce script that accepts input from the user and outputs the data in a comma delimited format. \nYou write the following lines of code to accept input: \n \nitem = input(‛Enter the item name: ‛) \nsales = input(‚Enter the quantity: ‛) \n \nThe output must meet the following requirements: \n \nStrings must be enclosed inside of double-quotes \n \nNumbers must not be enclosed in quotes or other characters \n \nEach item must be separated with a comma \nYou need to complete the code to meet the requirements. Which three code segments should you use? Each correct \nanswer presents a complete solution. Choose three.", "options": ["A) print(‟”{0}”,{1}‟.format(item, sales))", "B) print(item + „,‟ + sales)", "C) print(‟”‟ + item + „”,„ + sales)", "D) print(”{0},{1}”.format(item, sales))", "E) print(‟”%s”, %s‟ % (item, sales))"], "correct_answer": [0, 2, 4], "answer_display": "A, C, E", "images": [], "explanation": "Требуется заключить строки в кавычки, числа оставить без кавычек и разделить запятой: print('\"{0}\",{1}'.format(item, sales)), print('\"' + item + '\",' + sales), print('\"%s\", %s' % (item, sales))."}, {"id": 168, "number": 168, "section": "3. Input and Output Operations", "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations", "type": "single", "question": "We are developing an app in which students will provide college name and city as input. If the student provides college \nname as DURGASOFT and city as Hyderabad, then our application has to provide the following greeting message. \nWelcome to DURGASOFT in Hyderabad Which of the following code can be used for this requirement?", "options": ["A) 1) college_name=input('Enter Your College Name:') \n2) city=input('Enter Your City:') \n3) print('Welcome to {} in {}'.format(college_name,city))", "B) 1) college_name=read('Enter Your College Name:') \n2) city=read('Enter Your City:') \n3) print('Welcome to {} in {}'.format(college_name,city))", "C) 1) college_name=eval('Enter Your College Name:') \n2) city=eval('Enter Your City:') \n3) print('Welcome to {} in {}'.format(college_name,city))", "D) 1) college_name=str('Enter Your College Name:') \n2) city=str('Enter Your City:') \n3) print('Welcome to {} in {}'.format(college_name,city))"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 169, "number": 169, "section": "3. Input and Output Operations", "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations", "type": "single", "question": "You are writing a function to read a data file and print the results as a formatted table. The data file contains information \nabout fruit. Each record contains the name of the fruit the weight and the price. \nYou need to print the data so that it looks like the following sample: \nOranges 5.6   1.33 \nApples   2.0   0.54 \nGrapes  10.2  10.96 \nSpecifically, the print out must meet the following requirements: \n \nThe fruit name must print left-aligned in a column 10 spaces wide. \n \nThe weight must print right-aligned in a column 5 spaces wide with up to one digit after the decimal point. \n \nThe price must print right-aligned in a column 7 spaces wide with up to two digits after the decimal point. \nYou write the following code. Line numbers included are for reference only. \n1. def print_table(file): \n2.   data = open(file,’r’) \n3.   for record in data: \n4.      fields = record.split(‛,‛) \n5. \nHow should you complete line 05? To answer, drag the appropriate code segments to the correct location. Each code \nsegment may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to \nview content. \nCode Segments \n \n \n\".format(fields[0], eval(fields[1]), eval(fields[2]))) \nAnswer Area \nprint(\"{:<10} {:>5.1f} {:>7.2f}\".format(fields[0], eval(fields[1]), eval(fields[2]))", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "print('{:<10} {:>5.1f} {:>7.2f}'.format(fields[0], eval(fields[1]), eval(fields[2])))", "images": ["images/qimg_p56_1_267.png"], "explanation": "{:<10} выравнивает по левому краю с шириной 10; {:>5.1f} выравнивает число по правому краю шириной 5 с 1 знаком после запятой; {:>7.2f} — ширина 7 с 2 знаками после запятой."}, {"id": 170, "number": 170, "section": "3. Input and Output Operations", "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations", "type": "single", "question": "You are writing a Python program to validate employee numbers.  \nThe employee number must have the format ddd-dd-dddd and consist only of numbers and dashes. The program must \nprint True if the format is correct and print False if the format is incorrect. \nHow should you complete the code? To answer, select the appropriate code segmentsin the answer area. \n[1]\n \n       parts = \"\" \n[2]\n \n        [3]\n \n    employee_number = input(’Enter employee number (ddd-dd-dddd): ‚) \n    parts = employee_number. split(' -') \n    if len(parts) == 3: \n       if len(parts[0]) == 2 and len(parts[1]) == 3 and len(parts[2]) == 4: \n          if parts[0].isdigit() and parts[1].isdigit() and parts[2].isdigit(): \n                           [4]\n \n    print(valid) \n[1]:\n [2]:\n [3]:\n [4]:\n \n\n<<<PAGE_57>>>\n57", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: valid = False | 2: parts = employee_number.split('-') | 3: if len(parts) == 3: ... | 4: valid = True", "images": ["images/qimg_p56_2_119.png", "images/qimg_p56_3_268.png", "images/qimg_p56_4_269.png", "images/qimg_p56_5_270.png"], "explanation": "Сначала считывается номер, разбивается через split('-'), проверяется длина частей (2, 3, 4) и метод isdigit(). При успешной валидации valid = True."}, {"id": 171, "number": 171, "section": "3. Input and Output Operations", "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations", "type": "single", "question": "You are writing a Python program to validate employee numbers. The employee number must have the format dd-ddd-\ndddd and consists of only numbers and dashes.The program must print True if the format is correct,otherwise print False. \n \n1) employee_number=input('Enter Your Employee Number(dd-ddd-dddd):') \n2) parts=employee_number.split('-') \n3) valid=False \n4) if len(parts) == 3: \n5) if len(parts[0])==2 and len(parts[1])==3 and len(parts[2])==4: \n6) if parts[0].isdigit() and parts[1].isdigit() and parts[2].isdigit(): \n7) valid=True \n8) print(valid) \n \nWhich of the following is True about this code?", "options": ["A) It will throw error because misuse of split() method", "B) It will throw error because misuse of isDigit() method", "C) There is no error but it won't fulfll our requirement.", "D) No changes are required for this code and it can fulfill requirement."], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 172, "number": 172, "section": "3. Input and Output Operations", "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations", "type": "single", "question": "What will be the output of the following program? \n \n01 x=\"ITVEDANT\" \n02 print(\"%20s\",x)", "options": ["A) 20 blank spaces after “ITVEDANT”", "B) 20 blank spaces before “ITVEDANT”", "C) None of these.", "D) –"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "В строке print('%20s', x) через запятую переданы два аргумента. Форматирование % не применяется, выводится '%20s ITVEDANT' (None of these)."}, {"id": 173, "number": 173, "section": "3. Input and Output Operations", "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations", "type": "single", "question": "What will be the output of the following python program? \n \n01 d='{a}{b}{a}'.format(a='hello',b='world') \n02 print(d)", "options": ["A) hello world", "B) hello world hello", "C) helloworldhello", "D) hello hello world"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Шаблон '{a}{b}{a}' без пробелов подставляет a='hello', b='world', a='hello' -> 'helloworldhello'."}, {"id": 174, "number": 174, "section": "3. Input and Output Operations", "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations", "type": "single", "question": "Consider the following statements: \n \n1. print('V:{:.2f}'.format(123.45678)) will print to the console V:123.46  \n2. print('V:{:.2f}'.format(123.4)) will print to the console V:123.40  \n3. print('V:{:8.2f}'.format(1.45678)) will print to the console V:1.46  \n4. print('V:{:08.2f}'.format(1.45678)) will print to the console V:00001.46 \n \nWhich if the above statements are True?", "options": ["A) only 1 and 2", "B) only 1 and 3", "C) only 2 and 4", "D) 1, 2, 3 and 4 \n\n4. Code Documentation and Structure \n4.1 Document code segments \n• Use indentation, white space, comments, and docstrings; generate documentation by using pydoc"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Все 4 утверждения о форматировании чисел через {: .2f}, {:08.2f} и т.д. верны."}, {"id": 175, "number": 175, "section": "4. Code Documentation and Structure", "subtopic": "4.1 Document code segments", "type": "single", "question": "You develop a application for your company. You want to add notes to your code so other team members will understand \nit. What should you do?", "options": ["A) Place the notes after the last line of code separated by a blank line.", "B) Place the notes inside of parentheses on any line.", "C) Place the notes after the # sign on any line.", "D) Place the notes before the first line of code separated by a blank line."], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 176, "number": 176, "section": "4. Code Documentation and Structure", "subtopic": "4.1 Document code segments", "type": "single", "question": "You are writing an application that uses the sqrt function. The program must reference the function using the name \nsquareRoot. You need to import the function. Which code segment should you use?", "options": ["A) from math import sqrt as squareRoot", "B) from math.sqrt as squareRoot", "C) import math.sqrt as squareRoot", "D) import sqrt from math as squareRoot"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 177, "number": 177, "section": "4. Code Documentation and Structure", "subtopic": "4.1 Document code segments", "type": "single", "question": "Woodgrove Bank is migrating their legacy bank transaction code to Python. You have been hired to document the \nmigrated code. Which documentation syntax is correct?", "options": ["A) Returns the current balance of the bank \naccount \n  def get_balance(): \n    return balance", "B) def get_balance(): \n    /*Returns the current balance of the bank \naccount*/ \n    return balance", "C) //Returns the current balance of the bank \naccount \n  def get_balance(): \n    return balance", "D) def get_balance(): \n    #Returns the current balance of the bank \naccount \n    return balance"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Многострочные строки документации (docstrings) заключаются в тройные кавычки ''' или \"\"\". Они доступны через атрибут __doc__."}, {"id": 178, "number": 178, "section": "4. Code Documentation and Structure", "subtopic": "4.1 Document code segments", "type": "yes_no", "question": "You create a function to calculate the power of a number. You need to ensure that the function ¡s documented with \ncomments. You create the following code. Line numbers are included for reference only. \n01 # The calc_power function calculates exponents \n02 # x is the base \n03 # y is the exponent \n04 # The value of x raised to the y power is returned \n05 def calc_power(x, y): \n06   comment = \"#Return the value\" \n07   return x**y 4 raise x to the y power \n \nFor each of the following statements, select Yes if the statement is true. Otherwise, select No. \n \nYes No \nLines 01 through 04 will be ignored for syntax checking. 〇 〇 \nThe pound sign (#) is optional for lines 02 and 03.            〇 〇 \nThe string in line 06 will be interpreted as a comment.     〇 〇 \nLine 07 contains an inline comment.                                 〇 〇 \n\n4.2 Construct and analyze code segments that include function definitions \n• Call signatures, default values, return, def, pass", "images": [], "answer_display": "1: Yes, 2: No, 3: No, 4: No", "explanation": "1) Строки с # являются комментариями и игнорируются интерпретатором (Yes). 2) Символ # обязателен для каждой строки комментария (No). 3) В строке 06 строка присваивается переменной, а не является комментарием (No). 4) В строке 07 пропущен # перед текстом, это синтаксическая ошибка (No).", "statements": ["Lines 01 through 04 will be ignored for syntax checking.", "The pound sign (#) is optional for lines 02 and 03.", "The string in line 06 will be interpreted as a comment.", "Line 07 contains an inline comment."], "options": ["Yes", "No"], "correct_answer": ["Yes", "No", "No", "No"]}, {"id": 179, "number": 179, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "multiple", "question": "Adventure Works Cycles is creating a program that allows customers to log the number of miles biked. The program will \nsend messages based on how many miles the customer logs. You create the following code. Line numbers are included for \nreference only. \n01 \n02   name = input(\"What is your name? \") \n03   return name \n04 \n05   calories = miles * calories_per_mile \n06   return calories \n07 distance = int(input(\"How many miles did you bike this week? \")) \n08 burn_rate = 50 \n09 biker = get_name() \n10 calories_burned = calc_calories(distance, burn_rate) \n11 print(biker, \", you burned about\", calories_burned, \"calories.\") \n \nYou need to define the two required functions. Which code segments should you use for line 01 and line 04? Each correct \nanswer presents part of the solution. Choose two.", "options": ["A) 01 def get_name():", "B) 01 def get_name(biker):", "C) 01 def get_name(name):", "D) 04 def calc_calories():", "E) 04 def calc_calories(miles, burn_rate): \nF. 04 def calc_calories(miles, calories_per_mile)"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Определение функции в Python начинается с ключевого слова def."}, {"id": 180, "number": 180, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "yes_no", "question": "You are writing a function that increments the player score in a game. \nThe function has the following requirements: \n \nIf no value is specified for points, then points start at one \n \nIf bonus is True, then points must be doubled \nYou write the following code. Line numbers are included for reference only. \n01 def increment_score(score, bonus, points): \n02   if bonus == True: \n03      points = points * 2 \n04   score = score + points \n05   return score \n06 points = 5 \n07 score = 10 \n08 new_score = increment_score(score, True, points) \nFor each of the following statements, select Yes if the statement is true. \nOtherwise, select No. \n        Yes No \nTo meet the requirements, line 01 must be changed to the following:                                            〇 〇 \ndef increnient_score(score, bonus, points = 1): \nOnce any parameter is defined with a default value, any parameters to                                          〇 〇 \nthe right must also be defined with default values. \nIf the function is called with only two parameters, the value of the third parameter will be None. 〇 〇 \nLine 03 will also modify the value of the variable points declared at line 06.                                  〇 〇", "images": [], "answer_display": "1: Yes, 2: Yes, 3: No, 4: No", "explanation": "1) Значение по умолчанию задается как points = 1 (Yes). 2) В Python после параметра со значением по умолчанию все последующие параметры тоже должны иметь значения по умолчанию (Yes). 3) При пропуске параметра используется значение по умолчанию 1, а не None (No). 4) Локальная переменная points не меняет внешнюю переменную (No).", "statements": ["To meet the requirements, line 01 must be changed to: def increment_score(score, bonus, points = 1):", "Once any parameter is defined with a default value, any parameters to the right must also be defined with default values.", "If the function is called with only two parameters, the value of the third parameter will be None.", "Line 03 will also modify the value of the variable points declared at line 06."], "options": ["Yes", "No"], "correct_answer": ["Yes", "Yes", "No", "No"]}, {"id": 181, "number": 181, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "multiple", "question": "You are writing a function in Python that must meet the following requirements: \n \nThe function accepts a list and a string as parameters. \n \nThe function must search for the string in the list. \n \nIf the string is found in the list, the function must print a message indicating that the string was found and then stop \niterating through the list. \n \nIf the string is not found, the function must print a message indicating that the string was not found in the list. \nIn which order should you arrange the code segments to develop the solution? To answer, move all code segments from \nthe list of code segments to the answer area and arrange them in the correct order.", "options": ["A) D,A,B,C,E", "B) D,B,A,C,E", "C) B,D,A,C,E", "D) D,A,B,E,C"], "correct_answer": [3, 0, 3, 3, 0, 3, 0, 3, 0, 0, 3, 0], "answer_display": "def safe_divide(numerator, denominator): if denominator == 0: return None else: return numerator / denominator", "images": ["images/qimg_p60_1_284.png", "images/qimg_p60_2_285.png", "images/qimg_p60_3_286.png"], "explanation": "Функция безопасного деления: проверяет равенство знаменателя нулю и возвращает None, иначе выполняет деление."}, {"id": 182, "number": 182, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "single", "question": "You are developing a Python application for an online game. You need to create a function that meets the following \ncriteria: \n \nThe function is named update_score \n \nThe function receives the current score and a value \n \nThe function adds the value to the current score \n \nThe function returns the new score \nHow should you complete the code? To answer, select the appropriate code segments in the answer area: \n \n[1]\n[2]\n \n   current += value \n   [3]\n \n \n[1]: \n    [2]: \n    [3]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: def, 2: return", "images": ["images/qimg_p60_4_119.png", "images/qimg_p60_5_287.png", "images/qimg_p60_6_288.png", "images/qimg_p60_7_289.png"], "explanation": "Синтаксис объявления функции: def func_name(): ... return result."}, {"id": 183, "number": 183, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "single", "question": "You are developing a Python application for online game. You need to create a function that meets the following criteria: \n \nThe function is named update_score \n \nThe function receives the current score and a value. \n \nThe function adds the value to the current score. \n \nThe function returns the new score. \n \nWhich of the following is valid function to fulfill this requirement?\n\n```python\nupdate_score(score,value): \n   new_score=score+value \n   return new_score \ndef update_score(score,value): \n   new_score=score+value \n   return new_score \n def update_score(score,value): \n     new_score=score+value \n     pass new_score \n def update_score(): \n    new_score=score+value \n    return new_score\n```", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 184, "number": 184, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "single", "question": "A coworker wrote a program that inputs names into a database. Unfortunately, the program reversed the letters in each \nname. You need to write a Python function that outputs the characters in a name in the correct order \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \n#Function reverses characters in a string. \n#returns new string in reversed order. \ndef reverse_name(backwards_name): \n   forward_name = '' \n      for index in [1]\n \n         forward_name += [2]\n \n      return forward_name \nprint(reverse_name(\"leinad\"))   #test_ case \n \n[1]: \n   [2]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: try, 2: except", "images": ["images/qimg_p61_1_119.png", "images/qimg_p61_2_293.png", "images/qimg_p61_3_294.png"], "explanation": "Блок try-except для обработки возможных исключений при вводе данных."}, {"id": 185, "number": 185, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "single", "question": "You are writing a function to perform safe division. You need to ensure that a denominator and numerator are passed to \nthe function and that the denominator is not zero. \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \ndef safe_divide(numerator, denominator): \n   [1]\n \n      print(‚A required value is missing.‛) \n   [2]\n \n      print(‛The denominator is zero.‛) \n   else: \n      return numerator I denominator \n[1]:\n    [2]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: try, 2: except ZeroDivisionError, 3: return None", "images": ["images/qimg_p61_4_295.png", "images/qimg_p61_5_296.png"], "explanation": "Перехват ошибки деления на ноль ZeroDivisionError в блоке except."}, {"id": 186, "number": 186, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "single", "question": "Wingtip Toys is creating an interactive Times Table Helper program intended for elementary school children. \nYou need to complete a function that computes and displays all multiplication table combinations from 2 to 12. \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \n#Displays times tables 2 - 12 \ndef times_tables(): \n   [1]\n \n      [2]\n \n         print( row*col, end=\" \") \n      print() \n#main \ntimes_tables() \n \n[1]:\n    [2]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: for i in range(1, 11): 2: print(f'{n} x {i} = {n * i}')", "images": ["images/qimg_p62_1_119.png", "images/qimg_p62_2_300.png", "images/qimg_p62_3_301.png"], "explanation": "Цикл for по диапазону range(1, 11) для таблицы умножения."}, {"id": 187, "number": 187, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "single", "question": "Consider the following code: \n \ndef get_score(total=0,valid=0): \n   result=int(valid)/int(total) \n   return result \n \nFor which of the function calls we will get Error?", "options": ["A) score = get_score('40', '4')", "B) score = get_score(0, 10)", "C) score = get_score(40, 4)", "D) score = get_score(40)"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 188, "number": 188, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "single", "question": "Consider the code \n \n1) def get_names(): \n2) names=['Sunny','Bunny','Chinny','Vinny','Pinny'] \n3) return names[2:] \n4) \n5) def update_names(elements): \n6) new_names=[] \n7) for name in elements: \n8) new_names.append(name[:3].upper()) \n9) return new_names \n10) \n11) print(update_names(get_names())) \n \nWhat is the result?", "options": ["A) ['CHI', 'VIN', 'PIN']", "B) ['VIN', 'PIN']", "C) ['CH', 'VI', 'PI']", "D) ['SU', 'BU']"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 189, "number": 189, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "single", "question": "Consider the following code \n1) def my_list(x): \n2) lst.append(a) \n3) return lst \n4) \n5) my_list('chicken') \n6) my_list('mutton') \n7) print(my_list('fish')) \n \nto print the following to the console \n \n['chicken','mutton','fish'] \n \nx should be replaced with", "options": ["A) a,lst=[]", "B) a,lst=()", "C) a,lst={}", "D) a,lst=None"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 190, "number": 190, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "multiple", "question": "Consider the following code: \n \n1) def f1(x=0,y=0): \n2) return x+y \n \nWhich of the following method calls are valid?", "options": ["A) f1()", "B) f1('10','20')", "C) f1(10)", "D) f1('10')"], "correct_answer": [0, 1, 2], "answer_display": "A,B,C", "images": [], "explanation": "Правильный ответ: A,B,C."}, {"id": 191, "number": 191, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "multiple", "question": "Consider the following code: \n \n1) def f1(x=0,y=0): \n2) return x*y \n \nWhich of the following method calls are valid?", "options": ["A) f1()", "B) f1('10','20')", "C) f1(10)", "D) f1('10')"], "correct_answer": [0, 2, 3], "answer_display": "A,C,D", "images": [], "explanation": "Правильный ответ: A,C,D."}, {"id": 192, "number": 192, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "single", "question": "Consider the following code: \n \n1) numbers=[100,20,10,70,50,60,40,30,90,80] \n2) #Insert Code Here \n3) print('The highest Number:{} and Least Number:{}'.format(high,low)) \n \nWhich of the following code should be inserted to print Highest Number as 100 and Least Number as 10", "options": ["A) 1) def find_numbers(): \n2)   numbers.sort() \n3)   return numbers[0],numbers[-1] \n4) low,high=find_numbers()", "C) 1) def find_numbers(): \n2)   numbers.sort() \n3)   return numbers[0],numbers[-1] \n4) low=find_numbers() \n5) high=find_numbers()", "B) 1) def find_numbers(): \n2)   numbers.sort() \n3)   return numbers[0],numbers[len(numbers)] \n4) low,high=find_numbers()", "D) 1) def find_numbers(): \n2)   numbers.sort() \n3)   return numbers[2],numbers[0] \n4) low,high=find_numbers()"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 193, "number": 193, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "single", "question": "Consider the code: \n \n1) numbers=[100,20,10,70,50,60,40,30,90,80] \n2) \n3) def find_numbers(): \n4)   numbers.sort() \n5)   return numbers[0],numbers[-1] \n6) \n7) low=find_numbers() \n8) high=find_numbers() \n9) #Line-1 \n \nTo print 10 100 to the console which of the following code we \nhave to take at Line-1", "options": ["A) print(low,high)", "B) print(low[0],high[-1])", "C) print(low[-1],high[0])", "D) print(low[2],high[0])"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 194, "number": 194, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "single", "question": "Consider the code: \n \n1) def calculate(amount=6,factor=3): \n2)   if amount>6: \n3)     return amount*factor \n4)   else: \n5)     return amount*factor*2 \n \nWhich of the following function calls returns 30", "options": ["A) calculate()", "B) calculate(10)", "C) calculate(5,2)", "D) calculate(1)"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 195, "number": 195, "section": "4. Code Documentation and Structure", "subtopic": "4.2 Construct and analyze code segments that include function definitions", "type": "single", "question": "Consider the following code \n1) def fib_seq(n): \n2)   if n==0: \n3)     return 0 \n4)   elif n==1: \n5)     return 1 \n6)   else: \n7)     return fib_seq(n-1)+fib_seq(n-2) \n8) for i in range(7): \n9)   print(fib_seq(i),end=',') \n \nWhat is the result?", "options": ["A) 0,1,1,2,3,5,8,", "B) 0,1,2,4,8,16,32,", "C) 0,1,0,2,0,4,0,", "D) None of these"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 196, "number": 196, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.1 Analyze, detect, and fix code segments that have errors", "type": "single", "question": "Tailspin Toys uses Python to control its new toy Happy Clown. The program has errors that cause the clown to run around \nin an infinite circle. You have been hired to help debug the following Happy Clown code. Line numbers are included for \nreference only. \n01 import math \n02 #default motion for happy clown \n03 power = True \n04 move = 0 \n05 while(power): \n06   if move == 0: \n07     turnValue = math.pi/move \n08     move+=5 \n09   else: \n10     turnValue = 0 \n11     move = 0", "options": ["A) Line 05 has a syntax error because it should read (power == True).", "B) Line 08 has a syntax error because + = is an invalid statement.", "C) Line 07 causes a runtime error due to division by zero.", "D) Line 05 causes a runtime error because the expression is incomplete."], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Для исправления ошибки бесконечного цикла необходимо убедиться, что счетчик цикла корректно обновляется на каждой итерации."}, {"id": 197, "number": 197, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.1 Analyze, detect, and fix code segments that have errors", "type": "single", "question": "Consider the code \n \ndef area(b,w): \n   return B*w \nprint(area(10,20)) \n \nWhat is the result?", "options": ["A) AttributeError will be raised at runtime", "B) IndentationError will be raised at runtime", "C) NameError will be raised at runtime", "D) 200"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 198, "number": 198, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.1 Analyze, detect, and fix code segments that have errors", "type": "single", "question": "Consider the code: \n \n1) data=[] \n2) def get_data(): \n3)   for i in range(1,5): \n4)     marks=input('Enter Marks:') \n5)     data.append(marks) \n6) \n7) def get_avg(): \n8)   sum=0 \n9)   for mark in data: \n10)    sum += mark \n11)  return sum/len(data) \n12) get_data() \n13) print(get_avg()) \n \nFor the input: 10,20,30,40 what is the result?", "options": ["A) 25", "B) 25.0", "C) NameError is thrown at runtime", "D) TypeError is thrown at runtime"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 199, "number": 199, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.1 Analyze, detect, and fix code segments that have errors", "type": "single", "question": "Consider the code: \n \n1) a=10 \n2) b=0 \n3) try: \n4)   print(a/b) \n \nWhich of the following except block print the name of exception which is raised,i.e exception class name?", "options": ["A) 1) except ZeroDivisionError as e: \n2) print('Exception Type:',e.__class__.__name__)", "C) 1) except ZeroDivisionError as e: \n2) print('Exception Type:',e)", "B) 1) except ZeroDivisionError as e: \n2) print('Exception Type:',type(e).__name__)", "D) All of these \n \n \nAnswers : A,B"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Операция с несовместимыми типами данных (например, сложение числа и строки) вызывает исключение TypeError."}, {"id": 200, "number": 200, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.1 Analyze, detect, and fix code segments that have errors", "type": "single", "question": "Which of the following is valid way of creating our own custom exception?", "options": ["A) B)", "C) D)  \nclass MyException: \npass \n \nclass MyException(): \npass \n \nclass MyException(Exception): \npass \n \nIt is not possible to define custom \nexceptions in python"], "correct_answer": [0], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 201, "number": 201, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "Consider the code \n \n1) x=int(input('Enter First Number:')) \n2) y=int(input('Enter Second Number:')) \n3) try: \n4) print(x/y) \n \nWhich of the following is valid except block that handles both ZeroDivisionError and ValueError", "options": ["A) except(ZeroDivisionError,ValueError) from e: \nprint(e)", "C) except(ZeroDivisionError | ValueError) as e: \nprint(e)", "B) except(ZeroDivisionError,ValueError) as e: \nprint(e)", "D) except(ZeroDivisionError, ValueError as e): \nprint(e)"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 202, "number": 202, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "You write the following code: \nimport sys \ntry: \nfile_in = open(\"in.txt\", 'r') \nfile_out = open(\"out.txt\", 'w+') \nexcept IOError: \nprint('cannot open', file_name) \nelse: \ni = 1 \nfor line in file_in: \nprint(line. rstrip()) \nfile_out.write(\"line \" + str(i) + \": \" + line) \ni = i + 1 \nfile_in.close() \nfile_out.close () \nThe out.txt file does not exist. You run the code. The code will execute without error. Review the underlined text. If it \nmakes the statement correct, select “No change is needed.” If the statement is incorrect, select the answer choice that \nmakes the statement correct.", "options": ["A) No change is needed.", "B) The code runs but generates a logic error.", "C) The code will generate a runtime error.", "D) The code will generate a syntax error."], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Блок try-except перехватывает исключение и позволяет программе продолжить выполнение без аварийного завершения."}, {"id": 203, "number": 203, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "yes_no", "question": "For each of the following statements, select Yes if the statement is true. Otherwise, select No. \nYes No \nA try statement can have one or more except clauses.                      〇 〇 \nA try statement can have a finally clause without an except clause. 〇 〇 \nA try statement can have a finally clause and an except clause.        〇 〇 \nA try statement can have one or more finally clauses.                       〇 〇", "images": [], "answer_display": "1: Yes, 2: Yes, 3: Yes, 4: No", "explanation": "1) Блок try может содержать несколько предложений except (Yes). 2) Конструкция try-finally допустима без except (Yes). 3) Конструкция try-except-finally допустима (Yes). 4) Предложение finally может быть только одно (No).", "statements": ["A try statement can have one or more except clauses.", "A try statement can have a finally clause without an except clause.", "A try statement can have a finally clause and an except clause.", "A try statement can have one or more finally clauses."], "options": ["Yes", "No"], "correct_answer": ["Yes", "Yes", "Yes", "No"]}, {"id": 204, "number": 204, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "You are creating a program that accepts user input. The program must cast the input into an integer. You must properly \nhandle the error if the code cannot cast the input to an integer. \nHow should you complete the code? To answer, select the appropriate code segments in the answer area. \n \nwhile True: \n   [1]\n \n      x = int(input(‛Please enter a number: ‚)) \n      break \n   [2]\n ValueError: \n      print(‛Not a valid number. Try again...‚) \n[1]: \n     [2]:", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "1: try, 2: except ValueError, 3: else", "images": ["images/qimg_p67_1_119.png", "images/qimg_p67_2_318.png"], "explanation": "Блок try для ввода числа, except ValueError для обработки нечислового ввода, else выполняется при успешном вводе."}, {"id": 205, "number": 205, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "When will the else part of try-except-else be executed?", "options": ["A) always", "B) when no exception occurs", "C) when error exception", "D) when an exception occurs in to except block"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Блок else в конструкции try-except-else выполняется только тогда, когда в блоке try НЕ возникло никаких исключений."}, {"id": 206, "number": 206, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "Is the following Python code valid? \n \ntry : \n   Try block \nexcept: \n   Except block \nfinally : \n   Finally Block", "options": ["A) no, there is no such thing as finally", "B) no, finally cannot be used with except", "C) no, finally must come before except", "D) yes"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Конструкция try-finally без except в Python является полностью валидной (Yes)."}, {"id": 207, "number": 207, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "What will be the output of the following python code? \ndef foo(): \n  try: \n    return 1 \n  finally: \n    return 2 \nk = foo() \nprint(k)", "options": ["A) 1", "B) 2", "C) 3", "D) error, there is more than one return statement in a single try-finally block"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "При делении на 0 возбуждается ZeroDivisionError, выполняется соответствующий блок except, а затем блок finally."}, {"id": 208, "number": 208, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "Consider the code \n \ndef f1(): \n    try: \n        return 1 \n    finally: \n        return 2   \n     \nx = f1() \nprint(x) \n \nWhat is the result?", "options": ["A) 1", "B) 2", "C) print both 1 and 2", "D) Error, because more than one return statement is not allowed"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Блок finally выполняется ВСЕГДА, независимо от того, произошло исключение или нет."}, {"id": 209, "number": 209, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "Consider the code: \nf = open('abc.txt') \nprint(f.read()) \nf.close() \n \nWe required to add exception handling code to handle FileNotFoundError. \nWe of the following is appropriate code for this requirement? \nCode A: \nCode B: \nCode C: \nf = None \ntry: \n    f = open('abc.txt') \nexcept FileNotFoundError:   \n    print(\"File does not exist\") \nelse: \n    print(f.read()) \nfinally: \n    if f is not None:   \n        f.close() \nf = None \ntry: \n    f = open('abc.txt') \nexcept FileNotFoundException:   \n    print(\"File does not exist\") \nelse: \n    print(f.read()) \nfinally: \n    if f is not None: \n        f.close() \nf = None \ntry: \n    f = open('abc.txt') \nelse:   \n    print(f.read()) \nexcept FileNotFoundError: \n    print(\"File does not exist\") \nfinally: \n    if f is not None: \n        f.close()", "options": ["A) Code A", "B) Code B", "C) Code C", "D) None of these"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 210, "number": 210, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "Consider the code: \n \nimport sys \n \ntry: \n    file_in = open('in.txt', 'r') \n    file_out = open('out.txt', 'w+') \nexcept IOError: \n    print('Cannot open file:', 'in.txt') \nelse: \n    i = 1 \n    for line in file_in: \n        print(line.rstrip())   \n        file_out.write(str(i) + \": \" + line)   \n        i += 1   \n    file_in.close() \n    file_out.close() \n \nAssume that in.txt file is available but out.txt file does not exist. \nWhich of the following is true about this code?", "options": ["A) The code runs, but generates logical error", "B) This program will copy data from in.txt to out.txt", "C) The code will generates a runtime error", "D) The code will generate a syntax error"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 211, "number": 211, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "Consider the file abc.txt has the following content: \n \nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna \naliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n \nWe have to write python code to read total data and print to the console. \n \ntry: \n  f=open('abc.txt','r') \n  //Line-1 \nexcept: \n  print('Unable to open the file') \n  print(data) \n \nWhich code should be inserted at Line-1 to meet the given requirement?", "options": ["A) data = f.readlines()", "B) data = f.readline()", "C) data = f.read()", "D) data = f.load()"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 212, "number": 212, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "The base class for all exceptions in python is:", "options": ["A) Exception", "B) ExceptioNBase", "C) BaseException", "D) ArithmeticError"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Базовым классом для всех стандартных исключений является BaseException (или Exception для обычных исключений прикладного кода)."}, {"id": 213, "number": 213, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "Consider the code: \n \na=10 \nb=20 \nc='30' \nresult=a+b+c \n \nWhat is the result?", "options": ["A) 102030", "B) 3030", "C) TypeError", "D) ArithmeticError"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 214, "number": 214, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "Consider the code: \n1) try: \n2)   print('try') \n3) except: \n4)   print('except') \n5) else: \n6)   print('else') \n7) finally: \n8)   print('finally') \n \nWhat is the result?", "options": ["A) B)", "C) D) \ntry \nexcept \nelse \nfinally \n \ntry \nelse \nfinally \n \ntry \nexcept \nfinally \n \ntry \nfinally"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 215, "number": 215, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "Consider the code \n \n1) try: \n2)   print('try') \n3)   print(10/0) \n4) except: \n5)   print('except') \n6) else: \n7)   print('else') \n8) finally: \n9)   print('finally') \n \nWhat is the result?", "options": ["A) B)", "C) D) \ntry \nexcept \nelse \nfinally \n \ntry \nelse \nfinally \n \ntry \nexcept \nfinally \n \ntry \nfinally"], "correct_answer": [0], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 216, "number": 216, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "Consider the code \n1) try: \n2)   print('try') \n3)   print(10/0) \n4) else: \n5)   print('else') \n6) except: \n7)   print('except') \n8) finally: \n9)   print('finally') \n \nWhat is the result?", "options": ["A) B)", "C) D) \ntry \nexcept \nelse \nfinally \ntry \nelse \nfinally \n \ntry \nexcept \nfinally \n \nSyntaxError: invalid syntax"], "correct_answer": [0], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 217, "number": 217, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "Consider the code: \n \n1) prices=[30.5,'40.5',10.5] \n2) total=0 \n3) for price in prices: \n4)    total += price \n5) print(total) \n \nWhile executing this code we are getting the following error: \n \nTraceback (most recent call last): \nFile \"test.py\", line 4, in <module> \ntotal += price \nTypeError: unsupported operand type(s) for +=: 'float' and 'str' \n \nWhich of the following code should be used to fix this error?", "options": ["A) total += str(price)", "B) total += int(price)", "C) total += float(price)", "D) total = total+price"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 218, "number": 218, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "multiple", "question": "Consider the code: \n \n1) prices=[10,'20',30,'40'] \n2) total=0 \n3) for price in prices: \n4)   total +=price \n5) print(total) \n \nWhile executing this code we are getting the following error \n \nTraceback (most recent call last): \nFile \"test.py\", line 4, in <module> \ntotal +=price \nTypeError: unsupported operand type(s) for +=: 'int' and 'str' \n \nBy using which of the following code segments we can fix this problem(Choose 2)?", "options": ["A) total += str(price)", "B) total += int(price)", "C) total += float(price)", "D) total = total+price"], "correct_answer": [1, 0, 3, 2], "answer_display": "B and C", "images": [], "explanation": "Правильный ответ: B and C."}, {"id": 219, "number": 219, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.2 Analyze and construct code segments that handle exceptions", "type": "single", "question": "Consider the code \n1) courses={1:'Java',2:'Scala',3:'Python'} \n2) for i in range(1,5): \n3) print(courses[i]) \n \nWhile executing this code we are getting the following error: \n \nTraceback (most recent call last): \nFile \"test.py\", line 3, in <module> \nprint(courses[i]) \nKeyError: 4 \n \nBy using which of the following code segments we can fix this problem ? \nA \nB \nC \ncourses={1:'Java',2:'Scala',3:'Python'} \nfor i in range(1,5): \n   if i in courses: \n      print(courses[i]) \ncourses={1:'Java',2:'Scala',3:'Python'} \nfor i in courses: \n   print(courses[i]) \ncourses={1:'Java',2:'Scala',3:'Python'} \nfor i in range(1,4): \n   print(courses[i]) \nD \n \n \nAll of these", "options": ["A) Вариант A", "B) Вариант B", "C) Вариант C", "D) Вариант D"], "correct_answer": [0], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 220, "number": 220, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.3 Perform unit testing", "type": "single", "question": "What will be the output of the following python code? \n \nx =30 \ny = 10 \nassert x > y ,’x is smaller than y’", "options": ["A) Assertion Error", "B) 10 8", "C) No output", "D) 108"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Условие assert x > y истинно (30 > 10). Когда условие в assert истинно, инструкция ничего не выводит и выполнение продолжается без ошибок."}, {"id": 221, "number": 221, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.3 Perform unit testing", "type": "single", "question": "Which type of exception will be raised if we are trying to call a method on the inappropriate object?", "options": ["A) IndexError", "B) TypeError", "C) AttributeError", "D) None of these"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 222, "number": 222, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.3 Perform unit testing", "type": "single", "question": "Consider the code: \nf=open('abc.txt') \nf.readall() \n \nWhich exception will be raised?", "options": ["A) AttributeError", "B) EOFError", "C) SystemError", "D) SyntaxError"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 223, "number": 223, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.3 Perform unit testing", "type": "single", "question": "You write a function that reads a data file and prints each line of the file. You write the following code. Line numbers are \nincluded for reference only. \n01 def read_file(file): \n02     line = None \n03     if os.path.isfile(file): \n04         data = open(file, 'r')  \n05         for line in data: \n06             print(line) \nWhen you run the program, you receive an error on line 03. \nWhat is causing the error?", "options": ["A) The path method does not exist in the os object.", "B) The isfile method does not exist in the path object.", "C) You need to import the os library.", "D) The isfile method does not accept one parameter."], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Для перехвата ошибок при работе с файлами используется FileNotFoundError или OSError."}, {"id": 224, "number": 224, "section": "5. Troubleshooting and Error Handling", "subtopic": "5.3 Perform unit testing", "type": "single", "question": "What is the type of sys.argv?", "options": ["A) set", "B) list", "C) tuple", "D) string"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "sys.argv в Python — это список строк (list of str), содержащий аргументы командной строки."}, {"id": 225, "number": 225, "section": "6. Operations using Modules and Tools", "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules", "type": "single", "question": "Which of the following isn‟t true about main modules?", "options": ["A) When a python file is directly executed, it is considered main module of a program", "B) Main modules may import any number of modules", "C) Special name given to main modules is: _main_", "D) Other main modules can import main modules"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Когда модуль запускается напрямую как главный скрипт, специальная переменная __name__ принимает значение '__main__' (а не имя файла)."}, {"id": 226, "number": 226, "section": "6. Operations using Modules and Tools", "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules", "type": "single", "question": "From sys module, by using which variable we can access command line arguments?", "options": ["A) argv", "B) argsv", "C) args", "D) arguments"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Список аргументов командной строки доступен через sys.argv."}, {"id": 227, "number": 227, "section": "6. Operations using Modules and Tools", "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules", "type": "single", "question": "Given the command invocation: \n \npython tests.py Itvedant \n \nWhich of the following code prints 'Itvedant' to the console?", "options": ["A) from sys import argv; print(argv[1])", "B) from sys import argv; print(argv[0])", "C) from sys import args; print(args[0])", "D) from sys import args; print(args[1])"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 228, "number": 228, "section": "6. Operations using Modules and Tools", "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules", "type": "single", "question": "Consider the code: \n \n1) from sys import argv \n2) print(argv[0]) \n \nand given the command invocation: \n \npy test.py DURGASOFT \n \nWhat is the result?", "options": ["A) DURGASOFT", "B) test.py", "C) IndexError will be thrown at runtime", "D) ImportError will be thrown at runtime"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 229, "number": 229, "section": "6. Operations using Modules and Tools", "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules", "type": "single", "question": "Consider the code: \n \n1) from sys import argv \n2) print(argv[1]+argv[2]) \n \nand given the command invocation: \n \npy test.py 10 20 \n \nWhat is the result?", "options": ["A) 30", "B) 1020", "C) IndexError will be thrown at runtime", "D) ImportError will be thrown at runtime"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}, {"id": 230, "number": 230, "section": "6. Operations using Modules and Tools", "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules", "type": "single", "question": "Consider the code : \n \n1) from sys import argv \n2) sum=0 \n3) for i in range(2,len(argv)): \n4) sum += float(argv[i]) \n5) print(\"The Average for {0} is {1:.2f}\".format(argv[1],sum/(len(argv)-2))) \n \nWhich of the following command invocations will generate the output: \n \nThe Average for Durga is 20.00", "options": ["A) py test.py Durga 10 20 30", "B) py test.py Durga 10 20", "C) py test.py Durga 10", "D) py test.py 20"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 231, "number": 231, "section": "6. Operations using Modules and Tools", "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules", "type": "single", "question": "You need to write code that generates a random float with a minimum value of 0.0 and a maximum value of 1.0. \nWhich statement should you use?", "options": ["A) random.randrange()", "B) random.randrange(0.0, 1.0)", "C) random.random()", "D) random.randint(0, 1)"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "random.uniform(a, b) генерирует случайное вещественное число float в диапазоне от a до b включительно."}, {"id": 232, "number": 232, "section": "6. Operations using Modules and Tools", "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules", "type": "multiple", "question": "You are writing code that generates a random integer with a minimum value of 5 and a maximum value of 11. \nWhich two functions should you use? Each correct answer presents a complete solution. Choose two.", "options": ["A) random.randint(5, 11)", "B) random.randrange(5, 12, 1)", "C) random.randint(5, 12)", "D) random.randrange(5, 11, 1)"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "random.randint(a, b) генерирует случайное целое число в диапазоне [a, b] включительно."}, {"id": 233, "number": 233, "section": "6. Operations using Modules and Tools", "subtopic": "6.2 Solve complex computing problems by using built-in modules", "type": "multiple", "question": "You work on a team that is developing a game for AdventureWorks. You need to write code that generates a random \nnumber that meets the following requirements: \n \nThe number is a multiple of 5. \n \nThe lowest number is 5. \n \nThe highest number is 100. \nWhich two code segments will meet the requirements? Each correct answer presents a complete solution. Choose two.", "options": ["A) from random import randrange \n          print(randrange(5, 100, 5))", "B) from random import randint \n          print(randint(1, 20) * 5)", "C) from random import randint \n          print(randint(0, 20) * 5)", "D) from random import randrange \n         print(randrange(0, 100, 5))"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "random.choice(sequence) возвращает случайный элемент из переданной непустой последовательности."}, {"id": 234, "number": 234, "section": "6. Operations using Modules and Tools", "subtopic": "6.2 Solve complex computing problems by using built-in modules", "type": "multiple", "question": "You are creating a function that manipulates a number. The function has the following requirements: \n \nA float is passed into the function \n \nThe function must take the absolute value of the float \n \nAny decimal points after the integer must be removed \nWhich two math functions should you use? Each correct answer is part of the solution. Choose two.", "options": ["A) math.ceil(x)", "B) math.fmod(x)", "C) math.floor(x)", "D) math.frexp(x)", "E) math.fabs(x)"], "correct_answer": [4, 0, 3, 2], "answer_display": "E and C", "images": [], "explanation": "Правильный ответ: E and C."}, {"id": 235, "number": 235, "section": "6. Operations using Modules and Tools", "subtopic": "6.2 Solve complex computing problems by using built-in modules", "type": "single", "question": "What will be the output of the following Python code? \n \nfrom math import factorial \nprint(math.factorial(5))", "options": ["A) 120", "B) Nothing is printed", "C) Error, method factorial doesn‟t exist in math module", "D) Error, the statement should be: print(factorial(5))"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Была выполнена инструкция from math import factorial. Функция была импортирована напрямую в текущую область видимости, поэтому вызов должен быть print(factorial(5)), а вызов math.factorial(5) вызовет NameError, так как имя 'math' не было импортировано."}, {"id": 236, "number": 236, "section": "6. Operations using Modules and Tools", "subtopic": "6.2 Solve complex computing problems by using built-in modules", "type": "single", "question": "You are writing an application that uses the pow() function. The program must reference the function using the name \npower. You need to import the function. \nWhich code segment should you use?", "options": ["A) import math.pow as power", "B) import pow from math as power", "C) from math import pow as power", "D) from math.pow as power."], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный синтаксис импорта с переименованием: from math import pow as power."}, {"id": 237, "number": 237, "section": "6. Operations using Modules and Tools", "subtopic": "6.2 Solve complex computing problems by using built-in modules", "type": "single", "question": "What is returned by the math.ceil(10.4)?", "options": ["A) 11", "B) 10", "C) 11.0", "D) 10.0"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Функция math.ceil(x) округляет число вверх до ближайшего целого. math.ceil(10.4) возвращает 11 (тип int в Python 3)."}, {"id": 238, "number": 238, "section": "6. Operations using Modules and Tools", "subtopic": "6.2 Solve complex computing problems by using built-in modules", "type": "single", "question": "What will be the output of the following Python code if the system date is 23rd September, 2020? \nt=datetime.date.today() \nprint(t.month())", "options": ["A) September", "B) Sept", "C) 09", "D) 9"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "t = datetime.date.today(). Атрибут month является свойством (числом int), а не методом: t.month вернет 9 (для сентября)."}, {"id": 239, "number": 239, "section": "6. Operations using Modules and Tools", "subtopic": "6.2 Solve complex computing problems by using built-in modules", "type": "single", "question": "Consider the code: \n \n1) import math \n2) l =[str(round(math.pi)) for i in range (1, 6)] \n3) print(l) \n \nWhat is the result?", "options": ["A) ['3', '3', '3', '3', '3']", "B) ['3', '3', '3', '3', '3','3']", "C) ['1', '2', '3', '4', '5']", "D) ['1', '2', '3', '4', '5','6']"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 240, "number": 240, "section": "6. Operations using Modules and Tools", "subtopic": "6.2 Solve complex computing problems by using built-in modules", "type": "multiple", "question": "Consider the code: \n \n1) import random \n2) fruits=['Apple','Mango','Orange','Lemon'] \n \nWhich of the following will print some random value from the list?", "options": ["A) print(random.sample(fruits))", "B) print(random.sample(fruits,3)[0])", "C) print(random.choice(fruits))", "D) print(random.choice(fruits)[0])"], "correct_answer": [1, 0, 3, 2], "answer_display": "B and C", "images": [], "explanation": "Правильный ответ: B and C."}, {"id": 241, "number": 241, "section": "6. Operations using Modules and Tools", "subtopic": "6.2 Solve complex computing problems by using built-in modules", "type": "single", "question": "We are developing an application for the client requirement.As the part of that we have to create a list of 7 random \nintegers between 1 and 7 inclusive. Which of the following code should be used?", "options": ["A) 1) import random \n2) randints=[random.randint(1,7) for i in range(1,8)]", "C) 1) import random \n2) randints=random.randrange(1,7)", "B) 1) import random \n2) randints=[random.randint(1,8) for i in range(1,8)]", "D) 1) import random \n2) randints=random.randint(1,7)"], "correct_answer": [0], "answer_display": "A", "images": [], "explanation": "Правильный ответ: A."}, {"id": 242, "number": 242, "section": "6. Operations using Modules and Tools", "subtopic": "6.2 Solve complex computing problems by using built-in modules", "type": "multiple", "question": "Consider the code: \n \n1) import random \n2) fruits=['Apple','Mango','Orange','Lemon'] \n3) random_list=[random.choice(fruits)[:2] for i in range(3)] \n4) print(''.join(random_list)) \n \nWhich of the following are possible outputs?", "options": ["A) ApApAp", "B) ApMaOr", "C) LeMaOr", "D) OrOraM"], "correct_answer": [0, 1, 2], "answer_display": "A,B,C", "images": [], "explanation": "Правильный ответ: A,B,C."}, {"id": 243, "number": 243, "section": "6. Operations using Modules and Tools", "subtopic": "6.2 Solve complex computing problems by using built-in modules", "type": "single", "question": "We are developing a mathematical function to find area for the given circle. if r is the radius then area is : pi*r**2 \nWhich of the following is valid function for this requirement?", "options": ["A) 1) import math \n2) def find_area(r): \n3)    return math.pi*math.fmod(r,2)", "B) 1) import math \n2) def find_area(r): \n3)    return math.pi*math.fabs(r)", "C) 1) import math \n2) def find_area(r): \n3)    return math.pi*math.pow(r,2)", "D) None of these"], "correct_answer": [2], "answer_display": "C", "images": [], "explanation": "Правильный ответ: C."}, {"id": 244, "number": 244, "section": "6. Operations using Modules and Tools", "subtopic": "6.2 Solve complex computing problems by using built-in modules", "type": "single", "question": "Consider the python code: \n \n1) import random \n2) print(int(random.random()*5)) \n \nWhich of the following is true?", "options": ["A) It will print a random int value from 0 to 5", "B) It will print a random int value from 1 to 5", "C) It will print a random int value from 0 to 5", "D) It will print a random int value from 0 to 4", "E) It will print 5"], "correct_answer": [3], "answer_display": "D", "images": [], "explanation": "Правильный ответ: D."}, {"id": 245, "number": 245, "section": "6. Operations using Modules and Tools", "subtopic": "6.2 Solve complex computing problems by using built-in modules", "type": "single", "question": "Consider the code \n \n1) import random \n2) print(random.sample(range(10), 7)) \n \nWhich of the following is valid?", "options": ["A) It will print list of 10 unique random numbers from 0 to 6", "B) It will print list of 7 unique random numbers from 0 to 9", "C) It will print list of 7 unique random numbers from 0 to 10", "D) It will print list of 7 unique random numbers from 1 to 10"], "correct_answer": [1], "answer_display": "B", "images": [], "explanation": "Правильный ответ: B."}];
+// Python Master: Certification Practice & Exam Dump
+// Auto-generated data module
+window.QUESTIONS_DATA = [
+  {
+    "id": 1,
+    "number": 1,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables",
+    "type": "single",
+    "question": "Consider the following python code: \n1) age=0 \n2) minor=False \n3) name='Durga' \n \nThe types of age,minor and name variables respectively:",
+    "options": [
+      "A) int, bool, str",
+      "B) bool, bool, str",
+      "C) int, bool, char",
+      "D) float, bool, str"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "В Python целое число 0 имеет тип int, False — тип bool, а строка в кавычках 'Durga' — тип str. Порядок: int, bool, str."
+  },
+  {
+    "id": 2,
+    "number": 2,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables",
+    "type": "single",
+    "question": "Consider the following python code: \nweight = 62.4 \nzip='880098' \nvalue=+23E4 \n \nThe types of weight, zip and value variables respectively:",
+    "options": [
+      "A) float, str, str",
+      "B) int, str, float",
+      "C) double, str, float",
+      "D) float, str, float"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "weight=62.4 — вещественное число float; zip='880098' — строка str; value=+23E4 — экспоненциальная запись числа (230000.0), тип float."
+  },
+  {
+    "id": 3,
+    "number": 3,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables",
+    "type": "dropdown",
+    "question": "You create the following program to locate a conference room and display the room name. Line numbers are included for \nreference only. \n01 rooms = {1: 'Left Conference Room', 2: 'Right conference Room'} \n02 room = input('Enter the room number: ') \n03 if not room in rooms: \n04   print('Room does not exist.') \n05 else: \n06   print(\"The room name is \" + rooms[room]) \nColleagues report that the program sometimes produces incorrect results. You need to troubleshoot the program. Use the \ndrop-down menus to select the answer choice mat answers each question based on the information presented in the code \nsegment. \nWhich two data types are stored in the rooms list at line 01? [1] . \n \nWhat is the data type of room at line 02? [2] . \n \nWhy does line 03 fail to find the rooms? [3] .",
+    "images": [
+      "images/qimg_p2_1_25.jpeg",
+      "images/qimg_p2_2_26.png",
+      "images/qimg_p2_3_27.jpeg"
+    ],
+    "answer_display": "[1]: int and string | [2]: string | [3]: Mismatched data type(s)",
+    "explanation": "В словаре rooms ключи int, значения str. input() всегда возвращает str. Поиск 'room in rooms' ищет строку среди ключей int, что приводит к несовпадению типов данных (Mismatched data types).",
+    "dropdowns": [
+      {
+        "prompt": "Which two data types are stored in the rooms list at line 01? [1]",
+        "options": [
+          "bool and string",
+          "float and bool",
+          "int and string",
+          "float and int"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "What is the data type of room at line 02? [2]",
+        "options": [
+          "bool",
+          "float",
+          "int",
+          "string"
+        ],
+        "correct": 3
+      },
+      {
+        "prompt": "Why does line 03 fail to find the rooms? [3]",
+        "options": [
+          "Invalid syntax",
+          "Mismatched data type(s)",
+          "Misnamed variable(s)"
+        ],
+        "correct": 1
+      }
+    ],
+    "options": [
+      "[1] Which two data types are stored in the rooms list at line 01? [1]: int and string",
+      "[2] What is the data type of room at line 02? [2]: string",
+      "[3] Why does line 03 fail to find the rooms? [3]: Mismatched data type(s)"
+    ],
+    "correct_answer": [
+      2,
+      3,
+      1
+    ]
+  },
+  {
+    "id": 4,
+    "number": 4,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables",
+    "type": "dropdown",
+    "question": "You are writing a program that calculates a user‟s year of birth. The program asks users for their age and the current year, \nthen outputs the user‟s year of birth. You write the following code. Line numbers are included for reference only. \n01 age = input(‛Enter your age: ‚) \n02 year = input(‚Enter the four digit year: ‛) \n03 born = eval(year) - eval(age) \n04 message = ‚You were born in ‚ + str(born) \n05 print(message) \n \nYou need to ensure that the program uses the appropriate data types. What data types are used? Use the drop-down menus \nto select the answer choice that answers each question based on the information presented in ¡ne code segment. \n \nWhat data type is age in line 01? \n \nWhat data type is born in line 03? \n \nWhat data type is message in line 04?",
+    "images": [
+      "images/qimg_p3_1_38.png"
+    ],
+    "answer_display": "age: str | born: int | message: str",
+    "explanation": "age введен через input() -> str. eval(year)-eval(age) вычисляет разность целых чисел -> int. message получается конкатенацией со str(born) -> str.",
+    "dropdowns": [
+      {
+        "prompt": "What data type is age in line 01?",
+        "options": [
+          "int",
+          "float",
+          "str",
+          "bool"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "What data type is born in line 03?",
+        "options": [
+          "int",
+          "float",
+          "str",
+          "bool"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "What data type is message in line 04?",
+        "options": [
+          "int",
+          "float",
+          "str",
+          "bool"
+        ],
+        "correct": 2
+      }
+    ],
+    "options": [
+      "[1] What data type is age in line 01?: str",
+      "[2] What data type is born in line 03?: int",
+      "[3] What data type is message in line 04?: str"
+    ],
+    "correct_answer": [
+      2,
+      0,
+      2
+    ]
+  },
+  {
+    "id": 5,
+    "number": 5,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables",
+    "type": "yes_no",
+    "question": "During school holidays, you volunteer to explain some basic programming concepts to your younger siblings. \nYou want to introduce the concept of data types in Python. You create the following three code segments: \n# Code segment 1 \nx1 = \"20\" \ny1 = 3 \na = x1 * y1 \n# Code segment 2 \nx2 = 6 \ny2 = 4 \nb = x2 / y2 \n# Code segment 3 \nx3 = 2.5 \ny3 = 1 \nc = x3 / y3 \n \nYou need to evaluate the code segments. \nFor each of the following statements, select Yes if the statement is true. Otherwise, select No. \n \n Yes No \nAfter executing code segment 1, the data type of variable a is str.    〇 〇 \nAfter executing code segment 2, the data type of variable b is float. 〇 〇 \nAfter executing code segment 3, the data type of variable c is int.     〇 〇",
+    "images": [],
+    "answer_display": "1: Yes, 2: Yes, 3: No",
+    "explanation": "1) '20'*3 = '202020' (str) -> Yes. 2) 6/4 = 1.5 (деление / всегда дает float) -> Yes. 3) 2.5/1 = 2.5 (тип float, не int) -> No.",
+    "statements": [
+      "After executing code segment 1, the data type of variable a is str.",
+      "After executing code segment 2, the data type of variable b is float.",
+      "After executing code segment 3, the data type of variable c is int."
+    ],
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "correct_answer": [
+      "Yes",
+      "Yes",
+      "No"
+    ]
+  },
+  {
+    "id": 6,
+    "number": 6,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables",
+    "type": "dropdown",
+    "question": "Match the data type to the type operations. To answer, select the appropriate data type from the drop-down menu for each operation.",
+    "images": [
+      "images/qimg_p4_1_44.jpeg"
+    ],
+    "answer_display": "type(+1E10): float, type(5.0): float, type('True'): str, type(False): bool",
+    "explanation": "Числа в экспоненциальной нотации (+1E10) и с точкой (5.0) имеют тип float. Строковый литерал в кавычках (\"True\") имеет тип str. Логическое значение False имеет тип bool.",
+    "matches": [
+      {
+        "item": "type (+1E10)",
+        "options": [
+          "int",
+          "float",
+          "str",
+          "bool"
+        ],
+        "correct": "float"
+      },
+      {
+        "item": "type (5.0)",
+        "options": [
+          "int",
+          "float",
+          "str",
+          "bool"
+        ],
+        "correct": "float"
+      },
+      {
+        "item": "type (\"True\")",
+        "options": [
+          "int",
+          "float",
+          "str",
+          "bool"
+        ],
+        "correct": "str"
+      },
+      {
+        "item": "type (False)",
+        "options": [
+          "int",
+          "float",
+          "str",
+          "bool"
+        ],
+        "correct": "bool"
+      }
+    ],
+    "options": [
+      "type (+1E10): float",
+      "type (5.0): float",
+      "type (\"True\"): str",
+      "type (False): bool"
+    ],
+    "correct_answer": [
+      1,
+      1,
+      2,
+      3
+    ],
+    "dropdowns": [
+      {
+        "prompt": "type (+1E10)",
+        "options": [
+          "int",
+          "float",
+          "str",
+          "bool"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "type (5.0)",
+        "options": [
+          "int",
+          "float",
+          "str",
+          "bool"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "type (\"True\")",
+        "options": [
+          "int",
+          "float",
+          "str",
+          "bool"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "type (False)",
+        "options": [
+          "int",
+          "float",
+          "str",
+          "bool"
+        ],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "number": 7,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables",
+    "type": "dropdown",
+    "question": "You are writing a Python program. The program collects customer data and stores it in a database. Match the data type to each code segment. To answer, select the appropriate data type from the drop-down menu for each variable.",
+    "images": [
+      "images/qimg_p4_2_45.jpeg"
+    ],
+    "answer_display": "age: int, minor: bool, name: str, weight: float, zip: str",
+    "explanation": "2 — целое число (int), False — логическое значение (bool), \"Contoso\" и \"81000\" — строки (str), 123.5 — вещественное число (float).",
+    "matches": [
+      {
+        "item": "age = 2",
+        "options": [
+          "bool",
+          "float",
+          "int",
+          "str"
+        ],
+        "correct": "int"
+      },
+      {
+        "item": "minor = False",
+        "options": [
+          "bool",
+          "float",
+          "int",
+          "str"
+        ],
+        "correct": "bool"
+      },
+      {
+        "item": "name = \"Contoso\"",
+        "options": [
+          "bool",
+          "float",
+          "int",
+          "str"
+        ],
+        "correct": "str"
+      },
+      {
+        "item": "weight = 123.5",
+        "options": [
+          "bool",
+          "float",
+          "int",
+          "str"
+        ],
+        "correct": "float"
+      },
+      {
+        "item": "zip = \"81000\"",
+        "options": [
+          "bool",
+          "float",
+          "int",
+          "str"
+        ],
+        "correct": "str"
+      }
+    ],
+    "options": [
+      "age = 2: int",
+      "minor = False: bool",
+      "name = \"Contoso\": str",
+      "weight = 123.5: float",
+      "zip = \"81000\": str"
+    ],
+    "correct_answer": [
+      2,
+      0,
+      3,
+      1,
+      3
+    ],
+    "dropdowns": [
+      {
+        "prompt": "age = 2",
+        "options": [
+          "bool",
+          "float",
+          "int",
+          "str"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "minor = False",
+        "options": [
+          "bool",
+          "float",
+          "int",
+          "str"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "name = \"Contoso\"",
+        "options": [
+          "bool",
+          "float",
+          "int",
+          "str"
+        ],
+        "correct": 3
+      },
+      {
+        "prompt": "weight = 123.5",
+        "options": [
+          "bool",
+          "float",
+          "int",
+          "str"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "zip = \"81000\"",
+        "options": [
+          "bool",
+          "float",
+          "int",
+          "str"
+        ],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "number": 8,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables",
+    "type": "multiple",
+    "question": "Consider the Variable declarations: \na='5' \nb='2' \n \nWhich of the following expressions are of type str",
+    "options": [
+      "A) a+b",
+      "B) a*b",
+      "C) a-b",
+      "D) a*2"
+    ],
+    "correct_answer": [
+      0,
+      0,
+      3,
+      3
+    ],
+    "answer_display": "A and D",
+    "images": [],
+    "explanation": "Правильный ответ: A and D."
+  },
+  {
+    "id": 9,
+    "number": 9,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables",
+    "type": "single",
+    "question": "You are writing a Python program. You required to handle data types properly. \nConsider the code segment: \n \n1) a=10+20 \n2) b='10'+'20' \n3) c='10'*3 \n \nIdentify the types of a,b and c?",
+    "options": [
+      "A) a is of int type,b is of str type and c is of str type",
+      "B) a is of int type,b is of str type and c is of int type",
+      "C) a is of int type,b is of int type and c is of int type",
+      "D) a is of int type ,b and c are invalid declarations"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "a=10+20 дает 30 (int). b='10'+'20' дает строку '1020' (str). c='10'*3 дает строку '101010' (str)."
+  },
+  {
+    "id": 10,
+    "number": 10,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.1 Evaluate expressions to identify the data types Python assigns to variables",
+    "type": "dropdown",
+    "question": "You are writing a function that returns the data type of the value that is passed in. You write the following code. Line \nnumbers are included for reference only. \n01 def checkType(value): \n02    dataType = type(value) \n03    return dataType \n04 print(checkType(True)) \n05 print(checkType(1.0)) \n06 print(checkType(1)) \n07 print(checkType(‛True‛)) \n \nUse the drop-down menus to select the answer choice that answers each question based on the information presented in \nthe code segment. \n \nWhat is printed at line 04?  \n \nWhat is printed at line 05? \n \nWhat is printed at line 06? \n \nWhat is printed at line 07? \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n1.2 Perform and analyze data and data type operations \n• Data type conversion, indexing, slicing, construct data structures, lists, list operations (including sorting, merging, \nappending, inserting, removing, finding maximum and minimum, and reversing)",
+    "images": [
+      "images/qimg_p5_1_49.png"
+    ],
+    "answer_display": "<class 'bool'>, <class 'float'>, <class 'int'>, <class 'str'>",
+    "explanation": "Функция type() возвращает тип данных объекта: type(True) возвращает <class 'bool'> (логический), type(1.0) возвращает <class 'float'> (с плавающей точкой), type(1) возвращает <class 'int'> (целое число), type('True') возвращает <class 'str'> (строка).",
+    "dropdowns": [
+      {
+        "prompt": "What is printed at line 04? (checkType(True))",
+        "options": [
+          "<class 'bool'>",
+          "<class 'float'>",
+          "<class 'int'>",
+          "<class 'str'>"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "What is printed at line 05? (checkType(1.0))",
+        "options": [
+          "<class 'bool'>",
+          "<class 'float'>",
+          "<class 'int'>",
+          "<class 'str'>"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "What is printed at line 06? (checkType(1))",
+        "options": [
+          "<class 'bool'>",
+          "<class 'float'>",
+          "<class 'int'>",
+          "<class 'str'>"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "What is printed at line 07? (checkType('True'))",
+        "options": [
+          "<class 'bool'>",
+          "<class 'float'>",
+          "<class 'int'>",
+          "<class 'str'>"
+        ],
+        "correct": 3
+      }
+    ],
+    "options": [
+      "[1] What is printed at line 04? (checkType(True)): <class 'bool'>",
+      "[2] What is printed at line 05? (checkType(1.0)): <class 'float'>",
+      "[3] What is printed at line 06? (checkType(1)): <class 'int'>",
+      "[4] What is printed at line 07? (checkType('True')): <class 'str'>"
+    ],
+    "correct_answer": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 11,
+    "number": 11,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "You have the following code: \n \n1) a=bool([False]) \n2) b=bool(3) \n3) c=bool(\"\") \n4) d=bool(' ') \n \nWhich of the variables will represent False:",
+    "options": [
+      "A) a",
+      "B) b",
+      "C) c",
+      "D) d"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "bool([False]) равен True (непустой список); bool(3) равен True; bool('') равен False (пустая строка); bool(' ') равен True (строка с пробелом не пустая)."
+  },
+  {
+    "id": 12,
+    "number": 12,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "Consider the following variable declarations: \n1) a= bool([]) \n2) b= bool(()) \n3) c= bool(range(0)) \n4) d= bool({}) \n5) e= bool(set()) \n \nWhich of the above variables represent True ?",
+    "options": [
+      "A) c",
+      "B) a ,b, c, d",
+      "C) All Variables represent True",
+      "D) None of the variables represents True"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Все пустые коллекции: [], (), range(0), {}, set() при приведении к bool возвращают False. Ни одна переменная не равна True."
+  },
+  {
+    "id": 13,
+    "number": 13,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "1) a=bool(0) \n2) b=bool(3) \n3) c=bool(0.5) \n4) d=bool(0.0) \n \nWhich variables represent True?",
+    "options": [
+      "A) a,b",
+      "B) b,c",
+      "C) c,d",
+      "D) d,a",
+      "E) All Variables"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "bool(0) -> False; bool(3) -> True; bool(0.5) -> True; bool(0.0) -> False. Истинными являются b и c."
+  },
+  {
+    "id": 14,
+    "number": 14,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "You are writing a Python program to read two int values from the keyboard and print the sum. \n1) x=input('Enter First Number:') \n2) y=input('Enter Second Number:') \n3) #Line-1 \n \nWhich of the following code we have to write at Line-1 to print sum of given numbers?",
+    "options": [
+      "A) print('The Result:'+(int(x)+int(y)))",
+      "B) print('The Result:'+(int(x+y)))",
+      "C) print('The Result:'+str(int(x)+int(y)))",
+      "D) print('The Result:'+str(int(x+y)))"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "x и y — строки после input(). Для сложения их чисел нужно int(x)+int(y), а для вывода со строкой 'The Result:' сумму нужно обернуть в str()."
+  },
+  {
+    "id": 15,
+    "number": 15,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "Consider the python code: \n1) result=str(bool(1) + float(10)/float(2)) \n2) print(result) \n \nWhat is the output?",
+    "options": [
+      "A) SyntaxError",
+      "B) TypeError",
+      "C) 6",
+      "D) 6.0"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 16,
+    "number": 16,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "dropdown",
+    "question": "You write the following code: \na = 'Config1' \nprint(a) \nb = a \na += 'Config2' \nprint(a) \nprint(b) \nUse the drop-down menus to select the answer choice that answers each question based \non the information presented in the code segment. \nAnswer Area \nWhat is displayed after the first print? [1] \n \nWhat is displayed after the second print? [2] \n \nWhat is displayed after the third print? [3]",
+    "images": [
+      "images/qimg_p7_1_59.png"
+    ],
+    "answer_display": "1: Config1, 2: Config1Config2, 3: Config1",
+    "explanation": "a='Config1'. Первое print(a) выводит 'Config1'. b=a сохраняет ссылку на 'Config1'. a += 'Config2' создает новую строку 'Config1Config2'. Строки неизменяемы, поэтому b остается 'Config1'.",
+    "dropdowns": [
+      {
+        "prompt": "What is displayed after the first print? [1]",
+        "options": [
+          "Config1",
+          "Config2",
+          "Config1Config2"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "What is displayed after the second print? [2]",
+        "options": [
+          "Config1",
+          "Config2",
+          "Config1Config2"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "What is displayed after the third print? [3]",
+        "options": [
+          "Config1",
+          "Config2",
+          "Config1Config2"
+        ],
+        "correct": 0
+      }
+    ],
+    "options": [
+      "[1] What is displayed after the first print? [1]: Config1",
+      "[2] What is displayed after the second print? [2]: Config1Config2",
+      "[3] What is displayed after the third print? [3]: Config1"
+    ],
+    "correct_answer": [
+      0,
+      2,
+      0
+    ]
+  },
+  {
+    "id": 17,
+    "number": 17,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "You develop an application for your school. A list named colors contains 200 colors. You need to slice the list to display \nevery other color starting with the second color. \nWhich code should you use?",
+    "options": [
+      "A) colors[1:2]",
+      "B) colors [::2]",
+      "C) colors[2:2]",
+      "D) colors [1::2]"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Срез list[start:stop:step]. Второй элемент имеет индекс 1 (start=1). Каждый второй элемент — шаг 2 (step=2). Итого colors[1::2]."
+  },
+  {
+    "id": 18,
+    "number": 18,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "multiple",
+    "question": "You develop an application for your company. A list named employees contains 200 employee names, the last five being \ncompany management. You need to slice the list to display all employees excluding management. Which two code \nsegments should you use? Each correct answer presents a complete solution. Choose two.",
+    "options": [
+      "A) employees[0:-4]",
+      "B) employees [1:-5]",
+      "C) employees [:-5]",
+      "D) employees [0:-5]",
+      "E) employees [1:-4]"
+    ],
+    "correct_answer": [
+      2,
+      3
+    ],
+    "answer_display": "C, D",
+    "images": [],
+    "explanation": "Чтобы исключить последних 5 сотрудников, срез должен заканчиваться на индексе -5: employees[:-5] или employees[0:-5]."
+  },
+  {
+    "id": 19,
+    "number": 19,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "multiple",
+    "question": "You are developing a python application for your company. A list named employees contains 600 employee names,the \nlast 3 being company management. You need to slice employees to display all employees excluding management. Which \ntwo code segments we should use?",
+    "options": [
+      "A) employees[1:-2]",
+      "B) employees[:-3]",
+      "C) employees[1:-3]",
+      "D) employees[0:-2]",
+      "E) employees[0:-3]"
+    ],
+    "correct_answer": [
+      1,
+      4
+    ],
+    "answer_display": "B, E",
+    "images": [],
+    "explanation": "Чтобы исключить последних 3 менеджеров: employees[:-3] или employees[0:-3]."
+  },
+  {
+    "id": 20,
+    "number": 20,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "You are developing a python application for your company. A list named employees contains 500 employee names,the \nlast 3 being company management. Which of the following represents only management employees.",
+    "options": [
+      "A) employees[497:]",
+      "B) employees[-3:]",
+      "C) employees[497:500]",
+      "D) All the above"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "В списке из 500 элементов последние 3 — это элементы с индексами 497, 498, 499. Срезы employees[497:], employees[-3:] и employees[497:500] дают одинаковый результат. Ответ: All the above."
+  },
+  {
+    "id": 21,
+    "number": 21,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "You write the following code: \nlist_1 = [1, 2] \nlist_2 = [3, 4] \nlist_3 = list_1 + list_2 \nlist_4 = list_3 * 3 \nprint(list_4) \nYou run the code. \nWhat is the output value?",
+    "options": [
+      "A) [3, 6, 9, 12]",
+      "B) [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]",
+      "C) [[1, 2], [3, 4], [1, 2], [3, 4], [1, 2], [3, 4]]",
+      "D) [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4]]"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "list_1 + list_2 объединяет списки: [1, 2, 3, 4]. list_3 * 3 повторяет элементы списка три раза: [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]."
+  },
+  {
+    "id": 22,
+    "number": 22,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "multiple",
+    "question": "Woodgrove Bank must generate a report that shows the average balance for all customers each day. The report must \ntruncate the decimal portion of the balance. Which two code segments should you use? Each correct answer presents a \ncomplete solution. Choose two.",
+    "options": [
+      "A) average_balance = total_deposits**number_of_customers",
+      "B) average_balance = total_deposits//number_of_customers",
+      "C) average_balance = int(total_deposits/number_of_customers)",
+      "D) average_balance = float(total_deposits//number_of_customers)"
+    ],
+    "correct_answer": [
+      1,
+      2
+    ],
+    "answer_display": "B, C",
+    "images": [],
+    "explanation": "Целочисленное деление // отбрасывает дробную часть: total_deposits // number_of_customers. Также функция int() отсекает дробную часть: int(total_deposits / number_of_customers)."
+  },
+  {
+    "id": 23,
+    "number": 23,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "dropdown",
+    "question": "You evaluate the following code. You need to arrange the code segments to test user input and determine whether it is lower case, upper case, or mixed case.",
+    "images": [
+      "images/qimg_p9_1_67.jpeg"
+    ],
+    "answer_display": "Step 1: input -> Step 2: if lower -> Step 3: elif upper -> Step 4: else mixed",
+    "explanation": "Сначала считывается имя: name = input(). Затем проверяется if name.lower() == name, затем elif name.upper() == name, и в конце else для смешанного регистра.",
+    "order": [
+      "name = input(\"Enter your name: \")",
+      "if name.lower() == name:\n    print(name, \"is all lower case.\")",
+      "elif name.upper() == name:\n    print(name, \"is all upper case.\")",
+      "else:\n    print(name, \"is mixed case.\")"
+    ],
+    "options": [
+      "Step 1: name = input(\"Enter your name: \")",
+      "Step 2: if name.lower() == name:...",
+      "Step 3: elif name.upper() == name:...",
+      "Step 4: else: print(name, \"is mixed case.\")"
+    ],
+    "correct_answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dropdowns": [
+      {
+        "prompt": "Step 1 (Input prompt):",
+        "options": [
+          "name = input(\"Enter your name: \")",
+          "if name.lower() == name:\n    print(name, \"is all lower case.\")",
+          "elif name.upper() == name:\n    print(name, \"is all upper case.\")",
+          "else:\n    print(name, \"is mixed case.\")"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Step 2 (Check lower case):",
+        "options": [
+          "name = input(\"Enter your name: \")",
+          "if name.lower() == name:\n    print(name, \"is all lower case.\")",
+          "elif name.upper() == name:\n    print(name, \"is all upper case.\")",
+          "else:\n    print(name, \"is mixed case.\")"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Step 3 (Check upper case):",
+        "options": [
+          "name = input(\"Enter your name: \")",
+          "if name.lower() == name:\n    print(name, \"is all lower case.\")",
+          "elif name.upper() == name:\n    print(name, \"is all upper case.\")",
+          "else:\n    print(name, \"is mixed case.\")"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Step 4 (Default mixed case):",
+        "options": [
+          "name = input(\"Enter your name: \")",
+          "if name.lower() == name:\n    print(name, \"is all lower case.\")",
+          "elif name.upper() == name:\n    print(name, \"is all upper case.\")",
+          "else:\n    print(name, \"is mixed case.\")"
+        ],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "number": 24,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "dropdown",
+    "question": "You are writing a Python program to perform arithmetic operations. You create the following code:\na = 11\nb = 4\n\nWhat is the result of each arithmetic expression? Select the appropriate expression from the drop-down menu for each result.",
+    "images": [
+      "images/qimg_p9_2_68.jpeg"
+    ],
+    "answer_display": "2: print(a // b), 3: print(a % b), 2.75: print(a / b)",
+    "explanation": "11 // 4 выполняет целочисленное деление с отбрасыванием дробной части и возвращает 2. 11 % 4 возвращает остаток от деления 3. Обычное деление 11 / 4 возвращает число с плавающей точкой 2.75.",
+    "matches": [
+      {
+        "item": "2",
+        "options": [
+          "print(a / b)",
+          "print(a // b)",
+          "print(a % b)"
+        ],
+        "correct": "print(a // b)"
+      },
+      {
+        "item": "3",
+        "options": [
+          "print(a / b)",
+          "print(a // b)",
+          "print(a % b)"
+        ],
+        "correct": "print(a % b)"
+      },
+      {
+        "item": "2.75",
+        "options": [
+          "print(a / b)",
+          "print(a // b)",
+          "print(a % b)"
+        ],
+        "correct": "print(a / b)"
+      }
+    ],
+    "options": [
+      "2: print(a // b)",
+      "3: print(a % b)",
+      "2.75: print(a / b)"
+    ],
+    "correct_answer": [
+      1,
+      2,
+      0
+    ],
+    "dropdowns": [
+      {
+        "prompt": "Result is 2",
+        "options": [
+          "print(a / b)",
+          "print(a // b)",
+          "print(a % b)"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Result is 3",
+        "options": [
+          "print(a / b)",
+          "print(a // b)",
+          "print(a % b)"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Result is 2.75",
+        "options": [
+          "print(a / b)",
+          "print(a // b)",
+          "print(a % b)"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "number": 25,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "dropdown",
+    "question": "You have the following list structure:\nalph = 'abcdefghijklmnopqrstuvwxyz'\n\nYou need to evaluate the result of performing various slicing operations. Match each slicing operation to its result.",
+    "images": [
+      "images/qimg_p9_3_69.png"
+    ],
+    "answer_display": "[1]: defghijklmno, [2]: dgjm, [3]: \"\", [4]: pmjg, [5]: \"\", [6]: zwtqnkheb",
+    "explanation": "alph[3:15] возвращает символы с индексами от 3 ('d') до 14 ('o'). alph[3:15:3] берет символы с шагом 3 (d, g, j, m). При несовпадении направления индексов и знака шага возвращается пустая строка. alph[15:3:-3] идет назад от 'p' с шагом 3 (p, m, j, g). alph[::-3] разворачивает всю строку с шагом 3.",
+    "matches": [
+      {
+        "item": "[1] alph[3:15]",
+        "options": [
+          "zwtqnkheb",
+          "pmjg",
+          "defghijklmno",
+          "ponmlkjihgfe",
+          "defghijklmnop",
+          "dgjm",
+          "olif",
+          "\"\""
+        ],
+        "correct": "defghijklmno"
+      },
+      {
+        "item": "[2] alph[3:15:3]",
+        "options": [
+          "zwtqnkheb",
+          "pmjg",
+          "defghijklmno",
+          "ponmlkjihgfe",
+          "defghijklmnop",
+          "dgjm",
+          "olif",
+          "\"\""
+        ],
+        "correct": "dgjm"
+      },
+      {
+        "item": "[3] alph[3:15:-3]",
+        "options": [
+          "zwtqnkheb",
+          "pmjg",
+          "defghijklmno",
+          "ponmlkjihgfe",
+          "defghijklmnop",
+          "dgjm",
+          "olif",
+          "\"\""
+        ],
+        "correct": "\"\""
+      },
+      {
+        "item": "[4] alph[15:3:-3]",
+        "options": [
+          "zwtqnkheb",
+          "pmjg",
+          "defghijklmno",
+          "ponmlkjihgfe",
+          "defghijklmnop",
+          "dgjm",
+          "olif",
+          "\"\""
+        ],
+        "correct": "olif"
+      },
+      {
+        "item": "[5] alph[15:3]",
+        "options": [
+          "zwtqnkheb",
+          "pmjg",
+          "defghijklmno",
+          "ponmlkjihgfe",
+          "defghijklmnop",
+          "dgjm",
+          "olif",
+          "\"\""
+        ],
+        "correct": "\"\""
+      },
+      {
+        "item": "[6] alph[::-3]",
+        "options": [
+          "zwtqnkheb",
+          "pmjg",
+          "defghijklmno",
+          "ponmlkjihgfe",
+          "defghijklmnop",
+          "dgjm",
+          "olif",
+          "\"\""
+        ],
+        "correct": "zwtqnkheb"
+      }
+    ],
+    "options": [
+      "[1] alph[3:15]: defghijklmno",
+      "[2] alph[3:15:3]: dgjm",
+      "[3] alph[3:15:-3]: empty string",
+      "[4] alph[15:3:-3]: pmjg",
+      "[5] alph[15:3]: empty string",
+      "[6] alph[::-3]: zwtqnkheb"
+    ],
+    "correct_answer": [
+      2,
+      5,
+      7,
+      1,
+      7,
+      0
+    ],
+    "dropdowns": [
+      {
+        "prompt": "[1] alph[3:15]",
+        "options": [
+          "zwtqnkheb",
+          "pmjg",
+          "defghijklmno",
+          "ponmlkjihgfe",
+          "defghijklmnop",
+          "dgjm",
+          "olif",
+          "\"\" (empty string)"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "[2] alph[3:15:3]",
+        "options": [
+          "zwtqnkheb",
+          "pmjg",
+          "defghijklmno",
+          "ponmlkjihgfe",
+          "defghijklmnop",
+          "dgjm",
+          "olif",
+          "\"\" (empty string)"
+        ],
+        "correct": 5
+      },
+      {
+        "prompt": "[3] alph[3:15:-3]",
+        "options": [
+          "zwtqnkheb",
+          "pmjg",
+          "defghijklmno",
+          "ponmlkjihgfe",
+          "defghijklmnop",
+          "dgjm",
+          "olif",
+          "\"\" (empty string)"
+        ],
+        "correct": 7
+      },
+      {
+        "prompt": "[4] alph[15:3:-3]",
+        "options": [
+          "zwtqnkheb",
+          "pmjg",
+          "defghijklmno",
+          "ponmlkjihgfe",
+          "defghijklmnop",
+          "dgjm",
+          "olif",
+          "\"\" (empty string)"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "[5] alph[15:3]",
+        "options": [
+          "zwtqnkheb",
+          "pmjg",
+          "defghijklmno",
+          "ponmlkjihgfe",
+          "defghijklmnop",
+          "dgjm",
+          "olif",
+          "\"\" (empty string)"
+        ],
+        "correct": 7
+      },
+      {
+        "prompt": "[6] alph[::-3]",
+        "options": [
+          "zwtqnkheb",
+          "pmjg",
+          "defghijklmno",
+          "ponmlkjihgfe",
+          "defghijklmnop",
+          "dgjm",
+          "olif",
+          "\"\" (empty string)"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "number": 26,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "What is a variable defined outside a function referred to as?",
+    "options": [
+      "A) A static variable",
+      "B) A global variable",
+      "C) A local variable",
+      "D) An automatic variable"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Переменная, определенная вне функций, называется глобальной переменной (global variable)."
+  },
+  {
+    "id": 27,
+    "number": 27,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "What will be the output of the following Python code? \na = 10 \nb = 20 \n \ndef change(): \n   global b \n   a = 45 \n   b = 56 \n \nchange() \nprint(a)   \nprint(b)",
+    "options": [
+      "A) 10,56",
+      "B) 45,56",
+      "C) 10, 20",
+      "D) Syntax Error"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Внутри change() объявлено global b, поэтому изменяется глобальная переменная b (становится 56). Переменная a=45 локальна для функции. Внешняя a остается 10. print(a) -> 10, print(b) -> 56."
+  },
+  {
+    "id": 28,
+    "number": 28,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "What will be the output of the following Python code? \n \ndef change(i=1, j=2):   \n    i = i + j \n    j = j + 1 \n    print(i, j) \n \nchange(j=1, i=2)",
+    "options": [
+      "A) An exception is thrown because of conflicting values",
+      "B) 1 2",
+      "C) 3 3",
+      "D) 3 2"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Функция change(j=1, i=2): аргументы переданы по ключевым именам (i=2, j=1). i = 2 + 1 = 3, j = 1 + 1 = 2. Выводится: 3 2."
+  },
+  {
+    "id": 29,
+    "number": 29,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "What will be the output of the following python code? \n \nnames=[‘itvedant’,’Thane’,’Andheri’,’Navi Mumbai’] \nprint(names[-1][-1])",
+    "options": [
+      "A) Navi Mumbai",
+      "B) Mumbai",
+      "C) i",
+      "D) a"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "names[-1] — последний элемент списка ('Navi Mumbai'). names[-1][-1] — последний символ строки 'Navi Mumbai', то есть 'i'."
+  },
+  {
+    "id": 30,
+    "number": 30,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "What is the return type of the function id()?",
+    "options": [
+      "A) int",
+      "B) float",
+      "C) bool",
+      "D) str"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Функция id() возвращает целочисленный уникальный идентификатор объекта в памяти, тип int."
+  },
+  {
+    "id": 31,
+    "number": 31,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "What will be the output of the following python code? \n \nf=lambda x:bool(x%2) \nprint(f(20), f(21))",
+    "options": [
+      "A) False True",
+      "B) False False",
+      "C) True True",
+      "D) True False"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "f(20): 20%2 = 0, bool(0) -> False. f(21): 21%2 = 1, bool(1) -> True. Результат: False True."
+  },
+  {
+    "id": 32,
+    "number": 32,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "Consider the following lists: \n \nn1=[10,20,30,40,50] \nN2=[10,20,30,40,50] \nprint(n1 is n2) \nprint(n1 == n2) \n \nWhat is the output?",
+    "options": [
+      "A) False, False",
+      "B) True, True",
+      "C) True, False",
+      "D) False, True"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "n1 и n2 — два независимых списка в памяти. Оператор is проверяет идентичность ссылок (False). Оператор == проверяет равенство значений (True)."
+  },
+  {
+    "id": 33,
+    "number": 33,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "Consider the following lists: \n1) n1=[10,20,30,40,50] \n2) n2=[10,20,30,40,50] \n3) print(n1 is n2) \n4) print(n1 == n2) \n5) n1=n2 \n6) print(n1 is n2) \n7) print(n1 == n2) \n \nWhat is the result?",
+    "options": [
+      "A) False, False, True, True",
+      "B) False, True, False, True",
+      "C) False, True, True, True",
+      "D) True, False, True, False"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "До присваивания: n1 is n2 -> False, n1 == n2 -> True. После n1=n2 обе переменные ссылаются на один и тот же объект, поэтому n1 is n2 -> True, n1 == n2 -> True."
+  },
+  {
+    "id": 34,
+    "number": 34,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "Consider the lists: \n \n1) numbers=[10,20,30,40,50] \n2) alphabets=['a','b','c','d','e'] \n3) print( numbers is alphabets) \n4) print( numbers == alphabets) \n5) numbers=alphabets \n6) print( numbers is alphabets) \n7) print( numbers == alphabets) \n \nWhat is the result?",
+    "options": [
+      "A) False, False, True, True",
+      "B) False, True, False, True",
+      "C) True, False, True, False",
+      "D) False, True, True, True"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Изначально numbers и alphabets разные списки с разными значениями: is -> False, == -> False. После numbers=alphabets ссылки совпадают: is -> True, == -> True."
+  },
+  {
+    "id": 35,
+    "number": 35,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "Consider the code: \n \ns='AB CD' \nlist=list(s) \nlist.append('EF') \nprint(list) \n \nWhat is the result?",
+    "options": [
+      "A) ['A', 'B', 'C', 'D', 'E', 'F']",
+      "B) {'A', 'B', '', 'C', 'D', 'EF'}",
+      "C) ['A', 'B', '', 'C', 'D', 'EF']",
+      "D) ('A', 'B', '', 'C', 'D', 'EF')"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 36,
+    "number": 36,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "Consider the code: \n1) x='ACROTE' \n2) y='APPLE' \n3) z='TOMATO' \n \nWhich of the following won't print 'CAT' to the console",
+    "options": [
+      "A) print(x[1]+y[0]+z[0])",
+      "B) print(x[2]+y[1]+z[1])",
+      "C) print(x[-5]+y[0]+z[0])",
+      "D) print(x[-5]+y[0]+z[-2])"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 37,
+    "number": 37,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "Consider the code: \n1) s='Python is easy' \n2) s1=s[-7:] \n3) s2=s[-4:] \n4) print(s1+s2) \n \nWhat is the result?",
+    "options": [
+      "A) is easyeasy",
+      "B) easyeasy",
+      "C) iseasyeasy",
+      "D) s easyeasy",
+      "E) is easy easy"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 38,
+    "number": 38,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "Consider the code: \n1) s='Python is easy' \n2) s1=s[6:-4] \n3) #Line-1 \n4) print(len(s2)) \n \nTo print 2 as output,which code we have to insert at Line-1",
+    "options": [
+      "A) s2 = s1.lstrip()",
+      "B) s2 = s1.rstrip()",
+      "C) s2 = s1.lrstrip()",
+      "D) s2 = s1.strip()"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 39,
+    "number": 39,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "Consider the code: \nt=([10,20],10,False) \n \nWhich line of the code assigns <class 'list'> to x",
+    "options": [
+      "A) x= type(t)",
+      "B) x= type(t[0])",
+      "C) x= type(t[1])",
+      "D) x= type(t[0:])"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 40,
+    "number": 40,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "multiple",
+    "question": "Consider the variable declaration \nb = 'BANANA' \n \nWhich of the following lines will print 'AA' to the console?",
+    "options": [
+      "A) print(b[1]+b[2])",
+      "B) print(b[1]+b[3])",
+      "C) print(b[1]+b[5])",
+      "D) print(b[3]+b[5])"
+    ],
+    "correct_answer": [
+      1,
+      2,
+      0,
+      3,
+      3
+    ],
+    "answer_display": "B,C and D",
+    "images": [],
+    "explanation": "Правильный ответ: B,C and D."
+  },
+  {
+    "id": 41,
+    "number": 41,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "Consider the list: \nlist = ['Apple', 'Banana', 'Carrot', 'Mango'] \nWhitch of the following are the valid ways of accessing 'Mango': \n \nOption A : list[3] \nOption B: list[4] \nOption C: list[-1] \nOption D: list[0]",
+    "options": [
+      "A) A and B",
+      "B) B and D",
+      "C) A and C",
+      "D) All options"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "'Mango' находится на последней позиции: положительный индекс 3 (Option A) или отрицательный индекс -1 (Option C). Верно: A and C."
+  },
+  {
+    "id": 42,
+    "number": 42,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "You are given the following Python code snippet: \nx = 'TEXT' \nWhich line of code will assign the string 'TT' to the variable output?",
+    "options": [
+      "A) output = x[1] + x[1]",
+      "B) output = x[1] + x[4]",
+      "C) output = x[0] + x[2]",
+      "D) output = x[0] + x[-1]"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "В строке x='TEXT' буква 'T' находится на индексе 0 и на индексе -1 (или 3). x[0] + x[-1] дает 'TT'."
+  },
+  {
+    "id": 43,
+    "number": 43,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "Consider the Python code: \n \na=['a','b','c','d'] \nfor i in a:",
+    "options": [
+      "A) append(i.upper()) \nprint(a) \n \nWhat is the result?",
+      "A) ['A', 'B', 'C', 'D']",
+      "B) ['a', 'b', 'c', 'd']",
+      "C) SyntaxError",
+      "D) MemoryError thrown at runtime"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Цикл for i in a добавляет новые элементы в список a во время итерации по нему. Цикл никогда не завершится, что приведет к переполнению памяти (MemoryError)."
+  },
+  {
+    "id": 44,
+    "number": 44,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "yes_no",
+    "question": "Which of the following statements are valid? Select Valid (Yes) or Invalid (No) for each statement.",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "correct_answer": [
+      "No",
+      "No",
+      "No"
+    ],
+    "answer_display": "1: No (Invalid), 2: No (Invalid), 3: No (Invalid)",
+    "images": [],
+    "explanation": "1) 456 + 456.0 дает float 912.0, а не int. 2) Одинарные кавычки внутри строки в двойных кавычках полностью допустимы. 3) int(\"456.0\") вызывает исключение ValueError (сначала нужно вызвать float). Все утверждения неверны.",
+    "statements": [
+      "result = 456 + 456.0 (type of result is int)",
+      "s = \"Durga Sir's Python Classes are Good\" (causes an error because double and single quotes cannot be mixed)",
+      "The line print(int(\"456.0\")) will print result"
+    ]
+  },
+  {
+    "id": 45,
+    "number": 45,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "Consider the code: \n \nt=([10,20],10,False) \n \nWhitch line of the code assigns <class 'list'> to x?",
+    "options": [
+      "A) x = type(t)",
+      "B) x = type(t[0])",
+      "C) x=type(t[1])",
+      "D) x = type(t[0:1])"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "t=([10,20],10,False). Элемент t[0] — это список [10, 20]. Поэтому type(t[0]) возвращает <class 'list'>."
+  },
+  {
+    "id": 46,
+    "number": 46,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "Consider the code \n \n1) count=input('Enter the number of customers of the bank:') \n2) #Line-1 \n3) print(output) \n \nWhich code inserted at Line-1 will print 20 to the console if we pass 15 as count value from the console?",
+    "options": [
+      "A) output=int(count)+5",
+      "B) output=count+5",
+      "C) output=str(count)+5",
+      "D) output=float(count)+5"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 47,
+    "number": 47,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "single",
+    "question": "In which of the following cases we will get <class 'int'> as output?",
+    "options": [
+      "A) B)",
+      "C) D) \n1) x=47.0 \n2) print(type(x)) \n1) x='47' \n2) print(type(x)) \n1) x=10+20j \n2) print(type(x)) \n1) x=2**2**2 \n2) print(type(x))"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 48,
+    "number": 48,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.2 Perform and analyze data and data type operations",
+    "type": "multiple",
+    "question": "Which of the following are valid statements?",
+    "options": [
+      "A) 5+False evaluates to False",
+      "B) True+1 evaluates to 2",
+      "C) True and False evaluates to False",
+      "D) True or False evaluates to False",
+      "E) type('') is <class 'bool'>"
+    ],
+    "correct_answer": [
+      1,
+      2
+    ],
+    "answer_display": "B,C",
+    "images": [],
+    "explanation": "Правильный ответ: B,C."
+  },
+  {
+    "id": 49,
+    "number": 49,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Consider the code \n1) a=15 \n2) b=5 \n3) print(a/b) \n \nWhat is the result ?",
+    "options": [
+      "A) 3",
+      "B) 3.0",
+      "C) 0",
+      "D) 0.0"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "15 / 5 в Python 3 возвращает вещественное число 3.0 (обычное деление всегда возвращает float)."
+  },
+  {
+    "id": 50,
+    "number": 50,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Consider the code \n1) a=21 \n2) b=6 \n3) print(a/b) \n4) print(a//b) \n5) print(a%b) \n \nWhat is the result?",
+    "options": [
+      "A) 3  3  3",
+      "B) 3.5  3  3",
+      "C) 3.0  3  3",
+      "D) 3.5  3.5  3"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "21 / 6 = 3.5; 21 // 6 = 3 (целочисленное деление); 21 % 6 = 3 (остаток 21 - 18 = 3). Результат: 3.5 3 3."
+  },
+  {
+    "id": 51,
+    "number": 51,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "You have the following code: \n1) a=3 \n2) b=5 \n3) a += 2**3 \n4) a -=b//2//3 \n5) print(a) \n \nWhat is the result?",
+    "options": [
+      "A) 13",
+      "B) 12",
+      "C) 11",
+      "D) 10"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "a = 3 + 2**3 = 3 + 8 = 11. b//2//3 = 5//2//3 = 2//3 = 0. a -= 0 -> a остается 11."
+  },
+  {
+    "id": 52,
+    "number": 52,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Consider the following expression \n1) result=8//6%5+2**3-2 \n2) print(result) \n \nWhat is the result?",
+    "options": [
+      "A) 6",
+      "B) 7",
+      "C) 8",
+      "D) 9"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Приоритет операций: 2**3 = 8. Затем слева направо: 8 // 6 = 1; 1 % 5 = 1. Итого: 1 + 8 - 2 = 7."
+  },
+  {
+    "id": 53,
+    "number": 53,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Which of the following expression will generate max value?",
+    "options": [
+      "A) 8%3*4",
+      "B) 8-3*4",
+      "C) 8//3*4",
+      "D) 8/3*4"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 54,
+    "number": 54,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Which expression would evaluate to 2?",
+    "options": [
+      "A) 3**2",
+      "B) 22%5",
+      "C) 13//4",
+      "D) 11/2"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 55,
+    "number": 55,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Consider the code \na=7 \nb=3 \nc=5 \nd=1 \n \nWhich line of the code assigns 9 to the output?",
+    "options": [
+      "A) output=a%c+1",
+      "B) output=a+c//d",
+      "C) output=c*d-1",
+      "D) output=a+d*2"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 56,
+    "number": 56,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Consider the code \n1) x=3 \n2) x +=1 \n3) #Line-1 \n \nWhich line should be inserted at Line-1 so that x value will become 16?",
+    "options": [
+      "A) x+=2",
+      "B) x-=2",
+      "C) x*=2",
+      "D) x**=2"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 57,
+    "number": 57,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Which expression evaluates to 4?",
+    "options": [
+      "A) 7/2*3",
+      "B) 7%2+3",
+      "C) 7//2-3",
+      "D) 7-2*3"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 58,
+    "number": 58,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Consider the following expression: \n \n6//4%5+2**3-2//3 \n \nThis expression results to:",
+    "options": [
+      "A) 9",
+      "B) 3",
+      "C) -1",
+      "D) 25"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 59,
+    "number": 59,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Consider the code \n \n1) x=2 \n2) y=6 \n3) x+=2**3 \n4) x//=y//2//3 \n5) print(x) \n \nWhat is the output?",
+    "options": [
+      "A) 0",
+      "B) 9",
+      "C) 10",
+      "D) 7"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 60,
+    "number": 60,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Consider the Code \n \n1) x=3/3+3**3-3 \n2) print(x) \n \nWhat is the output?",
+    "options": [
+      "A) 25",
+      "B) 32",
+      "C) 0.11",
+      "D) 25.0"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 61,
+    "number": 61,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "multiple",
+    "question": "In which of the following cases, True will be printed to the console? (Choose two)",
+    "options": [
+      "A) a = 45; b = 45; print(a is not b)",
+      "B) s1 = 'Python'; s2 = 'Python'.upper(); print(s1 is s2)",
+      "C) x = [1, 2, 3]; y = [1, 2, 3]; print(x is y)",
+      "D) print('r' in 'durga')",
+      "E) print('is' in 'This IS a Fake News')"
+    ],
+    "correct_answer": [
+      3,
+      4
+    ],
+    "answer_display": "D and E",
+    "images": [],
+    "explanation": "В варианте D подстрока 'r' содержится в слове 'durga' (True). В варианте E подстрока 'is' содержится в слове 'This' (True). В варианте A целые числа кэшируются, поэтому a is b равно True, а a is not b равно False."
+  },
+  {
+    "id": 62,
+    "number": 62,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "You evaluate the following code: \nnumList = [0,1,2,3,4] \nprint(5 in numList) \nWhat is the output of the print statement?",
+    "options": [
+      "A) 4",
+      "B) False",
+      "C) True",
+      "D) 5"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "not 3 > 4: 3 > 4 дает False, not False дает True."
+  },
+  {
+    "id": 63,
+    "number": 63,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "dropdown",
+    "question": "You develop an application for your company. You have the following code. Line numbers are included for reference only.\n01 def main(a,b,c,d):\n02    value = a+b*c-d\n03    return value\n\nUse the drop-down menus to select the answer choice that answers each question based on the information presented in the code segment.",
+    "options": [
+      "[1] First: b*c",
+      "[2] Second: addition",
+      "[3] Expression: (a + (b*c)) - d"
+    ],
+    "correct_answer": [
+      1,
+      0,
+      1
+    ],
+    "answer_display": "[1]: b*c, [2]: addition, [3]: (a + (b*c)) - d",
+    "images": [
+      "images/qimg_p19_1_101.png",
+      "images/qimg_p19_2_102.png",
+      "images/qimg_p19_3_103.png"
+    ],
+    "explanation": "Оператор умножения * имеет приоритет выше сложения и вычитания, поэтому b*c вычисляется первым. Сложение + и вычитание - имеют одинаковый приоритет и выполняются слева направо: вторым действием будет сложение a + (b*c). Итоговый порядок выражается как (a + (b*c)) - d.",
+    "dropdowns": [
+      {
+        "prompt": "Which part of the expression will be evaluated first? [1]",
+        "options": [
+          "a+b",
+          "b*c",
+          "c-d"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Which operation will be evaluated second? [2]",
+        "options": [
+          "addition",
+          "subtraction"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Which expression represents the order of operations? [3]",
+        "options": [
+          "(a+b) * (c-d)",
+          "(a + (b*c)) - d",
+          "a + ((b * c) - d)"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "number": 64,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Consider the expession: \n \nresult=a-b*c+d \n \nWhich of the following are valid?",
+    "options": [
+      "A) First b*c will be evaluated followed by subtraction and addition",
+      "B) First b*c will be evaluated followed by addition and subtraction",
+      "C) First a-b will be evaluated followed by multiplication and addition",
+      "D) The above expession is equivalent to a-(b*c)+d"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "x = 4; y = 2. x // y дает 2. x % y дает 0. x / y дает 2.0."
+  },
+  {
+    "id": 65,
+    "number": 65,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Consider the code \n1) a=2 \n2) a += 1 \n3) # Line-1 \n \nTo make a value as 9,which expression required to place at Line-1",
+    "options": [
+      "A) a*=2",
+      "B) a**=2",
+      "C) a+=2",
+      "D) a-=2"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Выражение (10 + 20) * 3 / 2: 30 * 3 / 2 = 90 / 2 = 45.0 (тип float)."
+  },
+  {
+    "id": 66,
+    "number": 66,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Consider the python code \n1) a=1 \n2) b=3 \n3) c=5 \n4) d=7 \n \nIn Which of the following cases the result value is 0?",
+    "options": [
+      "A) result = a+b*2",
+      "B) result = a%b-1",
+      "C) result = a-b//d",
+      "D) result = a**d-1"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Вычисление степени ** имеет наивысший приоритет среди арифметических операторов."
+  },
+  {
+    "id": 67,
+    "number": 67,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "multiple",
+    "question": "In which of the following cases we will get same result",
+    "options": [
+      "A) 23%5",
+      "B) 3**1",
+      "C) 11/3",
+      "D) 13//4"
+    ],
+    "correct_answer": [
+      0,
+      1,
+      3
+    ],
+    "answer_display": "A,B,D",
+    "images": [],
+    "explanation": "Правильный ответ: A,B,D."
+  },
+  {
+    "id": 68,
+    "number": 68,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Consider the code \n1) a=1 \n2) b=2 \n3) c=4 \n4) d=6 \n \nWhich of the following expression results -4?",
+    "options": [
+      "A) (a+b)//c%d",
+      "B) (b+c)//a%d",
+      "C) (a+b)//c*d",
+      "D) (a+b)//d-c"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 69,
+    "number": 69,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "dropdown",
+    "question": "You are developing a Python application for your company. You write the following code:\n\nnumList = [1,2,3,4,5]\nalphaList = [\"a\",\"b\",\"c\",\"d\",\"e\"]\nprint(numList is alphaList)\nprint(numList == alphaList)\nnumList = alphaList\nprint(numList is alphaList)\nprint(numList == alphaList)\n\nWhat is displayed after each print statement?",
+    "options": [
+      "First print: False",
+      "Second print: False",
+      "Third print: True",
+      "Fourth print: True"
+    ],
+    "correct_answer": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "answer_display": "1: False, 2: False, 3: True, 4: True",
+    "images": [
+      "images/qimg_p21_1_110.jpeg"
+    ],
+    "explanation": "Изначально numList и alphaList — два разных списка с разными элементами, поэтому is и == возвращают False. После numList = alphaList обе переменные ссылаются на один и тот же объект, поэтому оба сравнения дают True.",
+    "dropdowns": [
+      {
+        "prompt": "What is displayed after the first print? (numList is alphaList)",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "What is displayed after the second print? (numList == alphaList)",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "What is displayed after the third print? (after assignment; numList is alphaList)",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "What is displayed after the fourth print? (after assignment; numList == alphaList)",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "number": 70,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "multiple",
+    "question": "1) subjects=['java','python','sap'] \n2) more_subjects=['java','python','sap'] \n3) extra_subjects=more_subjects \n \nIn which cases True will be printed to the console?",
+    "options": [
+      "A) print(extra_subjects is more_subjects)",
+      "B) print(subjects is more_subjects)",
+      "C) print(subjects is extra_subjects)",
+      "D) print(subjects == extra_subjects)"
+    ],
+    "correct_answer": [
+      0,
+      0,
+      3,
+      3
+    ],
+    "answer_display": "A and D",
+    "images": [],
+    "explanation": "Правильный ответ: A and D."
+  },
+  {
+    "id": 71,
+    "number": 71,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Consider the python code:\nnumbers = [10, 20, 30, 40]\nx = 0\n\nIn which of the following cases 10 will be printed to the console?",
+    "options": [
+      "A) for i in (30, 40, 50):\n    if i in numbers:\n        x = x + 5\nprint(x)",
+      "B) for i in (30, 40, 50):\n    if i not in numbers:\n        x = x + 5\nprint(x)",
+      "C) for i in (30, 40, 50):\n    if i not in numbers:\n        x = x + 10\nprint(x)",
+      "D) for i in (30, 40, 50):\n    if i in numbers:\n        x = x + 10\nprint(x)"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "В варианте A элементы 30 и 40 находятся в списке numbers, поэтому x увеличивается на 5 дважды (5 + 5 = 10). Для 50 условие не выполняется. В итоге выводится 10."
+  },
+  {
+    "id": 72,
+    "number": 72,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Which of the following code snippets will produce the output:\nBoy\nCat\nDog",
+    "options": [
+      "A) l = ['Apple', 'Boy', 'Cat', 'Dog']\nfor x in l:\n    if len(x) == 3:\n        print(x)",
+      "B) l = ['Apple', 'Boy', 'Cat', 'Dog']\nfor x in l:\n    if len(x) != 3:\n        print(x)",
+      "C) l = ['Apple', 'Boy', 'Cat', 'Dog']\nfor x in l:\n    print(x)",
+      "D) l = ['Apple', 'Boy', 'Cat', 'Dog']\nl1 = l[1:]\nfor x in l1:\n    print(x)"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Длина 'Apple' равна 5, а длина слов 'Boy', 'Cat' и 'Dog' равна 3. Условие len(x) == 3 отбирает только слова из трёх букв."
+  },
+  {
+    "id": 73,
+    "number": 73,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "dropdown",
+    "question": "The ABC company is converting an existing application to Python. You are creating documentation that will be used by several interns who are working on the team.\nYou need to ensure that arithmetic expressions are coded correctly. What is the correct order of operations for the six classes of operations ordered from first to last in order of precedence? Select the appropriate operation for each precedence level.",
+    "options": [
+      "1. Parenthesis",
+      "2. Exponents",
+      "3. Unary positive, negative, not",
+      "4. Multiplication and Division",
+      "5. Addition and Subtraction",
+      "6. And"
+    ],
+    "correct_answer": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "answer_display": "1: Parenthesis, 2: Exponents, 3: Unary +,-,not, 4: *,/,//,%, 5: +,-, 6: and",
+    "images": [
+      "images/qimg_p22_1_114.png"
+    ],
+    "explanation": "Приоритет операций в Python сверху вниз: 1) Скобки (), 2) Степень **, 3) Унарные знаки +, -, not, 4) Умножение и деление *, /, //, %, 5) Сложение и вычитание +, -, 6) Логическое and.",
+    "dropdowns": [
+      {
+        "prompt": "1. First (Highest precedence):",
+        "options": [
+          "Parenthesis",
+          "Exponents",
+          "Unary positive, negative, not",
+          "Multiplication and Division",
+          "Addition and Subtraction",
+          "And"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "2. Second:",
+        "options": [
+          "Parenthesis",
+          "Exponents",
+          "Unary positive, negative, not",
+          "Multiplication and Division",
+          "Addition and Subtraction",
+          "And"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "3. Third:",
+        "options": [
+          "Parenthesis",
+          "Exponents",
+          "Unary positive, negative, not",
+          "Multiplication and Division",
+          "Addition and Subtraction",
+          "And"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "4. Fourth:",
+        "options": [
+          "Parenthesis",
+          "Exponents",
+          "Unary positive, negative, not",
+          "Multiplication and Division",
+          "Addition and Subtraction",
+          "And"
+        ],
+        "correct": 3
+      },
+      {
+        "prompt": "5. Fifth:",
+        "options": [
+          "Parenthesis",
+          "Exponents",
+          "Unary positive, negative, not",
+          "Multiplication and Division",
+          "Addition and Subtraction",
+          "And"
+        ],
+        "correct": 4
+      },
+      {
+        "prompt": "6. Sixth (Lowest precedence):",
+        "options": [
+          "Parenthesis",
+          "Exponents",
+          "Unary positive, negative, not",
+          "Multiplication and Division",
+          "Addition and Subtraction",
+          "And"
+        ],
+        "correct": 5
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "number": 74,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "You are writing a Python program that evaluates an arithmetic formula. The formula is described as b equals a multiplied by negative one, then raised to the second power, where a is the value that will be input and b is the result.\nYou create the following code segment. Line numbers are included for reference only.\n01 a = eval(input('Enter a number for the equation: '))\n02 b =\n\nHow should you complete the code on line 02?",
+    "options": [
+      "A) (-a)**2",
+      "B) -a**2",
+      "C) -(a**2)",
+      "D) (-a)*2"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A) (-a)**2",
+    "images": [
+      "images/qimg_p22_2_115.jpeg"
+    ],
+    "explanation": "Сначала значение переменной a умножается на -1 (получается -a), а затем результат возводится в квадрат. Без скобок -a**2 интерпретируется как -(a**2), так как оператор ** имеет более высокий приоритет, чем унарный минус -. Поэтому требуются скобки: (-a)**2."
+  },
+  {
+    "id": 75,
+    "number": 75,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "dropdown",
+    "question": "You are developing a Python program that compares numbers. Evaluate each expression and indicate the correct result. Select the appropriate result from the drop-down menu for each expression.",
+    "options": [
+      "[1] 0 or 5: 5",
+      "[2] bool(0): False",
+      "[3] None is None: True",
+      "[4] -5 < 0 < 5: True"
+    ],
+    "correct_answer": [
+      2,
+      1,
+      0,
+      0
+    ],
+    "answer_display": "[1]: 5, [2]: False, [3]: True, [4]: True",
+    "images": [
+      "images/qimg_p23_2_120.png"
+    ],
+    "explanation": "1) 0 or 5 возвращает 5 (первое истинное значение). 2) bool(0) возвращает False. 3) None is None возвращает True. 4) Цепное сравнение -5 < 0 < 5 истинно (True).",
+    "dropdowns": [
+      {
+        "prompt": "[1] 0 or 5",
+        "options": [
+          "True",
+          "False",
+          "5",
+          "None"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "[2] bool(0)",
+        "options": [
+          "True",
+          "False",
+          "5",
+          "None"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "[3] None is None",
+        "options": [
+          "True",
+          "False",
+          "5",
+          "None"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "[4] -5 < 0 < 5",
+        "options": [
+          "True",
+          "False",
+          "5",
+          "None"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "number": 76,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "What will be the value of X in the following Python expression? \nX = 2+9*((3*12)-8)/10",
+    "options": [
+      "A) 30.0",
+      "B) 30.8",
+      "C) 28.4",
+      "D) 27.2"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Оператор % возвращает остаток от деления целых чисел."
+  },
+  {
+    "id": 77,
+    "number": 77,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Operators with the same precedence are evaluated in which manner?",
+    "options": [
+      "A) Left to Right",
+      "B) Right to Left",
+      "C) Can‟t say",
+      "D) None of the mentioned"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Выражение оценивается согласно стандартному приоритету операторов Python."
+  },
+  {
+    "id": 78,
+    "number": 78,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "You are writing a python program that evaluates an arithmetic expression. \nThe expression is described as b is equals a multiplied by negative one, then raised to \nthe second power, where a is the value which will be input and b is result. \n \na=eval(input('Enter a number for the expression:')) \n \nWhich of the following is valid expression for the given requirement?",
+    "options": [
+      "A) b = (a) ** -2",
+      "B) b = (-a) ** 2",
+      "C) b = (a-) ** 2",
+      "D) b = -(a) ** 2"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Выражение с логическими и арифметическими операторами: сначала вычисляются скобки, затем арифметика, затем логические операторы."
+  },
+  {
+    "id": 79,
+    "number": 79,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.3 Determine the sequence of execution based on operator precedence",
+    "type": "single",
+    "question": "Which expression evaluates to 4?",
+    "options": [
+      "A) 7//2-3",
+      "B) 7%2+3",
+      "C) 7/2*3",
+      "D) 7-2*3"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B) 7%2+3",
+    "images": [],
+    "explanation": "В выражении 7 % 2 + 3 сначала вычисляется остаток от деления: 7 % 2 = 1. Затем сложение: 1 + 3 = 4."
+  },
+  {
+    "id": 80,
+    "number": 80,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.4 Select operators to achieve the intended results",
+    "type": "single",
+    "question": "Evaluate the following arithmetic expression: \n(3*(1+2)**2 - (2**2)*3) \nWhat is the result?",
+    "options": [
+      "A) 3",
+      "B) 13",
+      "C) 15",
+      "D) 69"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Вычисляем по правилам приоритета операторов Python (сначала скобки, затем степень **, умножение *, вычитание -): (3*(1+2)**2 - (2**2)*3) = 3*(3)**2 - 4*3 = 3*9 - 12 = 27 - 12 = 15."
+  },
+  {
+    "id": 81,
+    "number": 81,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.4 Select operators to achieve the intended results",
+    "type": "single",
+    "question": "Consider the following expression \nresult=(2*(3+4)**2-(3**3)*3) \nWhat is result value?",
+    "options": [
+      "A) 17",
+      "B) 16",
+      "C) 18",
+      "D) 19"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Вычисляем по правилам приоритета операторов Python (скобки, затем **, затем *, затем -): (2*(3+4)**2 - (3**3)*3) = 2*(7**2) - 27*3 = 2*49 - 81 = 98 - 81 = 17."
+  },
+  {
+    "id": 82,
+    "number": 82,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.4 Select operators to achieve the intended results",
+    "type": "single",
+    "question": "Which of the following expressions results in an error?",
+    "options": [
+      "A) float(„10‟)",
+      "B) int(„10‟)",
+      "C) float(‟10.8‟)",
+      "D) int(‟10.8‟"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "int('10.8') вызывает ValueError, так как int() не может напрямую преобразовать строку с точкой в целое число (нужно сначала float('10.8'))."
+  },
+  {
+    "id": 83,
+    "number": 83,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.4 Select operators to achieve the intended results",
+    "type": "single",
+    "question": "Consider the code \nx='10' \ny='20' \n \nThe type of x+y ?",
+    "options": [
+      "A) int",
+      "B) float",
+      "C) str",
+      "D) complex"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 84,
+    "number": 84,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.4 Select operators to achieve the intended results",
+    "type": "single",
+    "question": "Consider the code \na=float('123.456') \n \nWhich expression evaluates to 2?",
+    "options": [
+      "A) int(a)+False",
+      "B) bool(a)+True",
+      "C) str(a)",
+      "D) bool(a)"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 85,
+    "number": 85,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.4 Select operators to achieve the intended results",
+    "type": "single",
+    "question": "Consider the following code \n \n1) x= 'Durga' \n2) y= 'Durga' \n3) result=condition \n4) print(result) \n \nFor which of the following condition True will be printed to the console?",
+    "options": [
+      "A) x is y",
+      "B) x is not y",
+      "C) x != y",
+      "D) x < y"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 86,
+    "number": 86,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.4 Select operators to achieve the intended results",
+    "type": "single",
+    "question": "Consider the code: \n1) x= 8 \n2) y= 10 \n3) result= x//3*3/2+y%2**2 \n4) print(result) \n \nWhat is the result?",
+    "options": [
+      "A) 5",
+      "B) 5.0",
+      "C) 6.0",
+      "D) 7.0"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 87,
+    "number": 87,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.4 Select operators to achieve the intended results",
+    "type": "single",
+    "question": "Consider the Python code: \n1) l1=['sunny','bunny','chinny','vinny'] \n2) l2=['sunny','bunny','chinny','vinny'] \n3) print(l1 is not l2) \n4) print(l1 != l2) \n5) l1=l2 \n6) print(l1 is not l2) \n7) print(l1 != l2) \n \nWhat is the result?",
+    "options": [
+      "A) B)",
+      "C) D) \nTrue \nTrue \nFalse \nFalse \nTrue \nFalse \nTrue \nFalse \nTrue \nFalse \nFalse \nTrue \nTrue \nFalse \nFalse \nFalse"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 88,
+    "number": 88,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.4 Select operators to achieve the intended results",
+    "type": "single",
+    "question": "Consider the Python Code \n1) l1=['sunny','bunny','chinny','vinny'] \n2) l2=['sunny','bunny','chinny','vinny'] \n3) print(l1 is l2) \n4) print(l1 == l2) \n5) l1=l2 \n6) print(l1 is l2) \n7) print(l1 == l2) \n \nWhat is the result?",
+    "options": [
+      "A) B)",
+      "C) D) \nFalse \nTrue \nTrue \nTrue \nFalse \nFalse \nTrue \nTrue \nFalse \nTrue \nFalse \nTrue \nFalse \nTrue \nTrue \nFalse"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "l1 и l2 — разные списки: print(l1 is l2) -> False. print(l1 == l2) -> True. После l1=l2 обе переменные указывают на один список: is -> True, == -> True."
+  },
+  {
+    "id": 89,
+    "number": 89,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.4 Select operators to achieve the intended results",
+    "type": "single",
+    "question": "Consider the python code: \n1) print(10==10 and 20!=20) \n2) print(10==10 or 20!=20) \n3) print( not 10==10) \n \nWhat is the result?",
+    "options": [
+      "A) B)",
+      "C) D) \nTrue \nTrue \nFalse \nFalse \nTrue \nTrue \nFalse \nTrue \nTrue \nFalse \nFalse \nFalse"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 90,
+    "number": 90,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.4 Select operators to achieve the intended results",
+    "type": "single",
+    "question": "Consider the code: \n \n1) print(not 0) \n2) print(not 10) \n3) print(not '') \n4) print(not 'durga') \n5) print(not None) \nWhat is the result?",
+    "options": [
+      "A) B)",
+      "C) D) \nTrue \nFalse \nFalse \nFalse \nTrue \nTrue \nFalse \nTrue \nFalse \nTrue \nFalse \nFalse \nTrue \nFalse \nTrue \nTrue \nFalse \nTrue \nFalse \nFalse"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 91,
+    "number": 91,
+    "section": "1. Operations using Data Types and Operators",
+    "subtopic": "1.4 Select operators to achieve the intended results",
+    "type": "single",
+    "question": "Consider the code: \n \n1) lst = [7, 8, 9] \n2) b = lst[:] \n3) print(b is lst) \n4) print(b == lst) \n \nWhat is the result?",
+    "options": [
+      "A) B)",
+      "C) D) \nFalse \nTrue \nFalse \nFalse \nTrue \nFalse \nTrue \nTrue"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 93,
+    "number": 93,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "single",
+    "question": "A classmate has asked you to debug the following code: \nx = 4 \n  while x >= 1: \n    if x % 4 == 0: \n      print (\"party\") \n    elif x - 2 < 0: \n      print(\"cake\") \n    elif x / 3 == 0: \n      print(\"greeting\") \n    else: \n      print(\"birthday\") \n    x = x - 1 \n \n \n \nWhat is the output that is printed to the screen?",
+    "options": [
+      "A) B.",
+      "C) D. \nbirthday \nparty \ngreeting \ncake \nparty \nbirthday \nbirthday \ncake \nparty \ngreeting \nbirthday \ncake \nbirthday \ngreeting \nparty \ncake"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "При x=4: 4%4==0 -> 'party'; x=3: 'birthday'; x=2: 'birthday'; x=1: 'birthday'. Итог: party, birthday, birthday, cake при x=0."
+  },
+  {
+    "id": 94,
+    "number": 94,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "single",
+    "question": "You are writing a Python application for a dance studio. The studio wants to encourage youth and seniors to sign up. \nMinors and seniors must receive a 10% discount. \nYou write the following code. Line numbers are included for reference only. \n \n01 def get_discount(minor, senior): \n02 discount = .1 \n03  \n04    discount = 0 \n05 return discount \n \nYou need to complete the code. Which code should you add on line 03?",
+    "options": [
+      "A) if not (minor and senior):",
+      "B) if not (minor or senior):",
+      "C) if (not minor) and senior:",
+      "D) if (not minor) or senior:"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Требуется условие: клиент НЕ является ни minor, ни senior. В булевой логике это выражается как if not (minor or senior): (закон де Моргана)."
+  },
+  {
+    "id": 95,
+    "number": 95,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "yes_no",
+    "question": "You are creating a Python program that compares numbers. \nYou create the following code. Line numbers are included for reference only. \n01 num1 = eval(input(\"Please enter the first number: \")) \n02 num2 = eval(input(\"Please enter the second number: \")) \n03 if num1 == num2: \n04    print(\"The two numbers are equal. \") \n05 if num1 <= num2: \n06    print(\"Number 1 is less than number 2. \") \n07 if num1 > num2: \n08    print(\"Number 1 is greater than number 2. \") \n09 if num2 = num1: \n10    print(\"The two numbers are the same. \") \nYou need to ensure that the comparisons are accurate. \nFor each of the following statements, select Yes if the statement is true. Otherwise, select No. \nYes No \nThe print statement at line 04 will only print if the two numbers are equal in value.〇 〇 \nThe print statement at line 06 will only print if num1 is less than num2.                  〇 〇 \nThe print statement at line 08 will only print if num1 is greater than num2.             〇 〇 \nThe statement at line 09 is an invalid comparison.                                                    〇 〇",
+    "images": [],
+    "answer_display": "1: Yes, 2: No, 3: Yes, 4: Yes",
+    "explanation": "1) num1 == num2 истинно только при равенстве значений (Yes). 2) num1 <= num2 истинно и при меньше, и при равно, а не только меньше (No). 3) num1 > num2 истинно только когда больше (Yes). 4) num2 = num1 в условии if недопустимо, так как = это присваивание, а не сравнение (Yes).",
+    "statements": [
+      "The print statement at line 04 will only print if the two numbers are equal in value.",
+      "The print statement at line 06 will only print if num1 is less than num2.",
+      "The print statement at line 08 will only print if num1 is greater than num2.",
+      "The statement at line 09 is an invalid comparison."
+    ],
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "correct_answer": [
+      "Yes",
+      "No",
+      "Yes",
+      "Yes"
+    ]
+  },
+  {
+    "id": 96,
+    "number": 96,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "single",
+    "question": "We are developing loan collection agent application. Consider the code: \n \n1) collected_amount=3000 \n2) commission=0 \n3) if collected_amount <= 2000: \n4)    commission=50 \n5) elif collected_amount> 2500 and collected_amount<3000: \n6)    commission=100 \n7) elif collected_amount>2500: \n8)    commission=150 \n9) if collected_amount>=3000: \n10)   commission+=200 \n \nWhat will be the value of commission?",
+    "options": [
+      "A) 350",
+      "B) 200",
+      "C) 150",
+      "D) 100"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 97,
+    "number": 97,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "single",
+    "question": "You are developing online shopping application. \nConsider the code: \n01 order_value = 1500 \n02 state = 'ap' \n03 delivery_charge = 0 \n \n04 if state in ['up', 'mp', 'ts']: \n05    if order_value <= 1000: \n06       delivery_charge = 50 \n07    elif 1000 < order_value < 2000: \n08       delivery_charge = 100 \n09    else: \n10        delivery_charge = 150 \n11 else: \n12    delivery_charge = 25 \n \n13 if state in ['lp', 'kp', 'ap']: \n14    if order_value > 1000: \n15        delivery_charge += 20 \n16    if order_value < 2000 and state in ['kp', 'ap']: \n17        delivery_charge += 30 \n18    else: \n19        delivery_charge += 15 \n20 print(delivery_charge) \n \nWhat is the result?",
+    "options": [
+      "A) 65",
+      "B) 75",
+      "C) 85",
+      "D) 55"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 98,
+    "number": 98,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "dropdown",
+    "question": "You need to complete a Python script that assigns a letter grade based on a percentage score according to the following grading scale:\n- 90 through 100: A\n- 80 through 89: B\n- 70 through 79: C\n- 65 through 69: D\n- 0 through 64: F\n\nHow should you complete the code? Select the appropriate code segment from the drop-down menu for each line.",
+    "options": [
+      "Line 01: if grade >= 90:",
+      "Line 03: elif grade >= 80:",
+      "Line 05: elif grade >= 70:",
+      "Line 07: elif grade >= 65:"
+    ],
+    "correct_answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "answer_display": "Line 01: if grade >= 90:, Line 03: elif grade >= 80:, Line 05: elif grade >= 70:, Line 07: elif grade >= 65:",
+    "images": [
+      "images/qimg_p29_1_140.png"
+    ],
+    "explanation": "При проверке диапазона оценок сверху вниз первой строкой идет if grade >= 90:. Затем следуют ветки elif grade >= 80:, elif grade >= 70: и elif grade >= 65:. Для всех остальных оценок сработает блок else: letter = 'F'.",
+    "dropdowns": [
+      {
+        "prompt": "Line 01: [1]",
+        "options": [
+          "if grade >= 90:",
+          "if grade >= 80:",
+          "if grade >= 70:",
+          "if grade >= 65:"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Line 03: [2]",
+        "options": [
+          "elif grade >= 90:",
+          "elif grade >= 80:",
+          "elif grade >= 70:",
+          "elif grade >= 65:"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Line 05: [3]",
+        "options": [
+          "elif grade >= 90:",
+          "elif grade >= 80:",
+          "elif grade >= 70:",
+          "elif grade >= 65:"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Line 07: [4]",
+        "options": [
+          "elif grade >= 90:",
+          "elif grade >= 80:",
+          "elif grade >= 70:",
+          "elif grade >= 65:"
+        ],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "number": 99,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "single",
+    "question": "You are writing a python script to convert student marks into grade. The grades are defined as follows: \n90 through 100 --> A grade \n80 through 89 -> B grade \n70 through 79 --> C grade \n65 through 69 --> D grade  \n0 through 64 --> E grade \n \nAnd developed application is: \n#Grade converter \nmarks=int(input(\"Enter Student marks:\")) \nif marks >=90: \n    grade = 'A' \nif marks >=80: \n    grade = 'B' \nif marks >=70: \n    grade = 'C' \nif marks >=65: \n    grade = 'D' \nelse: \n    grade = 'E' \nprint(\"Your grade is : \", grade) \n \n \n \nWhitch of the following changes should be performed to fulfill the \nrequirement?",
+    "options": [
+      "A) Line 3 should be replaced with if marks <= 90:",
+      "B) Line 5 should be replaced with if marks>=80 and marks <= 90:",
+      "C) Line 7 should be replaced with if marks>=70 and marks <= 80:",
+      "D) No changes are required."
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "В коде несколько независимых операторов if вместо if-elif. Если marks=95, выполнятся все if. Нужно использовать elif или проверку диапазона marks >= 80 and marks < 90."
+  },
+  {
+    "id": 100,
+    "number": 100,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "single",
+    "question": "We are developing one school automation application. If student marks between 80 and 100,then we have to offer 'A' \ngrade. Which code block we have to use?",
+    "options": [
+      "A) B)",
+      "C) D) \n1) if marks>=80 and marks>=100: \n2) grade='A' \n1) if marks>=80 or marks<=100: \n2) grade='A' \n1) if 80<=marks<=100: \n2) grade='A' \n1) if marks>80: \n2) grade='A'"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Выражение проверяет диапазон чисел с использованием операторов сравнения и логического and."
+  },
+  {
+    "id": 101,
+    "number": 101,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "single",
+    "question": "Consider the following code: \n \n1) marks=[30,40,50,45,50,100] \n2) average=sum(marks)//len(marks) \n3) grades={1:'A',2:'B',3:'C',4:'D'} \n4) if average>=90 and average<=100: \n5)    key=1 \n6) elif average>=80 and average<90: \n7)    key=2 \n8) elif average>=50 and average<80: \n9)    key=3 \n10) else: \n11)   key=4 \n12) print(grades[key]) \n \nWhich grade will be printed to the console?",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) C",
+      "D) D"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 102,
+    "number": 102,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "dropdown",
+    "question": "You are coding a math utility by using Python. You are writing a function to compute roots. The function must meet the following requirements:\n- If a is non-negative, return a**(1/b)\n- If a is negative and even, return 'Result is an imaginary number'\n- If a is negative and odd, return -(-a)**(1/b)\n\nHow should you complete the code?\ndef safe_root(a, b):\n   [1]\n      answer = a**(1/b)\n   [2]\n      [3]\n         answer = 'Result is an imaginary number'\n      [4]\n         answer = -(-a)**(1/b)\n   return answer",
+    "options": [
+      "[1]: if a >= 0:",
+      "[2]: else:",
+      "[3]: if a % 2 == 0:",
+      "[4]: else:"
+    ],
+    "correct_answer": [
+      0,
+      2,
+      1,
+      2
+    ],
+    "answer_display": "[1]: if a >= 0:, [2]: else:, [3]: if a % 2 == 0:, [4]: else:",
+    "images": [
+      "images/qimg_p30_2_150.png"
+    ],
+    "explanation": "Сначала проверяем if a >= 0:. Если число отрицательное, переходим в else:, внутри которого проверяем четность степени if a % 2 == 0:, а в противном случае (else:) возвращаем действительный нечетный корень -(-a)**(1/b).",
+    "dropdowns": [
+      {
+        "prompt": "Line [1]:",
+        "options": [
+          "if a >= 0:",
+          "if a % 2 == 0:",
+          "else:",
+          "elif:"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Line [2]:",
+        "options": [
+          "if a >= 0:",
+          "if a % 2 == 0:",
+          "else:",
+          "elif:"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Line [3]:",
+        "options": [
+          "if a >= 0:",
+          "if a % 2 == 0:",
+          "else:",
+          "elif:"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Line [4]:",
+        "options": [
+          "if a >= 0:",
+          "if a % 2 == 0:",
+          "else:",
+          "elif:"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "number": 103,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "dropdown",
+    "question": "You are coding a math utility by using Python. You are writing a function to compute roots. The function must meet the following requirements:\n- If a is non-negative, return a**(1/b)\n- If a is negative and even, return 'Result is an imaginary number'\n- If a is negative and odd, return -(-a)**(1/b)\n\nHow should you complete the code?\ndef safe_root(a, b):\n   [1]\n      answer = a**(1/b)\n   [2]\n      [3]\n         answer = 'Result is an imaginary number'\n      [4]\n         answer = -(-a)**(1/b)\n   return answer",
+    "options": [
+      "[1]: if a >= 0:",
+      "[2]: else:",
+      "[3]: if a % 2 == 0:",
+      "[4]: else:"
+    ],
+    "correct_answer": [
+      0,
+      2,
+      1,
+      2
+    ],
+    "answer_display": "[1]: if a >= 0:, [2]: else:, [3]: if a % 2 == 0:, [4]: else:",
+    "images": [
+      "images/qimg_p31_2_150.png"
+    ],
+    "explanation": "Сначала проверяем if a >= 0:. Если число отрицательное, переходим в else:, внутри которого проверяем четность степени if a % 2 == 0:, а в противном случае (else:) возвращаем действительный нечетный корень -(-a)**(1/b).",
+    "dropdowns": [
+      {
+        "prompt": "Line [1]:",
+        "options": [
+          "if a >= 0:",
+          "if a % 2 == 0:",
+          "else:",
+          "elif:"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Line [2]:",
+        "options": [
+          "if a >= 0:",
+          "if a % 2 == 0:",
+          "else:",
+          "elif:"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Line [3]:",
+        "options": [
+          "if a >= 0:",
+          "if a % 2 == 0:",
+          "else:",
+          "elif:"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Line [4]:",
+        "options": [
+          "if a >= 0:",
+          "if a % 2 == 0:",
+          "else:",
+          "elif:"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "number": 104,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "dropdown",
+    "question": "You work for a company that distributes media for all ages. You are writing a function that assigns a rating based on a user's age:\n- Anyone 18 years old or older receives a rating of 'A'\n- Anyone 13 or older, but younger than 18, receives a rating of 'T'\n- Anyone 12 years old or younger receives a rating of 'C'\n- If the age is unknown, the rating is set to 'C'\n\nSelect the appropriate code segments in the answer area.",
+    "options": [
+      "1: :rating = 'A'",
+      "2: age < 18 : rating = 'T'",
+      "3: age== None:rating = 'C'"
+    ],
+    "correct_answer": [
+      0,
+      1,
+      3
+    ],
+    "answer_display": "1: :rating = 'A', 2: age < 18 : rating = 'T', 3: age== None:rating = 'C'",
+    "images": [
+      "images/qimg_p31_3_154.png"
+    ],
+    "explanation": "В соответствии с правилами градации возраста проверяются граничные условия, присваивая правильный буквенный рейтинг.",
+    "dropdowns": [
+      {
+        "prompt": "Which condition assigns rating 'A'?",
+        "options": [
+          ":rating = \"A\"",
+          "age < 18 : rating = \"T\"",
+          "age < 13 : rating = \"C\"",
+          "age== None:rating = \"C\""
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Which condition assigns rating 'T'?",
+        "options": [
+          ":rating = \"A\"",
+          "age < 18 : rating = \"T\"",
+          "age < 13 : rating = \"C\"",
+          "age== None:rating = \"C\""
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Which condition handles unknown age (None)?",
+        "options": [
+          ":rating = \"A\"",
+          "age < 18 : rating = \"T\"",
+          "age < 13 : rating = \"C\"",
+          "age== None:rating = \"C\""
+        ],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "number": 105,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "single",
+    "question": "You work for a company that distributes media for all ages. You are writing a function that assigns a rating based on a user's age. The function must meet the following requirements:\n- Anyone 18 years old or older receives a rating of 'A'\n- Anyone 13 or older, but younger than 18, receives a rating of 'T'\n- Anyone 12 years old or younger receives a rating of 'C'\n- If the age is unknown, the rating is set to 'C'\n\nWhich of the following code meets the above requirements?",
+    "options": [
+      "A) def get_rating(age):\n    if age >= 18:\n        rating = 'A'\n    elif age >= 13:\n        rating = 'T'\n    else:\n        rating = 'C'\n    return rating",
+      "B) def get_rating(age):\n    if age >= 18:\n        rating = 'A'\n    if age >= 13:\n        rating = 'T'\n    else:\n        rating = 'C'\n    return rating",
+      "C) def get_rating(age):\n    if age >= 18:\n        rating = 'A'\n    elif age < 18 and age >= 13:\n        rating = 'T'\n    elif age <= 12:\n        rating = 'C'\n    else:\n        rating = 'C'\n    return rating",
+      "D) def get_rating(age):\n    rating = 'C'\n    if age >= 18:\n        rating = 'A'\n    if age >= 13 and age < 18:\n        rating = 'T'\n    return rating"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Вариант A использует цепочку if-elif-else: если age >= 18, рейтинг 'A'; иначе если age >= 13 (то есть 13-17), рейтинг 'T'; для всех остальных (<= 12 или при неизвестном значении) выполняется ветка else, устанавливающая 'C'."
+  },
+  {
+    "id": 106,
+    "number": 106,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "dropdown",
+    "question": "Southridge Video needs a way to determine the cost that a customer will pay for renting a DVD. The cost is dependent on the time of day the DVD is returned. There are special rates on Thursdays and Sundays:\n- Cost is $1.59 per night.\n- If returned after 8 PM, customer is charged an extra day.\n- Special rates apply on Thursdays and Sundays.\n\nHow should you complete the code? Select the appropriate code segments in the answer area.",
+    "options": [
+      "Line 03: != \"n\":",
+      "Line 06: == \"Sunday\":",
+      "Line 08: == \"Thursday\":"
+    ],
+    "correct_answer": [
+      0,
+      0,
+      0
+    ],
+    "answer_display": "Line 03: != \"n\":, Line 06: == \"Sunday\":, Line 08: == \"Thursday\":",
+    "images": [
+      "images/qimg_p32_3_159.png",
+      "images/qimg_p32_4_160.png",
+      "images/qimg_p32_5_161.png"
+    ],
+    "explanation": "Для продолжения работы цикла проверяется while more != 'n':. Для проверки дня недели используется оператор сравнения строк == 'Sunday': и == 'Thursday':.",
+    "dropdowns": [
+      {
+        "prompt": "Line 03: loop condition for more rentals",
+        "options": [
+          "!= \"n\":",
+          "== \"n\":",
+          "== \"y\":"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Line 06: check if day is Sunday",
+        "options": [
+          "== \"Sunday\":",
+          "> \"Sunday\":",
+          "is \"Sunday\":"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Line 08: check if day is Thursday",
+        "options": [
+          "== \"Thursday\":",
+          "<= \"Thursday\":",
+          "is \"Thursday\":"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "number": 107,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "single",
+    "question": "The XYZ Book Company needs a way to determine the cost that a student will pay for renting a Book. \n● The Cost is dependent on the time of the Book is returned. \n● However there are also special rates on Saturday and Sundays. \n● The Fee Structure is shown in the following list: \n● The cost is $3.00 per night. \nIf the Book is returned after 9PM, the student will be charged an extra day. If the Book is rented on a Sunday,the student \nwill get 50% off for as long as they the keep the book. \nIf the Book is rented on a Saturday,the student will get 30% off for as long as they keep the book. \nWe need to write the code to meet this requirements. \n \n# XYZ Book Rented Amount Calculator \nontime = input(\"Was Book returned before 9 pm? y or n\").lower() \ndays_rented = int(input(\"How many days was video rented? \")) \nday_rented = input(\"What day was the video rented?\").capitalize() \ncost_per_day = 3.00 \nif ontime == 'n' \n  days_rented = days_rented + 1 \nif day_rented == 'Sunday' \n  total = (days_rented * cost_per_day) *0.5 \nelif day_rented == 'Saturday' \n  total = (days_rented * cost_per_day) *0.7 \nelse: \n  total = days_rented * cost_per_day \nprint(\"The Cost of the Book rental is : $\", total) \n \nIf the Book rented on 'Sunday',the number of days Book rented is 5 and Book returned after 9PM then what is the result?",
+    "options": [
+      "A) The Cost of Book Rental is: $7.0",
+      "B) The Cost of Book Rental is: $8.0",
+      "C) The Cost of Book Rental is: $9.0",
+      "D) The Cost of Book Rental is: $10.0"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "5 дней аренды + 1 день штрафа (возврат после 21:00) = 6 дней. 6 * $3.00 = $18.00. Скидка 50% в воскресенье: $18.00 * 0.5 = $9.0."
+  },
+  {
+    "id": 108,
+    "number": 108,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "single",
+    "question": "We are developing gold loan application for XYZ company. \n \n1) amount=float(input('Enter Loan Amount:')) \n2) interest_rate=0 \n3) if amount > 0 and amount<= 50000: \n4)    interest_rate = 10 \n5) \n6) elif amount > 50000 and amount<100000: \n7)    interest_rate = 12 \n8) \n9) elif amount >= 100000 and amount<150000: \n10)   interest_rate = 16 \n11) \n12) else: \n13)   interest_rate = 22 \n \nFor which of the following user input interest_rate will be 12.",
+    "options": [
+      "A) 50000",
+      "B) 50001",
+      "C) 100000",
+      "D) 100001",
+      "E) 150000"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 109,
+    "number": 109,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "dropdown",
+    "question": "You are writing a Python program to ask the user to enter a number and determine if the number is 1 digit, 2 digits, or more than 2 digits long.\nnum = int(input(\"Enter a number with 1 or 2 digits: \"))\ndigits = 0;\n[1]\n   digits = \"1\"\n[2]\n   digits = 2\n[3]\n   digits = \">2\"\n\nHow should you complete the code?",
+    "options": [
+      "[1]: if num > -10 and num < 10:",
+      "[2]: elif num > -100 and num < 100:",
+      "[3]: else:"
+    ],
+    "correct_answer": [
+      0,
+      1,
+      0
+    ],
+    "answer_display": "[1]: if num > -10 and num < 10:, [2]: elif num > -100 and num < 100:, [3]: else:",
+    "images": [
+      "images/qimg_p34_2_169.png",
+      "images/qimg_p34_3_170.png",
+      "images/qimg_p34_4_171.png"
+    ],
+    "explanation": "Числа из одной цифры лежат в диапазоне от -9 до 9 (num > -10 and num < 10). Числа из двух цифр проверяются в ветке elif num > -100 and num < 100:. Все остальные числа попадают в else:.",
+    "dropdowns": [
+      {
+        "prompt": "Condition [1] for 1 digit:",
+        "options": [
+          "if num > -10 and num < 10:",
+          "if num > -100 and num < 100:"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Condition [2] for 2 digits:",
+        "options": [
+          "if num > -100 and num < 100:",
+          "elif num > -100 and num < 100:",
+          "if num > -10 and num < 10:",
+          "elif num > -10 and num < 10:"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Condition [3] for > 2 digits:",
+        "options": [
+          "else:",
+          "elif:"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "number": 110,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "dropdown",
+    "question": "You are creating a function to calculate admission fees by using Python:\n- Anyone under age 5 = free admission\n- Anyone age 5 or older who is in school = 10 USD\n- Anyone age 5 to 17 who is not in school = 20 USD\n- Anyone older than age 17 who is not in school = 50 USD\n\nHow should you complete lines 02, 04, and 05?",
+    "options": [
+      "Line 02: if age >= 5 and school == True:",
+      "Line 04: elif age >= 5 and school == False:",
+      "Line 05: if age <= 17:"
+    ],
+    "correct_answer": [
+      0,
+      0,
+      2
+    ],
+    "answer_display": "Line 02: if age >= 5 and school == True:, Line 04: elif age >= 5 and school == False:, Line 05: if age <= 17:",
+    "images": [
+      "images/qimg_p34_5_172.png",
+      "images/qimg_p34_6_173.png",
+      "images/qimg_p34_7_174.png"
+    ],
+    "explanation": "Для учащихся от 5 лет плата 10 USD (if age >= 5 and school == True:). Если человек не учится в школе, срабатывает elif age >= 5 and school == False:. Внутри проверяется возраст до 17 лет (if age <= 17:) со стоимостью 20 USD, а старше 17 (else:) — 50 USD.",
+    "dropdowns": [
+      {
+        "prompt": "Line 02 (10 USD fee):",
+        "options": [
+          "if age >= 5 and school == True:",
+          "if age >= 5 and age <= 17:",
+          "if age >= 5 and school == False:"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Line 04 (not in school):",
+        "options": [
+          "elif age >= 5 and school == False:",
+          "else age >= 5 and school == False:",
+          "elif age >= 5 and school == True:"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Line 05 (nested 20 USD fee check):",
+        "options": [
+          "if age >= 5 and school == True:",
+          "if age >= 5 and school == False:",
+          "if age <= 17:"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "number": 111,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "dropdown",
+    "question": "You develop a Python application for your company. How should you complete the code so that the print statements are accurate?\nnumList = [1, 2, 3, 4, 5]\nalphaList = [\"a\", \"b\", \"c\", \"d\", \"e\"]\n[1]\n   print(\"The values in numList are equal to alphaList\")\n[2]\n   print(\"The values in numList are not equal to alphaList\")",
+    "options": [
+      "[1]: if numList == alphaList:",
+      "[2]: else:"
+    ],
+    "correct_answer": [
+      0,
+      2
+    ],
+    "answer_display": "[1]: if numList == alphaList:, [2]: else:",
+    "images": [
+      "images/qimg_p35_2_178.png"
+    ],
+    "explanation": "Для проверки равенства списков используется оператор if numList == alphaList:. Ветка отрицания оформляется блоком else: с двоеточием.",
+    "dropdowns": [
+      {
+        "prompt": "Condition [1]:",
+        "options": [
+          "if numList == alphaList:",
+          "if numList == alphaList",
+          "else:",
+          "else"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Condition [2]:",
+        "options": [
+          "if numList == alphaList:",
+          "if numList == alphaList",
+          "else:",
+          "else"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "number": 112,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "single",
+    "question": "Consider the Python code: \na=5 \nb=10 \nc=2 \nd=True \n \nx=a+b*c \ny=a+b/d \n \nif(condition): \n   print('Valid') \nelse: \n   print('Invalid') \n \nTo print 'Valid' to the console, whitch condition we have to take for if statement?",
+    "options": [
+      "A) x > y",
+      "B) x == y",
+      "C) x < y",
+      "D) x <= y"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "a=5, b=10, c=2, d=True. x = 5 + 10*2 = 25. y = 5 + 10/1 = 15.0. 25 > 15.0 истинно (x > y)."
+  },
+  {
+    "id": 113,
+    "number": 113,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "single",
+    "question": "We are developing a online shopping application. Consider the code: \nd = input('Enter day of the week:')  \ndiscount_percentage = 3 \nif d == 'Monday': \n   discount_percentage+=5 \nelif d == 'Tuesday': \n   discount_percentage+=7 \nelif d == 'Saturday': \n   discount_percentage+=10 \nelif d == 'Sunday': \n   discount_percentage+=20 \nelse: \n   discount_percentage+=2 \n \nTo get 5 as discount_percentage, whitch of the following input \nshould be provided end user?",
+    "options": [
+      "A) Monday",
+      "B) Tuesday",
+      "C) Thursday",
+      "D) Saturday",
+      "E) Sunday"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 114,
+    "number": 114,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "single",
+    "question": "Which of the following is True about else block?",
+    "options": [
+      "A) else block will be executed if there is no exception is try bloack",
+      "B) without writing except block we can't write else block",
+      "C) for the same try we can write atmost one else block",
+      "D) All the above"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 115,
+    "number": 115,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "single",
+    "question": "We are developing an application for leave approval in XYZ Company. \n \ndays=int(input('Enter number of days for leave:')) cause=input('Enter the cause:') \nif days==1: \n   print('Leave will be approved immediately') \nelif days>1 and days<=3: \n   if cause=='Sick\": \n      print('Leave will be approved immediately') \n   else: \n      print('Needs Lead Approval') \nelif days>3 and days<5: \n   if cause=='Sick': \n      print('Needs Manager Approval') \n   else: \n      print(\"Needs Director Approval') \nelif days>=5 and days<=10: \n   print('Needs Director Approval') \n \nIn which of the following cases 'Needs Director Approval' will be printed to the console?",
+    "options": [
+      "A) days = 2 and cause='sick'",
+      "B) days = 3 and cause='personal'",
+      "C) days = 4 and cause='sick'",
+      "D) days = 4 and cause='official'"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 116,
+    "number": 116,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.1 Construct and analyze code segments that use branching statements",
+    "type": "single",
+    "question": "Consider the code \n \na=12 \nb=4 \ns='He shall not be happy if he does not work' \n \nIn which of the following cases result value will become 9",
+    "options": [
+      "A) result=3 if None else a/b",
+      "B) result=s.find('not') if s else None",
+      "C) result=s.rfind('not') if s else None",
+      "D) result=5 if len(s)>4 else 6"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 117,
+    "number": 117,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "dropdown",
+    "question": "You find errors while evaluating the following code. Line numbers are included for reference only.\n01 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n02 index = 0\n03 while (index < 10)\n04    print(numbers[index])\n05\n06    if numbers(index) = 6\n07      break\n08    else:\n09      index += 1\n\nYou need to correct the code at line 03 and line 06.",
+    "options": [
+      "Line 03: while (index < 10) :",
+      "Line 06: if numbers[index] == 6 :"
+    ],
+    "correct_answer": [
+      0,
+      1
+    ],
+    "answer_display": "Line 03: while (index < 10) :, Line 06: if numbers[index] == 6 :",
+    "images": [
+      "images/qimg_p37_1_185.png",
+      "images/qimg_p37_2_186.jpeg"
+    ],
+    "explanation": "В строке 03 не хватало двоеточия после условия: while (index < 10):. В строке 06 доступ к элементам списка должен производиться через квадратные скобки numbers[index], операция сравнения должна использовать ==, и строка должна заканчиваться двоеточием: if numbers[index] == 6:.",
+    "dropdowns": [
+      {
+        "prompt": "Line 03 correction:",
+        "options": [
+          "while (index < 10) :",
+          "while [index < 10]",
+          "while (index < 5) :",
+          "while [index < 5]"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Line 06 correction:",
+        "options": [
+          "if numbers[index] == 6",
+          "if numbers[index] == 6 :",
+          "if numbers(index) = 6 :",
+          "if numbers(index) != 6"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "number": 118,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "dropdown",
+    "question": "You are building a Python program that displays all of the prime numbers from 2 to 100. How should you complete the code? Select the appropriate code segment for each slot.",
+    "options": [
+      "Slot 1: while loop with is_prime = True",
+      "Slot 2: for i in range(2, p) if p % i == 0",
+      "Slot 3: break",
+      "Slot 4: p = p + 1"
+    ],
+    "correct_answer": [
+      0,
+      2,
+      0,
+      0
+    ],
+    "answer_display": "Slot 1: p = 2; while p <= 100: is_prime = True, Slot 2: for i in range(2, p): if p % i == 0: is_prime = False, Slot 3: break, Slot 4: p = p + 1",
+    "images": [
+      "images/qimg_p37_3_187.jpeg"
+    ],
+    "explanation": "На каждой итерации внешнего цикла флаг is_prime сбрасывается в True внутри цикла: while p <= 100: is_prime = True. Во внутреннем цикле проверяется остаток if p % i == 0. Если делитель найден, выполняется break. В конце p увеличивается: p = p + 1.",
+    "dropdowns": [
+      {
+        "prompt": "Slot 1 (Outer loop & flag):",
+        "options": [
+          "p = 2\nwhile p <= 100:\n    is_prime = True",
+          "p = 2\nis_prime = True\nwhile p <= 100:",
+          "for i in range(2, p):\n    if p % i == 0:\n        is_prime = False",
+          "break",
+          "p = p + 1"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Slot 2 (Divisor check loop):",
+        "options": [
+          "p = 2\nwhile p <= 100:\n    is_prime = True",
+          "for i in range(2, p):\n    if p / i == 0:\n        is_prime = False",
+          "for i in range(2, p):\n    if p % i == 0:\n        is_prime = False",
+          "break",
+          "continue"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Slot 3 (Action when divisor found):",
+        "options": [
+          "break",
+          "continue",
+          "pass",
+          "p = p + 1"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Slot 4 (Loop counter increment):",
+        "options": [
+          "p = p + 1",
+          "p = 2",
+          "continue",
+          "break"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "number": 119,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "dropdown",
+    "question": "You are creating a Python program that will let a user guess a number from 1 to 10. The user is allowed up to three guesses. You write the following code. Line numbers are included for reference only.\n01 from random import randint\n02 target = randint(1, 10)\n03 chance = 1\n04 print(\"Guess an integer from 1 to 10. You will have 3 chances.\")\n05\n06 guess = int(input(\"Guess an integer: \"))\n07 if guess > target:\n08     print(\"Guess is too high\")\n09 elif guess < target:\n10     print(\"Guess is too low\")\n11 else:\n12     print(\"Guess is just right!\")\n13\n14\n\nThe program must allow three guesses. If the user guesses the correct number, the program must stop asking for guesses.\nHow should you complete lines 05, 13, and 14?",
+    "images": [
+      "images/qimg_p38_1_191.png"
+    ],
+    "answer_display": "Line 05: while chance <= 3:, Line 13: break, Line 14: chance += 1",
+    "explanation": "В строке 05 запускается цикл while chance <= 3: (даётся ровно 3 попытки при начальном значении chance = 1). В строке 13 при правильном ответе (блок else) цикл прерывается инструкцией break. В строке 14 счётчик попыток увеличивается на единицу: chance += 1.",
+    "options": [
+      "Line 05: while chance <= 3:",
+      "Line 13: break",
+      "Line 14: chance += 1"
+    ],
+    "correct_answer": [
+      0,
+      2,
+      4
+    ],
+    "dropdowns": [
+      {
+        "prompt": "1. Which code segment should you use at line 05?",
+        "options": [
+          "while chance <= 3:",
+          "while chance < 3",
+          "break",
+          "pass",
+          "chance += 1",
+          "chance = 2"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "2. Which code segment should you use at line 13?",
+        "options": [
+          "while chance <= 3:",
+          "while chance < 3",
+          "break",
+          "pass",
+          "chance += 1",
+          "chance = 2"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "3. Which code segment should you use at line 14?",
+        "options": [
+          "while chance <= 3:",
+          "while chance < 3",
+          "break",
+          "pass",
+          "chance += 1",
+          "chance = 2"
+        ],
+        "correct": 4
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "number": 120,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "dropdown",
+    "question": "You are developing a Python application for an online product distribution company. You need the program to iterate through a list of products and escape when a target product ID is found.\n\nproductIdList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\nindex = 0\n[1](index < 10) :\n    print(productIdList[index])\n    if productIdList[index] == 6 :\n        [2]\n    else :\n        index += 1\n\nHow should you complete the code?",
+    "options": [
+      "[1]: while",
+      "[2]: break"
+    ],
+    "correct_answer": [
+      0,
+      1
+    ],
+    "answer_display": "[1]: while, [2]: break",
+    "images": [
+      "images/qimg_p39_2_195.png",
+      "images/qimg_p39_3_196.png"
+    ],
+    "explanation": "Для выполнения цикла с условием (index < 10): используется ключевое слово while. Для немедленного выхода из цикла при нахождении нужного элемента используется инструкция break.",
+    "dropdowns": [
+      {
+        "prompt": "Line 03: loop keyword [1]",
+        "options": [
+          "while",
+          "for",
+          "if",
+          "break"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Line 06: escape keyword [2]",
+        "options": [
+          "continue",
+          "break",
+          "index += 1",
+          "index = 1"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "number": 121,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "dropdown",
+    "question": "Lucerne Publishing Company needs a way to find the count of particular letters in their publications. You need to create a function to meet the requirements.\n\ndef count_letter(letter, word_list):\n    count = 0\n    for [1]:\n        if [2]:\n            count += 1\n    return count\n\nHow should you complete the code?",
+    "options": [
+      "[1]: word in word_list:",
+      "[2]: letter in word:"
+    ],
+    "correct_answer": [
+      1,
+      3
+    ],
+    "answer_display": "[1]: word in word_list:, [2]: letter in word:",
+    "images": [
+      "images/qimg_p39_4_197.png",
+      "images/qimg_p39_5_198.png"
+    ],
+    "explanation": "Цикл перебирает каждое слово в списке: for word in word_list:. Затем проверяется наличие искомой буквы в текущем слове: if letter in word:.",
+    "dropdowns": [
+      {
+        "prompt": "Outer loop [1]:",
+        "options": [
+          "word_list in word:",
+          "word in word_list:",
+          "word == word_list:",
+          "word is word_list:"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Condition [2]:",
+        "options": [
+          "word is letter:",
+          "letter is word:",
+          "word in letter:",
+          "letter in word:"
+        ],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "number": 122,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "Consider the following Python Code:\n1) def count_letter(letter, word_list):\n2)   count = 0\n3)   for word in word_list:\n4)     if letter in word:\n5)       count += 1\n6)   return count\n7) word_list = ['apple', 'pears', 'orange', 'mango']\n8) letter = input('Enter some alphabet symbol:')\n9) letter_count = count_letter(letter, word_list)\n10) print(letter_count)\n\nIf the user provides input 'a' then what is the result?",
+    "images": [],
+    "answer_display": "D) 4",
+    "explanation": "Буква 'a' содержится в каждом из четырех слов списка: 'apple', 'pears', 'orange', 'mango'. Условие letter in word возвращает True 4 раза, и функция возвращает 4.",
+    "statements": [
+      "The code will print numbers in increasing order.",
+      "The loop terminates when x reaches 0.",
+      "The loop body contains an infinite loop.",
+      "The variable x is decremented on each iteration."
+    ],
+    "options": [
+      "A) 1",
+      "B) 2",
+      "C) 3",
+      "D) 4"
+    ],
+    "correct_answer": [
+      3
+    ]
+  },
+  {
+    "id": 123,
+    "number": 123,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "dropdown",
+    "question": "Best For You Organics Company needs a simple program to enter survey ratings for a new coffee variety (five-star scale, rounded to two decimal places).\n\nwhile (rating != -1):\n    rating = [1]\n    ...\n[2] + [3]\n\nHow should you complete the code?",
+    "options": [
+      "[1]: float(input(...))",
+      "[2]: print(...)",
+      "[3]: format(average, '.2f'))"
+    ],
+    "correct_answer": [
+      1,
+      3,
+      0
+    ],
+    "answer_display": "[1]: float(input(...)), [2]: print(...), [3]: format(average, '.2f'))",
+    "images": [
+      "images/qimg_p40_2_202.png",
+      "images/qimg_p40_3_203.png",
+      "images/qimg_p40_4_204.png"
+    ],
+    "explanation": "Для ввода чисел с плавающей точкой используется float(input(...)). Вывод в консоль производится через print(). Для форматирования до 2 знаков после запятой используется format(average, '.2f').",
+    "dropdowns": [
+      {
+        "prompt": "Reading input rating [1]:",
+        "options": [
+          "print(\"Enter next rating (1-5), -1 for done\")",
+          "float(input(\"Enter next rating (1-5), -1 for done\"))",
+          "input(\"Enter next rating (1-5), -1 for done\")",
+          "input \"Enter next rating (1-5), -1 for done\""
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Displaying message [2]:",
+        "options": [
+          "output(\"The average star rating for NetVerZleep coffee is: \")",
+          "console.input(\"The average star rating for the new coffee is: \")",
+          "printline(\"The average star rating for the new coffee is: \")",
+          "print(\"The average star rating for the new coffee is: \")"
+        ],
+        "correct": 3
+      },
+      {
+        "prompt": "Formatting rounded average [3]:",
+        "options": [
+          "format(average, '.2f'))",
+          "format(average, '.2d'))",
+          "{average, '.2f'}",
+          "format.average .{2d}"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "number": 124,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "The XYZ organics company needs a simple program that their call center will use to enter survey data for a new coffee \nvariety. The program must accept input and return the average rating based on a five-star scale.The output must be \nrounded to two decimal places. \nConsider the code: \n \n1) sum=count=done=0 \n2) average=0.0 \n3) while(done != -1): \n4)   rating=float(input('Enter Next Rating(1-5),-1 for done')) \n5)   if rating == -1: \n6)     break \n7)   sum+=rating \n8)   count+=1 \n9) average=float(sum/count) \n10) #Line-1 \n \nWhich of the following print() statement should be placed at Line-1 to meet requirement?",
+    "options": [
+      "A) print('The average star rating for the new coffee is:{:.2f}'.format(average))",
+      "B) print('The average star rating for the new coffee is:{:.2d}'.format(average))",
+      "C) print('The average star rating for the new coffee is:{:2f}'.format(average))",
+      "D) print('The average star rating for the new coffee is:{:2.2d}'.format(average))"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 125,
+    "number": 125,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "Consider the code: \n \n1) l=[10,20,[30,40],[50,60]] \n2) count=0 \n3) for i in range(len(l)): \n4)   if type(l[i])==list: \n5)     count=count+1 \n6) print(count) \n \n \nWhat is the result?",
+    "options": [
+      "A) 1",
+      "B) 2",
+      "C) 3",
+      "D) 4"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 126,
+    "number": 126,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "Consider the code: \n1) l=[10,(20,),{30},{},{},[40,50]] \n2) count=0 \n3) for i in range(len(l)): \n4)   if type(l[i])==list: \n5)     count+=1 \n6)   elif type(l[i])==tuple: \n7)     count+=2 \n8)   elif type(l[i])==set: \n9)     count+=3 \n10)  elif type(l[i])==dict: \n11)    count+=4 \n12)  else: \n13)    count+=5 \n14) print(count) \n \n \n \nWhat is the result?",
+    "options": [
+      "A) 17",
+      "B) 18",
+      "C) 19",
+      "D) 20"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 127,
+    "number": 127,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "Consider the code: \n1) t = (2,4,6,8,10,12) \n2) d = {1:'A',2:'B',3:'C',4:'D',5:'E',6:'F'} \n3) result=1 \n4) for t1 in t: \n5)   if t1 in d: \n6)     result+=t1 \n7) print(result) \n \nWhat is the result?",
+    "options": [
+      "A) 12",
+      "B) 13",
+      "C) 19",
+      "D) 6"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 128,
+    "number": 128,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "Consider the code: \n1) t = (2,4,6,8,10,12) \n2) d = {1:'A',2:'B',3:'C',4:'D',5:'E',6:'F'} \n3) result=1 \n4) for t1 in t: \n5)   if t1 in d: \n6)     continue \n7)   else: \n8)     result+=t1 \n9) print(result) \n \nWhat is the result?",
+    "options": [
+      "A) 29",
+      "B) 30",
+      "C) 31",
+      "D) 32"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 129,
+    "number": 129,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "Consider the code: \n \n1) values = [[3, 4, 5, 1], [33, 6, 1, 2]] \n2) \n3) v = values[0][0] \n4) for lst in values: \n5)   for element in lst: \n6)     if v > element: \n7)       v = element \n8) \n9) print(v) \n \nWhat is the result?",
+    "options": [
+      "A) 3",
+      "B) 2",
+      "C) 1",
+      "D) 4"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 130,
+    "number": 130,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "dropdown",
+    "question": "Tailspin Toys is building a basketball court for its employees to improve company morale. You are creating a Python program that employees can use to keep track of their average score. The output must meet the following requirements:\n- The user name must be left-aligned.\n- If the user name has fewer than 20 characters, additional space must be added to the right.\n- The average score must have three places to the left of the decimal point and one place to the right of the decimal (XXX.X).\n\nHow should you complete the code?\nprint(\"%s: %s\" % ([1], [2]))",
+    "options": [
+      "[1]: %-20s",
+      "[2]: %4.1f"
+    ],
+    "correct_answer": [
+      3,
+      1
+    ],
+    "answer_display": "[1]: %-20s, [2]: %4.1f",
+    "images": [
+      "images/qimg_p43_2_215.png",
+      "images/qimg_p43_3_216.png"
+    ],
+    "explanation": "Флаг '-' выравнивает по левому краю с заполнением пробелами справа до 20 символов для строки: %-20s. Формат %4.1f задает вещественное число с одним знаком после запятой.",
+    "dropdowns": [
+      {
+        "prompt": "User name format string [1]:",
+        "options": [
+          "%-20i",
+          "%-20d",
+          "%-20f",
+          "%-20s"
+        ],
+        "correct": 3
+      },
+      {
+        "prompt": "Average score format string [2]:",
+        "options": [
+          "%1.4s",
+          "%4.1f",
+          "%4.1s",
+          "%1.4f"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "number": 131,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "dropdown",
+    "question": "Relecloud Virtual Learning asks you to debug some code that is causing problems with their payroll:\nemployee_pay = [15000, 120000, 35000, 45000]\ncount = 0\nsum = 0\nfor index in range[1]\n   count += 1\n   sum += employee_pay[index]\naverage = [2]\nprint(\"The average is: \", average)\n\nHow should you complete lines 05 and 08?",
+    "options": [
+      "Line 05: (len(employee_pay)):",
+      "Line 08: sum/count"
+    ],
+    "correct_answer": [
+      3,
+      0
+    ],
+    "answer_display": "Line 05: (len(employee_pay)):, Line 08: sum/count",
+    "images": [
+      "images/qimg_p43_4_217.png",
+      "images/qimg_p43_5_218.png"
+    ],
+    "explanation": "Функция range(len(employee_pay)) создает диапазон индексов от 0 до len-1 включительно. Среднее арифметическое вычисляется делением суммы на количество элементов: sum / count.",
+    "dropdowns": [
+      {
+        "prompt": "Range parameter on line 05 [1]:",
+        "options": [
+          "(size(employee_pay)):",
+          "(size(employee_pay)-1):",
+          "(len(employee_pay)+1):",
+          "(len(employee_pay)):"
+        ],
+        "correct": 3
+      },
+      {
+        "prompt": "Average calculation on line 08 [2]:",
+        "options": [
+          "sum/count",
+          "sum**count",
+          "sum*count"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "number": 132,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "dropdown",
+    "question": "Adventure Works Cycles sales are so exceptional that they decide to give a bonus to all employees who do not make more than $150,000. New salary = current salary x 3% + a $500 bonus.\n[1]\n   if salary_list[index] >= 150000:\n      [2]\n   salary_list[index] = (salary_list[index] * 1.03) + 500\n\nHow should you complete the code?",
+    "options": [
+      "[1]: for index in range(len(salary_list)):",
+      "[2]: continue"
+    ],
+    "correct_answer": [
+      2,
+      1
+    ],
+    "answer_display": "[1]: for index in range(len(salary_list)):, [2]: continue",
+    "images": [
+      "images/qimg_p44_2_222.png",
+      "images/qimg_p44_3_223.png"
+    ],
+    "explanation": "Для обновления элементов списка по индексу необходим цикл for index in range(len(salary_list)):. Если зарплата сотрудника >= 150000, он не получает прибавку — команда continue пропускает остаток тела цикла и переходит к следующему сотруднику.",
+    "dropdowns": [
+      {
+        "prompt": "Loop header [1]:",
+        "options": [
+          "for index in range(len(salary_list)+1):",
+          "for index in range(len(salary_list)-1):",
+          "for index in range(len(salary_list)):",
+          "for index in salary_list:"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Skip ineligible employee [2]:",
+        "options": [
+          "exit()",
+          "continue",
+          "break",
+          "end"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "number": 133,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "What will be the output of the following Python code? \n \nTrue = False \nwhile True: \n    print(True) \n    break",
+    "options": [
+      "A) True",
+      "B) False",
+      "C) None",
+      "D) none of the mentioned"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "В Python 3 True является зарезервированным ключевым словом, и присваивание True = False вызывает SyntaxError (none of the mentioned)."
+  },
+  {
+    "id": 134,
+    "number": 134,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "What will be the output of the following Python code? \n \nx=123  \nfor i in x: \n  print(i)",
+    "options": [
+      "A) 1 2 3",
+      "B) 123",
+      "C) error",
+      "D) none of the mentioned"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "x = 123 — это целое число (int). Числа в Python не являются итерируемыми объектами, поэтому цикл for i in x: вызовет ошибку TypeError: 'int' object is not iterable."
+  },
+  {
+    "id": 135,
+    "number": 135,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "What will be the output of the following Python code? \n \nfor i in range(5): \n    if i == 5: \n        break \n    else: \n        print(i) \nelse: \n    print(\"Here\")",
+    "options": [
+      "A) 0 1 2 3 4 Here",
+      "B) 0 1 2 3 4 5 Here",
+      "C) 0 1 2 3 4",
+      "D) 1 2 3 4 5"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Цикл range(5) перебирает 0, 1, 2, 3, 4. Условие i == 5 никогда не выполняется, break не срабатывает. Поэтому выполняется ветка else цикла, выводя 'Here'. Итог: 0 1 2 3 4 Here."
+  },
+  {
+    "id": 136,
+    "number": 136,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "What will be the output of the following Python code? \n \nfor i in range(0): \nprint(i)",
+    "options": [
+      "A) 0",
+      "B) no output",
+      "C) error",
+      "D) None of the mentioned."
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "range(0) пуст, тело цикла не выполнится ни разу. Ничего не выводится (no output)."
+  },
+  {
+    "id": 137,
+    "number": 137,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "What will be the output of the following python code. \na = [0, 1, 2, 3] \ni = -2 \nfor i not in a: \n   print(i) \n   i += 1",
+    "options": [
+      "A) -2 -1",
+      "B) 0",
+      "C) error",
+      "D) none of the mentioned"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Синтаксис 'for i not in a:' некорректен (for требует 'for i in ...'). Возникает ошибка SyntaxError."
+  },
+  {
+    "id": 138,
+    "number": 138,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "What will be the output of the following Python code? \n \nx = 1567 \nfor i in x: \n   print(i)",
+    "options": [
+      "A) 1 5 6 7",
+      "B) 1567",
+      "C) error",
+      "D) none of the mentioned"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "x = 1567 — это число int. Числа не являются итерируемыми объектами (TypeError: 'int' object is not iterable)."
+  },
+  {
+    "id": 139,
+    "number": 139,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "Consider the code: \nl=[10, (20,), {30}, {}, {}, [48,50]] \ncount=0 \nfor i in range(len(1)): \n   if type(1[i])==list: \n      count+=1 \n   elif type(1[i])==tuple: \n      count+=2 \n   elif type(1[i])==set: \n      count+=3 \n   elif type(1[i])==dict: \n      count+=4 \n   else: \n      count+=5 \nprint(count) \n \nWhat is the result?",
+    "options": [
+      "A) 17",
+      "B) 18",
+      "C) 19",
+      "D) 20"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "len(l)=6. 10 (else +5), (20,) (tuple +2), {30} (set +3), {} (dict +4), {} (dict +4), [48,50] (list +1). Итого: 5 + 2 + 3 + 4 + 4 + 1 = 19."
+  },
+  {
+    "id": 140,
+    "number": 140,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "You are writing a python program that displays all prime numbers from 2 to 200. \nWhich of the following is the proper code to fulfilling our requirement? \n \nCode A \nCode B \nCode C \nCode D \np = 2 \nis_prime = True \nwhile p <= 200: \n  for i in range(2, p): \n    if p % i == 0: \n      is_prime = False \n      break \n  if is_prime == True: \n    print(p) \n  p = p + 1  \np = 2 \nwhile p <= 200: \n  is_prime = True   \n  for i in range(2, p): \n    if p % i == 0: \n      is_prime = False \n      break \n  if is_prime == True: \n    print(p) \n  p = p + 1 \np = 2 \nwhile p <= 200: \n  is_prime = True \n  for i in range(2, p): \n    if p % i == 0: \n      is_prime = False \n        break \n  if is_prime == False:   \n    print(p) \n  p = p + 1 \np = 2 \nwhile p <= 200: \n  is_prime = True \n  for i in range(2, p): \n    if p % i == 0: \n      is_prime = False \n        break \n  if is_prime == True: \n    print(p)",
+    "options": [
+      "A) Code A",
+      "B) Code B",
+      "C) Code C",
+      "D) Code D \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n3. Input and Output Operations \n3.1 Construct and analyze code segments that perform file input and output operations \n• open, close, read, write, append, check existence, delete, with statement"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Флаг is_prime = True должен сбрасываться внутри внешнего цикла while на каждой итерации (Code B), иначе после первого составного числа флаг навсегда останется False."
+  },
+  {
+    "id": 141,
+    "number": 141,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "You are writing a program to automate inventory. Your first task is to read a file of inventory transactions. The file \ncontains sales from the previous day, including the item id, price, and quantity. \nThe following shows a sample of data from the file: \n10, 200, 5 \n20, 100, 1 \nThe code must meet the following requirements: \n \nEach line of the file must be read and printed \n \nIf a blank line is encountered, it must be ignored \n \nWhen all lines have been read, the file must be closed \nYou create the following code. Line numbers are included for reference only. \n01 inventory = open(\"inventory.txt\", 'r') \n02 eof = False \n03 while eof == False: \n04   line = inventory.readline() \n05 \n06 \n07       print(line) \n08     else: \n09       print(\"End of file\") \n10       eof = True \n11 inventory.close() \nWhich code should you write for line 05 and line 06?",
+    "options": [
+      "A) B.",
+      "C) D. \n05 if line != '': \n06    if line !=\"\": \n05 if line != '\\n': \n06    if line != None: \n05 if line != '\\n': \n06    if line != \"\": \n05 if line != '': \n06    if line != \"\\n\":"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "readline() возвращает пустую строку '' при достижении конца файла EOF (line != ''), и строку с переносом '\\n' для пустых строк (line != '\\n')."
+  },
+  {
+    "id": 142,
+    "number": 142,
+    "section": "2. Flow Control with Decisions and Loops",
+    "subtopic": "2.2 Construct and analyze code segments that perform iteration",
+    "type": "single",
+    "question": "We are creating a function that reads a data file and prints each line of that file. Consider the following code: \n1) import os \n2) def read_file(file): \n3)   line=None \n4)   if os.path.isfile(file): \n5)     data=open(file,'r') \n6)   while line != '': \n7)     line=data.readline() \n8)     print(line) \nThe code attempts to read the file even if the file does not exist. \nYou need to correct the code. which lines having identation \nproblems?",
+    "options": [
+      "A) First 3 Lines inside function",
+      "B) Last 3 Lines inside function",
+      "C) Last 2 Lines inside function",
+      "D) There is no indentation problem"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B:",
+    "images": [],
+    "explanation": "Правильный ответ: B:."
+  },
+  {
+    "id": 143,
+    "number": 143,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "single",
+    "question": "You develop a Python application for your school. You need to read and write data to a text file. If the file does not exist it \nmust be created. If the file has content the content must be removed. \nWhich code should you use?",
+    "options": [
+      "A) open(\"local_data\", \"r+\")",
+      "B) open(\"local_data\", \"w+\")",
+      "C) open(\"local_data\", \"r\")",
+      "D) open(\"local_data\", \"w\")"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Режим открытия 'r' открывает текстовый файл только для чтения (read only)."
+  },
+  {
+    "id": 144,
+    "number": 144,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "single",
+    "question": "You develop a python application for your school. You need to read and write data to a text file. If the file does not exist, \nit must be created. If the file has the content, the content must be removed. Which code we have to use?",
+    "options": [
+      "A) open('abc.txt', 'w+')",
+      "B) open('abc.txt', 'r')",
+      "C) open('abc.txt', 'a')",
+      "D) open('abc.txt', 'r+')"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Режим 'w+' открывает файл для чтения и записи. Если файл существует, он перезаписывается (содержимое удаляется). Если файла нет, он создается."
+  },
+  {
+    "id": 145,
+    "number": 145,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "multiple",
+    "question": "You are creating a function that reads a data file and prints each line of the file. You write the following code. Line \nnumbers are included for reference only. \n \n01 import os \n02 def read_file(file): \n03     line = None \n04     if os.path.isfile(file): \n05         data = open(file, 'r') \n06         while line != '': \n07             line = data.readline() \n08             print(line) \n \nThe code attempts to read the file even if the file does not exist. You need to correct the code. Which three lines have \nindentation problems? Each correct answer presents part of the solution. Choose three.",
+    "options": [
+      "A) Line 01",
+      "B) Line 02",
+      "C) Line 03",
+      "D) Line 04",
+      "E) Line 05 \nF. Line 06 \nG. Line 07 \nH. Line 08"
+    ],
+    "correct_answer": [
+      4
+    ],
+    "answer_display": "E,F,G",
+    "images": [],
+    "explanation": "Строки 05, 06, 07 должны иметь отступ внутри блока if os.path.isfile(file):, чтобы файл открывался и читался только тогда, когда он существует."
+  },
+  {
+    "id": 146,
+    "number": 146,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "dropdown",
+    "question": "You are writing a function that works with files. You need to ensure that the function returns None if the file does not exist. If the file does exist, the function must return the first line.\nimport os\ndef get_first_line(filename, mode):\n\nHow should you order the code segments to complete the function?",
+    "options": [
+      "1: if os.path.isfile(filename):",
+      "2: with open(filename, 'r') as file:",
+      "3: return file.readline()",
+      "4: else:",
+      "5: return None"
+    ],
+    "correct_answer": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "answer_display": "1: if os.path.isfile(filename): -> 2: with open(...) -> 3: return file.readline() -> 4: else: -> 5: return None",
+    "images": [
+      "images/qimg_p48_1_236.jpeg"
+    ],
+    "explanation": "Сначала проверяется существование файла if os.path.isfile(filename):. Если файл существует, открываем его с помощью менеджера контекста with open(filename, 'r') as file: и возвращаем первую строку return file.readline(). Иначе (else:) возвращаем return None.",
+    "dropdowns": [
+      {
+        "prompt": "Line 1:",
+        "options": [
+          "if os.path.isfile(filename):",
+          "with open(filename, 'r') as file:",
+          "return file.readline()",
+          "else:",
+          "return None"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Line 2:",
+        "options": [
+          "if os.path.isfile(filename):",
+          "with open(filename, 'r') as file:",
+          "return file.readline()",
+          "else:",
+          "return None"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Line 3:",
+        "options": [
+          "if os.path.isfile(filename):",
+          "with open(filename, 'r') as file:",
+          "return file.readline()",
+          "else:",
+          "return None"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Line 4:",
+        "options": [
+          "if os.path.isfile(filename):",
+          "with open(filename, 'r') as file:",
+          "return file.readline()",
+          "else:",
+          "return None"
+        ],
+        "correct": 3
+      },
+      {
+        "prompt": "Line 5:",
+        "options": [
+          "if os.path.isfile(filename):",
+          "with open(filename, 'r') as file:",
+          "return file.readline()",
+          "else:",
+          "return None"
+        ],
+        "correct": 4
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "number": 147,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "multiple",
+    "question": "Consider the following code. \n1) import os \n2) def get_data(filename,mode): \n3)   if os.path.isfile(filename): \n4)     with open(filename,'r') as file: \n5)       return file.readline() \n6)   else: \n7)     return None \n \nWhich of the following are valid about this code?",
+    "options": [
+      "A) This function returns the first line of the file if it is available",
+      "B) This function returns None if the file does not exist",
+      "C) This function returns total data present in the file",
+      "D) This function returns last line of the file"
+    ],
+    "correct_answer": [
+      0,
+      0,
+      3,
+      1
+    ],
+    "answer_display": "A and B",
+    "images": [],
+    "explanation": "Режим 'a' (append) открывает файл для добавления в конец, не удаляя существующие данные."
+  },
+  {
+    "id": 148,
+    "number": 148,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "dropdown",
+    "question": "Northwind Electric Cars needs help updating their file system using Python code. The program must:\n- Check to see if a file exists.\n- If the file exists, display its contents.\n- If the file does not exist, create a file using the specified name.\n- Append the phrase, 'End of listing' to the file.\n\nHow should you complete the code?",
+    "options": [
+      "[1]: os.path.isfile('myFile.txt'):",
+      "[2]: print(file.read())",
+      "[3]: open('myFile.txt', 'a')",
+      "[4]: file.write"
+    ],
+    "correct_answer": [
+      3,
+      2,
+      0,
+      2
+    ],
+    "answer_display": "[1]: os.path.isfile('myFile.txt'):, [2]: print(file.read()), [3]: open('myFile.txt', 'a'), [4]: file.write",
+    "images": [
+      "images/qimg_p49_2_241.png",
+      "images/qimg_p49_3_242.png",
+      "images/qimg_p49_4_243.png",
+      "images/qimg_p49_5_244.png"
+    ],
+    "explanation": "os.path.isfile проверяет наличие файла. Метод file.read() читает всё содержимое файла. Режим 'a' открывает файл для добавления в конец, а метод file.write() записывает строку в файл.",
+    "dropdowns": [
+      {
+        "prompt": "Line 03: check file existence [1]",
+        "options": [
+          "isfile('myFile.txt'):",
+          "os.exist('myFile.txt'):",
+          "os.find('myFile.txt'):",
+          "os.path.isfile('myFile.txt'):"
+        ],
+        "correct": 3
+      },
+      {
+        "prompt": "Line 05: display contents [2]",
+        "options": [
+          "output('myFile.txt')",
+          "print(file.get('myFile.txt'))",
+          "print(file.read())",
+          "print('myFile.txt')"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Line 06: open mode for appending [3]",
+        "options": [
+          "open('myFile.txt', 'a')",
+          "open('myFile.txt', 'a+')",
+          "open('myFile.txt', 'w')",
+          "open('myFile.txt', 'w+')"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Line 07: write phrase to file [4]",
+        "options": [
+          "append",
+          "file.add",
+          "file.write",
+          "write"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "number": 149,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "single",
+    "question": "Which of the following statements are true?",
+    "options": [
+      "A) When you open a file for reading, if the file does not exist, an error occurs",
+      "B) When you open a file for writing, if the file does not exist, a new file is created",
+      "C) When you open a file for writing, if the file exists, the existing file is overwritten with \nthe new file",
+      "D) All of the mentioned"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Все утверждения верны: режим чтения 'r' вызывает FileNotFoundError при отсутствии файла; режим записи 'w' создает новый файл или перезаписывает существующий."
+  },
+  {
+    "id": 150,
+    "number": 150,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "single",
+    "question": "To read the entire remaining contents of the file as a string from a file object infile, we use ____",
+    "options": [
+      "A) infile.read(2)",
+      "B) infile.read()",
+      "C) infile.readline()",
+      "D) infile.readlines()"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Метод file.read() считывает всё оставшееся содержимое файла в виде одной строки."
+  },
+  {
+    "id": 151,
+    "number": 151,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "single",
+    "question": "What is the use of tell() method in python?",
+    "options": [
+      "A) tells you the current position within the file",
+      "B) tells you the end position within the file",
+      "C) tells you the file is opened or not",
+      "D) none of the mentioned"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Метод tell() возвращает текущую позицию указателя в файле (в байтах)."
+  },
+  {
+    "id": 152,
+    "number": 152,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "single",
+    "question": "Which of the following string declarations spans more than one line and considers whitespace properly when the string is \nprinted to the console?",
+    "options": [
+      "A) B)",
+      "C) D) \n1) s1='durga \n2) software \n3) solutions' \n1) s1=\"durga \n2) software \n3) solutions\" \n1) s1='durga\\n \n2) software\\n \n3) solutions' \n1) s1='''durga \n2) software \n3) solutions'''"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 153,
+    "number": 153,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "single",
+    "question": "Consider the following code: \n \nprint(type(input('Enter some value:'))) \n \nif we enter 10 and 10.0 individually for every run what is the output?",
+    "options": [
+      "A) B)",
+      "C) D) \n1) <class 'str'> \n2) <class 'str'> \n1) <class 'int'> \n2) <class 'float'> \n1) <class 'int'> \n2) <class 'int'> \n1) <class 'float'> \n2) <class 'float'>"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 154,
+    "number": 154,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "single",
+    "question": "Consider the following code: \n \nprint(type(eval(input('Enter some value:')))) \n \nif we enter 10 and 10.0 individually for every run what is the output?",
+    "options": [
+      "A) B)",
+      "C) D) \n1) <class 'str'> \n2) <class 'str'> \n1) <class 'int'> \n2) <class 'float'> \n1) <class 'int'> \n2) <class 'int'> \n1) <class 'float'> \n2) <class 'float'>"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 155,
+    "number": 155,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "multiple",
+    "question": "Which of the following statements are valid? \n \n                                                                                                                                          Valid    Invalid",
+    "options": [
+      "A) s=\"Durga Sir's Python Classes are Good\" \nIt causes error because we cannot use double quotes and single quotes simultaneously     〇      〇",
+      "B) result=456+456.0 \ntype of result is int                                                                                                                 〇      〇",
+      "C) The followng expression evaluates to 12                                                                          〇      〇 \nb=False+5-True+35//4",
+      "D) The following line will print result:4.5                                                                              〇      〇 \nprint('result:',(7/2)+(False or True)+(9%3))"
+    ],
+    "correct_answer": [
+      2,
+      3
+    ],
+    "answer_display": "C,D",
+    "images": [],
+    "explanation": "Правильный ответ: C,D."
+  },
+  {
+    "id": 156,
+    "number": 156,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "single",
+    "question": "Conside the file abc.txt: \n \nabc.txt: \n-------- \nDurga:10 \nRavi:20 \nShiva:30 \nPavan:40 \n \nConsider the python code which is present in the same location of the file \ntest.py: \n-------- \n1) values=0 \n2) try: \n3)   f=open('abc.txt','r') \n4)   content=f.readlines() \n5)   for line in content: \n6)     values+=float(line.split(':')[1]) \n7)   f.close() \n8) except Exception: \n9)   print('Unable to open the file') \n10) print(values) \n \nWhat is the result?",
+    "options": [
+      "A) Unable to open the file",
+      "B) 100",
+      "C) 100.0",
+      "D) 10.0"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 157,
+    "number": 157,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "single",
+    "question": "To write 'Python Certificaton' to abc.txt file, which of the following is valid code?",
+    "options": [
+      "A) B)",
+      "C) D) \nf=open('abc.txt','b') \nf.write('Python Certificaton') \nf.close() \nf=open('abc.txt','r') \nf.write('Python Certificaton') \nf.close() \nf=open('abc.txt') \nf.write('Python Certificaton') \nf.close() \nf=open('abc.txt','w') \nf.write('Python Certificaton') \nf.close()"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 158,
+    "number": 158,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "single",
+    "question": "Consider the data present in the file: abc.txt \n \nDURGASOFT,50,60,70,80,90 \nMICROSOFT,10,20,30,40,50 \n \nWhich of the following is valid code to read total data from the file?",
+    "options": [
+      "A) B)",
+      "C) D) \n1with open('abc.txt','r') f: \ndata=f.read() \nwith open('abc.txt') as f: \ndata=f.read() \nwith open('abc.txt','w') as f: \ndata=f.read() \nwith open('abc.txt') as f: \ndata=f.readline()"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 159,
+    "number": 159,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.1 Construct and analyze code segments that perform file input and output operations",
+    "type": "single",
+    "question": "Assume that we are writing python code for some voting application. \nYou need to open the file voters_list.txt and add new voters info and print total data to the console? \n1) with open('voters_list.txt','a+') as f: \n2)   f.write('New voters info') \n3)   #Line-1 \n4)   data=f.read() \n5)   print(data) \n \nWhich Line should be inserted at Line-1 ?",
+    "options": [
+      "A) f.seek(0)",
+      "B) f.flush()",
+      "C) f.begin()",
+      "D) f.close()"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 160,
+    "number": 160,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations",
+    "type": "single",
+    "question": "You write the following code: \nimport datetime \nd = datetime.datetime(2017, 4, 7) \nprint('{:%B-%d-%y}'.format(d)) \n \nnum=1234567.890 \nprint('{:, .4f}'.format(num)) \nYou run the program. \nWhat is the output?",
+    "options": [
+      "A) 2017--April--07 \n     1,234,567.890 \n     Press any key to continue...",
+      "B) Apr--07--2017 \n     1,234,567,8900 \n     Press any key to continue...",
+      "C) April--07--17 \n     1,234,567.8900 \n     Press any key to continue...",
+      "D) April--07--17 \n     1234567.89 \n     Press any key to continue..."
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "d.format('{:%B-%d-%y}') выводит 'April-07-17'. '{:,.4f}'.format(1234567.890) форматирует число с запятой как разделителем тысяч и 4 знаками после запятой: 1,234,567.8900."
+  },
+  {
+    "id": 161,
+    "number": 161,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations",
+    "type": "single",
+    "question": "Northwind Traders has hired you as an intern on the coding team that creates e-commerce applications. \nYou must write a script that asks the user for a value. The value must be used as a whole number in a calculation, even if \nthe user enters a decimal value. You need to write the code to meet the requirements. \nWhich code segment should you use?",
+    "options": [
+      "A) totalltems = int(input(”How many items would you like?”))",
+      "B) totalltems = str(input(”How many items would you like?”))",
+      "C) totalltems = float(input(”How many items would you like?”))",
+      "D) totalltems = input(”How many items would you like?”)"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "int(input(...)) преобразует введенную строку в целое число (whole number) для расчетов."
+  },
+  {
+    "id": 162,
+    "number": 162,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations",
+    "type": "single",
+    "question": "You develop a Python application for your company. \nYou need to accept input from the user and print that information to the user screen. \nYou have started with the following code. Line numbers are included for reference only. \n \n01 print(‚What is your name?‛) \n02 \n03 print(name) \n \nWhich code should you write at line 02?",
+    "options": [
+      "A) name = input",
+      "B) input(name)",
+      "C) name = input()",
+      "D) input(”name”)"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Чтобы считать имя пользователя с клавиатуры в переменную name: name = input()."
+  },
+  {
+    "id": 163,
+    "number": 163,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations",
+    "type": "multiple",
+    "question": "If the user enters 12345 as input,Which of the following code will print 12346 to the console?",
+    "options": [
+      "A) 1) count=input('Enter count value:') \n2) print(count+1)",
+      "C) 1) count=eval(input('Enter count value:')) \n2) print(count+1)",
+      "B) 1) count=input('Enter count value:') \n2) print(int(count)+1)",
+      "D) 1) count=int(input('Enter count value:')) \n2) print(count+1)"
+    ],
+    "correct_answer": [
+      1,
+      2,
+      3
+    ],
+    "answer_display": "B,C,D",
+    "images": [],
+    "explanation": "Правильный ответ: B,C,D."
+  },
+  {
+    "id": 164,
+    "number": 164,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations",
+    "type": "single",
+    "question": "You are creating a program that shows a congratulation message to employees on their service anniversary. \nYou need to calculate the number of years of service and print a congratulatory message. \nYou have written the following code. Line numbers are included for reference only. \n01 start = input(\"How old were you on your start date?\") \n02 end = input(\"How old are you today?\") \n03 \nYou need to complete the program. \nWhich code should you use at line 03?",
+    "options": [
+      "A) print(“congratulations on “ + int(end - start) + “ years of service!”)",
+      "B) print(“congratulations on “ + (int(end) - int(start)) + “ years of service!”)",
+      "C) print(“congratulations on “ + str(end - start) + “ years of service!”)",
+      "D) print(”congratulations on “ + str(int(end) - int(start)) + “ years of service!”)"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "start и end являются строками. Чтобы вычесть их, нужно преобразовать в int: int(end) - int(start), а для конкатенации со строками результат нужно обернуть в str()."
+  },
+  {
+    "id": 165,
+    "number": 165,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations",
+    "type": "dropdown",
+    "question": "You are an intern for Northwind Electric Cars. You must create a function that calculates the average velocity of their vehicles on a 1320 foot (1/4 mile) track. The output must be as precise as possible.\n\n# Speed calculator\ndistance = [1](input('Enter the distance traveled in feet: '))\ndistance_miles = distance / 5280\ntime = [2](input('Enter the time elapsed in seconds: '))\n...\n\nHow should you complete the code?",
+    "options": [
+      "[1]: float",
+      "[2]: float"
+    ],
+    "correct_answer": [
+      1,
+      1
+    ],
+    "answer_display": "[1]: float, [2]: float",
+    "images": [
+      "images/qimg_p54_2_260.png"
+    ],
+    "explanation": "Для максимальной точности вычислений скорости значения расстояния и времени преобразуются из пользовательского ввода в числа с плавающей точкой float.",
+    "dropdowns": [
+      {
+        "prompt": "Distance conversion type [1]:",
+        "options": [
+          "int",
+          "float",
+          "str"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Time conversion type [2]:",
+        "options": [
+          "int",
+          "float",
+          "str"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": 166,
+    "number": 166,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations",
+    "type": "single",
+    "question": "You are intern for XYZ Cars Company.You have to create a function that calculates the average velocity of vehicle on a \n2640 foot(1/2 mile)track. Consider the python code: \n \n1) distance=xxx(input('Enter the distance travelled in feet:')) #Line-1 \n2) distance_miles=distance/5280 \n3) time=yyy(input('Enter the time elapsed in seconds:')) #Line-2 \n4) time_hours=time/3600 \n5) velocity=distance_miles/time_hours \n6) print('The average Velocity:',velocity,'miles/hour') \n \nTo generate most precise output, which modifications should be done at Line-1 and atLine-2.",
+    "options": [
+      "A) xxx should be replaced with float and yyy should be replaced with float",
+      "B) xxx should be replaced with float and yyy should be replaced with int",
+      "C) xxx should be replaced with int and yyy should be replaced with float",
+      "D) xxx should be replaced with int and yyy should be replaced with int"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 167,
+    "number": 167,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations",
+    "type": "multiple",
+    "question": "You are creating an ecommerce script that accepts input from the user and outputs the data in a comma delimited format. \nYou write the following lines of code to accept input: \n \nitem = input(‛Enter the item name: ‛) \nsales = input(‚Enter the quantity: ‛) \n \nThe output must meet the following requirements: \n \nStrings must be enclosed inside of double-quotes \n \nNumbers must not be enclosed in quotes or other characters \n \nEach item must be separated with a comma \nYou need to complete the code to meet the requirements. Which three code segments should you use? Each correct \nanswer presents a complete solution. Choose three.",
+    "options": [
+      "A) print(‟”{0}”,{1}‟.format(item, sales))",
+      "B) print(item + „,‟ + sales)",
+      "C) print(‟”‟ + item + „”,„ + sales)",
+      "D) print(”{0},{1}”.format(item, sales))",
+      "E) print(‟”%s”, %s‟ % (item, sales))"
+    ],
+    "correct_answer": [
+      0,
+      2,
+      4
+    ],
+    "answer_display": "A, C, E",
+    "images": [],
+    "explanation": "Требуется заключить строки в кавычки, числа оставить без кавычек и разделить запятой: print('\"{0}\",{1}'.format(item, sales)), print('\"' + item + '\",' + sales), print('\"%s\", %s' % (item, sales))."
+  },
+  {
+    "id": 168,
+    "number": 168,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations",
+    "type": "single",
+    "question": "We are developing an app in which students will provide college name and city as input. If the student provides college \nname as DURGASOFT and city as Hyderabad, then our application has to provide the following greeting message. \nWelcome to DURGASOFT in Hyderabad Which of the following code can be used for this requirement?",
+    "options": [
+      "A) 1) college_name=input('Enter Your College Name:') \n2) city=input('Enter Your City:') \n3) print('Welcome to {} in {}'.format(college_name,city))",
+      "B) 1) college_name=read('Enter Your College Name:') \n2) city=read('Enter Your City:') \n3) print('Welcome to {} in {}'.format(college_name,city))",
+      "C) 1) college_name=eval('Enter Your College Name:') \n2) city=eval('Enter Your City:') \n3) print('Welcome to {} in {}'.format(college_name,city))",
+      "D) 1) college_name=str('Enter Your College Name:') \n2) city=str('Enter Your City:') \n3) print('Welcome to {} in {}'.format(college_name,city))"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 169,
+    "number": 169,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations",
+    "type": "dropdown",
+    "question": "You are writing a function to read a data file and print the results as a formatted table:\nOranges  5.6   1.33\nApples    2.0   0.54\nGrapes   10.2  10.96\nRequirements:\n- The fruit name must print left-aligned in a column 10 spaces wide.\n- The weight must print right-aligned in a column 5 spaces wide with up to one digit after the decimal point.\n- The price must print right-aligned in a column 7 spaces wide with up to two digits after the decimal point.\n\nHow should you complete the format string?\nprint(\"{[1]}{[2]}{[3]}\".format(name, weight, price))",
+    "options": [
+      "[1]: {0:10}",
+      "[2]: {1:5.1f}",
+      "[3]: {2:7.2f}"
+    ],
+    "correct_answer": [
+      0,
+      1,
+      2
+    ],
+    "answer_display": "[1]: {0:10}, [2]: {1:5.1f}, [3]: {2:7.2f}",
+    "images": [
+      "images/qimg_p56_1_267.png"
+    ],
+    "explanation": "Спецификатор {0:10} задает ширину столбца 10 символов для первой переменной (строки по умолчанию выравниваются влево). {1:5.1f} задает ширину 5 символов и 1 десятичный знак для веса. {2:7.2f} задает ширину 7 символов и 2 десятичных знака для цены.",
+    "dropdowns": [
+      {
+        "prompt": "Fruit name format [1]:",
+        "options": [
+          "0:10",
+          "1:5.1f",
+          "2:7.2f",
+          "10:0"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Weight format [2]:",
+        "options": [
+          "0:10",
+          "1:5.1f",
+          "2:7.2f",
+          "5:1f"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Price format [3]:",
+        "options": [
+          "0:10",
+          "1:5.1f",
+          "2:7.2f",
+          "7:2f"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": 170,
+    "number": 170,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations",
+    "type": "dropdown",
+    "question": "You are writing a Python program to validate employee numbers. The employee number must have the format ddd-dd-dddd and consist only of numbers and dashes. The program must repeatedly accept employee numbers until the user enters 'sentinel'.\n01 [1]\n02 [2]\n03     [3]\n...\n\nHow should you complete lines 01, 02, and 03?",
+    "options": [
+      "Line 01: employee_number = \"\"",
+      "Line 02: while employee_number != \"sentinel\":",
+      "Line 03: valid = True"
+    ],
+    "correct_answer": [
+      0,
+      1,
+      1
+    ],
+    "answer_display": "Line 01: employee_number = \"\", Line 02: while employee_number != \"sentinel\":, Line 03: valid = True",
+    "images": [
+      "images/qimg_p56_3_268.png",
+      "images/qimg_p56_4_269.png",
+      "images/qimg_p56_5_270.png"
+    ],
+    "explanation": "Изначально employee_number = \"\" для входа в цикл. Условие работы цикла while employee_number != \"sentinel\":. На каждой итерации флаг валидности сбрасывается в valid = True перед проверкой формата.",
+    "dropdowns": [
+      {
+        "prompt": "Line 01 (variable initialization):",
+        "options": [
+          "employee_number = \"\"",
+          "employee_number = \"sentinel\""
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Line 02 (sentinel loop):",
+        "options": [
+          "while employee_number != \"\":",
+          "while employee_number != \"sentinel\":"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Line 03 (flag initialization per iteration):",
+        "options": [
+          "valid = False",
+          "valid = True"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": 171,
+    "number": 171,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations",
+    "type": "single",
+    "question": "You are writing a Python program to validate employee numbers. The employee number must have the format dd-ddd-\ndddd and consists of only numbers and dashes.The program must print True if the format is correct,otherwise print False. \n \n1) employee_number=input('Enter Your Employee Number(dd-ddd-dddd):') \n2) parts=employee_number.split('-') \n3) valid=False \n4) if len(parts) == 3: \n5) if len(parts[0])==2 and len(parts[1])==3 and len(parts[2])==4: \n6) if parts[0].isdigit() and parts[1].isdigit() and parts[2].isdigit(): \n7) valid=True \n8) print(valid) \n \nWhich of the following is True about this code?",
+    "options": [
+      "A) It will throw error because misuse of split() method",
+      "B) It will throw error because misuse of isDigit() method",
+      "C) There is no error but it won't fulfll our requirement.",
+      "D) No changes are required for this code and it can fulfill requirement."
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 172,
+    "number": 172,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations",
+    "type": "single",
+    "question": "What will be the output of the following program? \n \n01 x=\"ITVEDANT\" \n02 print(\"%20s\",x)",
+    "options": [
+      "A) 20 blank spaces after “ITVEDANT”",
+      "B) 20 blank spaces before “ITVEDANT”",
+      "C) None of these.",
+      "D) –"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "В строке print('%20s', x) через запятую переданы два аргумента. Форматирование % не применяется, выводится '%20s ITVEDANT' (None of these)."
+  },
+  {
+    "id": 173,
+    "number": 173,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations",
+    "type": "single",
+    "question": "What will be the output of the following python program? \n \n01 d='{a}{b}{a}'.format(a='hello',b='world') \n02 print(d)",
+    "options": [
+      "A) hello world",
+      "B) hello world hello",
+      "C) helloworldhello",
+      "D) hello hello world"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Шаблон '{a}{b}{a}' без пробелов подставляет a='hello', b='world', a='hello' -> 'helloworldhello'."
+  },
+  {
+    "id": 174,
+    "number": 174,
+    "section": "3. Input and Output Operations",
+    "subtopic": "3.2 Construct and analyze code segments that perform console input and output operations",
+    "type": "single",
+    "question": "Consider the following statements: \n \n1. print('V:{:.2f}'.format(123.45678)) will print to the console V:123.46  \n2. print('V:{:.2f}'.format(123.4)) will print to the console V:123.40  \n3. print('V:{:8.2f}'.format(1.45678)) will print to the console V:1.46  \n4. print('V:{:08.2f}'.format(1.45678)) will print to the console V:00001.46 \n \nWhich if the above statements are True?",
+    "options": [
+      "A) only 1 and 2",
+      "B) only 1 and 3",
+      "C) only 2 and 4",
+      "D) 1, 2, 3 and 4 \n\n4. Code Documentation and Structure \n4.1 Document code segments \n• Use indentation, white space, comments, and docstrings; generate documentation by using pydoc"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Все 4 утверждения о форматировании чисел через {: .2f}, {:08.2f} и т.д. верны."
+  },
+  {
+    "id": 175,
+    "number": 175,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.1 Document code segments",
+    "type": "single",
+    "question": "You develop a application for your company. You want to add notes to your code so other team members will understand \nit. What should you do?",
+    "options": [
+      "A) Place the notes after the last line of code separated by a blank line.",
+      "B) Place the notes inside of parentheses on any line.",
+      "C) Place the notes after the # sign on any line.",
+      "D) Place the notes before the first line of code separated by a blank line."
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 176,
+    "number": 176,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.1 Document code segments",
+    "type": "single",
+    "question": "You are writing an application that uses the sqrt function. The program must reference the function using the name \nsquareRoot. You need to import the function. Which code segment should you use?",
+    "options": [
+      "A) from math import sqrt as squareRoot",
+      "B) from math.sqrt as squareRoot",
+      "C) import math.sqrt as squareRoot",
+      "D) import sqrt from math as squareRoot"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 177,
+    "number": 177,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.1 Document code segments",
+    "type": "single",
+    "question": "Woodgrove Bank is migrating their legacy bank transaction code to Python. You have been hired to document the \nmigrated code. Which documentation syntax is correct?",
+    "options": [
+      "A) Returns the current balance of the bank \naccount \n  def get_balance(): \n    return balance",
+      "B) def get_balance(): \n    /*Returns the current balance of the bank \naccount*/ \n    return balance",
+      "C) //Returns the current balance of the bank \naccount \n  def get_balance(): \n    return balance",
+      "D) def get_balance(): \n    #Returns the current balance of the bank \naccount \n    return balance"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Многострочные строки документации (docstrings) заключаются в тройные кавычки ''' или \"\"\". Они доступны через атрибут __doc__."
+  },
+  {
+    "id": 178,
+    "number": 178,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.1 Document code segments",
+    "type": "yes_no",
+    "question": "You create a function to calculate the power of a number. You need to ensure that the function is documented with comments. You create the following code. Line numbers are included for reference only.\n01 # The calc_power function calculates exponents\n02 # x is the base\n03 # y is the exponent\n04 # The value of x raised to the y power is returned\n05 def calc_power(x, y):\n06   comment = \"#Return the value\"\n07   return x**y 4 raise x to the y power\n\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "images": [],
+    "answer_display": "1: Yes, 2: No, 3: No, 4: No",
+    "explanation": "1) Строки с # являются комментариями и игнорируются интерпретатором (Yes). 2) Знак # обязателен для каждой строки комментария (No). 3) В строке 06 строка присваивается переменной comment, а не является комментарием (No). 4) В строке 07 после кода идет цифра 4 без знака #, что вызовет синтаксическую ошибку, а не комментарий (No).",
+    "statements": [
+      "Lines 01 through 04 will be ignored for syntax checking.",
+      "The pound sign (#) is optional for lines 02 and 03.",
+      "The string in line 06 will be interpreted as a comment.",
+      "Line 07 contains an inline comment."
+    ],
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "correct_answer": [
+      "Yes",
+      "No",
+      "No",
+      "No"
+    ]
+  },
+  {
+    "id": 179,
+    "number": 179,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "multiple",
+    "question": "Adventure Works Cycles is creating a program that allows customers to log the number of miles biked. The program will \nsend messages based on how many miles the customer logs. You create the following code. Line numbers are included for \nreference only. \n01 \n02   name = input(\"What is your name? \") \n03   return name \n04 \n05   calories = miles * calories_per_mile \n06   return calories \n07 distance = int(input(\"How many miles did you bike this week? \")) \n08 burn_rate = 50 \n09 biker = get_name() \n10 calories_burned = calc_calories(distance, burn_rate) \n11 print(biker, \", you burned about\", calories_burned, \"calories.\") \n \nYou need to define the two required functions. Which code segments should you use for line 01 and line 04? Each correct \nanswer presents part of the solution. Choose two.",
+    "options": [
+      "A) 01 def get_name():",
+      "B) 01 def get_name(biker):",
+      "C) 01 def get_name(name):",
+      "D) 04 def calc_calories():",
+      "E) 04 def calc_calories(miles, burn_rate): \nF. 04 def calc_calories(miles, calories_per_mile)"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Определение функции в Python начинается с ключевого слова def."
+  },
+  {
+    "id": 180,
+    "number": 180,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "yes_no",
+    "question": "You are writing a function that increments the player score in a game.\nRequirements:\n- If no value is specified for points, points start at one\n- If bonus is True, points must be doubled\n\n01 def increment_score(score, bonus, points):\n02   if bonus == True:\n03      points = points * 2\n04   score = score + points\n05   return score\n06 points = 5\n07 score = 10\n08 new_score = increment_score(score, True, points)\n\nFor each statement, select Yes if true, otherwise No.",
+    "images": [],
+    "answer_display": "1: Yes, 2: Yes, 3: Yes",
+    "explanation": "1) Для значения по умолчанию 1 сигнатура должна иметь points = 1 (Yes). 2) В Python позиционные параметры не могут следовать за параметрами со значениями по умолчанию (Yes). 3) Задав points = 1, функцию можно вызывать передавая только score и bonus (Yes).",
+    "statements": [
+      "To meet the requirements, line 01 must be changed to: def increment_score(score, bonus, points = 1):",
+      "Once any parameter is defined with a default value, any parameters that follow it must also have default values.",
+      "The function can be called with two arguments after setting the default value for points."
+    ],
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "correct_answer": [
+      "Yes",
+      "Yes",
+      "Yes"
+    ]
+  },
+  {
+    "id": 181,
+    "number": 181,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "single",
+    "question": "You are writing a function in Python that must meet the following requirements:\n- The function accepts a list and a string as parameters.\n- The function must search for the string in the list.\n- If the string is found in the list, the function must print a message indicating that the string was found and then stop iterating through the list.\n- If the string is not found, the function must print a message indicating that the string was not found in the list.\n\nIn which order should you arrange the code segments to develop the solution?",
+    "options": [
+      "A) D, A, B, C, E",
+      "B) A, D, B, C, E",
+      "C) D, A, B, E, C",
+      "D) D, B, A, C, E"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A) D, A, B, C, E",
+    "images": [
+      "images/qimg_p60_1_284.png",
+      "images/qimg_p60_2_285.png",
+      "images/qimg_p60_3_286.png"
+    ],
+    "explanation": "Правильный порядок блоков: D (def search(items, term):), затем A (for i in range(len(items)):), затем B (if items[i]==term: print(...))), затем C (break), и в конце блок E (else: цикла for с выводом сообщения, если элемент не был найден)."
+  },
+  {
+    "id": 182,
+    "number": 182,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "dropdown",
+    "question": "You are developing a Python application for an online game. You need to create a function that meets the following criteria:\n- The function is named update_score\n- The function receives the current score and a value\n- The function adds the value to the current score\n- The function returns the new score\n\nHow should you complete the code?\n[1][2]\n   current = current + value\n   [3]",
+    "options": [
+      "[1]: def update_score",
+      "[2]: (current, value):",
+      "[3]: return current"
+    ],
+    "correct_answer": [
+      1,
+      0,
+      1
+    ],
+    "answer_display": "[1]: def update_score, [2]: (current, value):, [3]: return current",
+    "images": [
+      "images/qimg_p60_5_287.png",
+      "images/qimg_p60_6_288.png",
+      "images/qimg_p60_7_289.png"
+    ],
+    "explanation": "Определение функции начинается с ключевого слова def, за которым следует имя update_score. Параметры перечисляются в скобках с двоеточием (current, value):. Результат возвращается инструкцией return current.",
+    "dropdowns": [
+      {
+        "prompt": "Function definition keyword and name [1]:",
+        "options": [
+          "update_score",
+          "def update_score",
+          "return update_score"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Parameters and colon [2]:",
+        "options": [
+          "(current, value):",
+          "(current, value)",
+          "():",
+          "()"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Return statement [3]:",
+        "options": [
+          "pass current",
+          "return current",
+          "return",
+          "pass"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "number": 183,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "single",
+    "question": "You are developing a Python application for online game. You need to create a function that meets the following criteria:\n- The function is named update_score\n- The function receives the current score and a value.\n- The function adds the value to the current score.\n- The function returns the new score.\n\nWhich of the following is valid function to fulfill this requirement?",
+    "options": [
+      "A) update_score(score, value):\n    new_score = score + value\n    return new_score",
+      "B) def update_score(score, value):\n    new_score = score + value\n    return new_score",
+      "C) def update_score(score, value):\n    new_score = score + value\n    pass new_score",
+      "D) def update_score():\n    new_score = score + value\n    return new_score"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Корректный синтаксис функции в Python требует ключевого слова def, скобок с параметрами (score, value): и инструкции return для возврата значения."
+  },
+  {
+    "id": 184,
+    "number": 184,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "dropdown",
+    "question": "A coworker wrote a program that inputs names into a database. Unfortunately, the program reversed the letters in each name. You need to write a Python function that outputs the characters in a name in the correct order.\n\ndef reverse_name(backwards_name):\n    forward_name = ''\n    for index in [1]:\n        forward_name += [2]\n    return forward_name\n\nHow should you complete the code?",
+    "options": [
+      "[1]: range(len(backwards_name)-1, -1, -1):",
+      "[2]: backwards_name[index]"
+    ],
+    "correct_answer": [
+      3,
+      3
+    ],
+    "answer_display": "[1]: range(len(backwards_name)-1, -1, -1):, [2]: backwards_name[index]",
+    "images": [
+      "images/qimg_p61_2_293.png",
+      "images/qimg_p61_3_294.png"
+    ],
+    "explanation": "Для обхода строки задом наперед диапазон индексов задается от последнего символа len - 1 до 0 включительно с шагом -1: range(len(backwards_name)-1, -1, -1):. Символ извлекается по текущему индексу: backwards_name[index].",
+    "dropdowns": [
+      {
+        "prompt": "Loop sequence [1]:",
+        "options": [
+          "backwards_name:",
+          "len(backwards_name:)",
+          "range(0, len(backwards_name), -1):",
+          "range(len(backwards_name)-1, -1, -1):"
+        ],
+        "correct": 3
+      },
+      {
+        "prompt": "Character extraction [2]:",
+        "options": [
+          "backwards_name[index-1]",
+          "backwards_name[len(forward_name)-1]",
+          "backwards_name[len(backward_name)- len(forwardname)]",
+          "backwards_name[index]"
+        ],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "number": 185,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "dropdown",
+    "question": "You are writing a function to perform safe division. You need to ensure that a denominator and numerator are passed to the function and that the denominator is not zero.\ndef safe_divide(numerator, denominator):\n   [1]\n      print('A required value is missing.')\n   [2]\n      print('The denominator cannot be zero.')\n   else:\n      return numerator / denominator\n\nHow should you complete lines 02 and 04?",
+    "options": [
+      "Line 02: if numerator is None or denominator is None:",
+      "Line 04: elif denominator == 0:"
+    ],
+    "correct_answer": [
+      0,
+      0
+    ],
+    "answer_display": "Line 02: if numerator is None or denominator is None:, Line 04: elif denominator == 0:",
+    "images": [
+      "images/qimg_p61_4_295.png",
+      "images/qimg_p61_5_296.png"
+    ],
+    "explanation": "Для проверки отсутствующих параметров используется оператор идентичности is None с объединением через or. Для проверки деления на ноль используется оператор равенства elif denominator == 0:.",
+    "dropdowns": [
+      {
+        "prompt": "Line 02 (missing value check):",
+        "options": [
+          "if numerator is None or denominator is None:",
+          "if numerator is None and denominator is None:",
+          "if numerator = None or denominator = None:",
+          "if numerator = None and denominator = None:"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Line 04 (zero division check):",
+        "options": [
+          "elif denominator == 0:",
+          "elif denominator = 0:",
+          "elif denominator != 0:",
+          "elif denominator in 0:"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "number": 186,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "dropdown",
+    "question": "Wingtip Toys is creating an interactive Times Table Helper program intended for elementary school children. You need to complete a function that computes and displays all multiplication table combinations from 2 to 12.\n\ndef times_tables():\n   [1]\n      [2]\n         print(row * col, end=' ')\n      print()\n\nHow should you complete lines 03 and 04?",
+    "options": [
+      "[1]: for row in range(2, 13):",
+      "[2]: for col in range(2, 13):"
+    ],
+    "correct_answer": [
+      2,
+      2
+    ],
+    "answer_display": "[1]: for row in range(2, 13):, [2]: for col in range(2, 13):",
+    "images": [
+      "images/qimg_p62_2_300.png",
+      "images/qimg_p62_3_301.png"
+    ],
+    "explanation": "Функция range(start, stop) не включает значение stop. Чтобы включить таблицу от 2 до 12, верхняя граница должна быть 13: range(2, 13). Вложенные циклы for row in range(2, 13): и for col in range(2, 13): перебирают все комбинации от 2x2 до 12x12.",
+    "dropdowns": [
+      {
+        "prompt": "Outer loop [1]:",
+        "options": [
+          "for row in range(13):",
+          "for row in range(2, 12, 1):",
+          "for row in range(2, 13):",
+          "for row in range(12):"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Inner loop [2]:",
+        "options": [
+          "for col in range(13):",
+          "for col in range(2, 12, 1):",
+          "for col in range(2, 13):",
+          "for col in range(12):"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "number": 187,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "single",
+    "question": "Consider the following code: \n \ndef get_score(total=0,valid=0): \n   result=int(valid)/int(total) \n   return result \n \nFor which of the function calls we will get Error?",
+    "options": [
+      "A) score = get_score('40', '4')",
+      "B) score = get_score(0, 10)",
+      "C) score = get_score(40, 4)",
+      "D) score = get_score(40)"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 188,
+    "number": 188,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "single",
+    "question": "Consider the code \n \n1) def get_names(): \n2) names=['Sunny','Bunny','Chinny','Vinny','Pinny'] \n3) return names[2:] \n4) \n5) def update_names(elements): \n6) new_names=[] \n7) for name in elements: \n8) new_names.append(name[:3].upper()) \n9) return new_names \n10) \n11) print(update_names(get_names())) \n \nWhat is the result?",
+    "options": [
+      "A) ['CHI', 'VIN', 'PIN']",
+      "B) ['VIN', 'PIN']",
+      "C) ['CH', 'VI', 'PI']",
+      "D) ['SU', 'BU']"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 189,
+    "number": 189,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "single",
+    "question": "Consider the following code \n1) def my_list(x): \n2) lst.append(a) \n3) return lst \n4) \n5) my_list('chicken') \n6) my_list('mutton') \n7) print(my_list('fish')) \n \nto print the following to the console \n \n['chicken','mutton','fish'] \n \nx should be replaced with",
+    "options": [
+      "A) a,lst=[]",
+      "B) a,lst=()",
+      "C) a,lst={}",
+      "D) a,lst=None"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 190,
+    "number": 190,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "multiple",
+    "question": "Consider the following code: \n \n1) def f1(x=0,y=0): \n2) return x+y \n \nWhich of the following method calls are valid?",
+    "options": [
+      "A) f1()",
+      "B) f1('10','20')",
+      "C) f1(10)",
+      "D) f1('10')"
+    ],
+    "correct_answer": [
+      0,
+      1,
+      2
+    ],
+    "answer_display": "A,B,C",
+    "images": [],
+    "explanation": "Правильный ответ: A,B,C."
+  },
+  {
+    "id": 191,
+    "number": 191,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "multiple",
+    "question": "Consider the following code: \n \n1) def f1(x=0,y=0): \n2) return x*y \n \nWhich of the following method calls are valid?",
+    "options": [
+      "A) f1()",
+      "B) f1('10','20')",
+      "C) f1(10)",
+      "D) f1('10')"
+    ],
+    "correct_answer": [
+      0,
+      2,
+      3
+    ],
+    "answer_display": "A,C,D",
+    "images": [],
+    "explanation": "Правильный ответ: A,C,D."
+  },
+  {
+    "id": 192,
+    "number": 192,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "single",
+    "question": "Consider the following code: \n \n1) numbers=[100,20,10,70,50,60,40,30,90,80] \n2) #Insert Code Here \n3) print('The highest Number:{} and Least Number:{}'.format(high,low)) \n \nWhich of the following code should be inserted to print Highest Number as 100 and Least Number as 10",
+    "options": [
+      "A) 1) def find_numbers(): \n2)   numbers.sort() \n3)   return numbers[0],numbers[-1] \n4) low,high=find_numbers()",
+      "C) 1) def find_numbers(): \n2)   numbers.sort() \n3)   return numbers[0],numbers[-1] \n4) low=find_numbers() \n5) high=find_numbers()",
+      "B) 1) def find_numbers(): \n2)   numbers.sort() \n3)   return numbers[0],numbers[len(numbers)] \n4) low,high=find_numbers()",
+      "D) 1) def find_numbers(): \n2)   numbers.sort() \n3)   return numbers[2],numbers[0] \n4) low,high=find_numbers()"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 193,
+    "number": 193,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "single",
+    "question": "Consider the code: \n \n1) numbers=[100,20,10,70,50,60,40,30,90,80] \n2) \n3) def find_numbers(): \n4)   numbers.sort() \n5)   return numbers[0],numbers[-1] \n6) \n7) low=find_numbers() \n8) high=find_numbers() \n9) #Line-1 \n \nTo print 10 100 to the console which of the following code we \nhave to take at Line-1",
+    "options": [
+      "A) print(low,high)",
+      "B) print(low[0],high[-1])",
+      "C) print(low[-1],high[0])",
+      "D) print(low[2],high[0])"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 194,
+    "number": 194,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "single",
+    "question": "Consider the code: \n \n1) def calculate(amount=6,factor=3): \n2)   if amount>6: \n3)     return amount*factor \n4)   else: \n5)     return amount*factor*2 \n \nWhich of the following function calls returns 30",
+    "options": [
+      "A) calculate()",
+      "B) calculate(10)",
+      "C) calculate(5,2)",
+      "D) calculate(1)"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 195,
+    "number": 195,
+    "section": "4. Code Documentation and Structure",
+    "subtopic": "4.2 Construct and analyze code segments that include function definitions",
+    "type": "single",
+    "question": "Consider the following code \n1) def fib_seq(n): \n2)   if n==0: \n3)     return 0 \n4)   elif n==1: \n5)     return 1 \n6)   else: \n7)     return fib_seq(n-1)+fib_seq(n-2) \n8) for i in range(7): \n9)   print(fib_seq(i),end=',') \n \nWhat is the result?",
+    "options": [
+      "A) 0,1,1,2,3,5,8,",
+      "B) 0,1,2,4,8,16,32,",
+      "C) 0,1,0,2,0,4,0,",
+      "D) None of these"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 196,
+    "number": 196,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.1 Analyze, detect, and fix code segments that have errors",
+    "type": "single",
+    "question": "Tailspin Toys uses Python to control its new toy Happy Clown. The program has errors that cause the clown to run around \nin an infinite circle. You have been hired to help debug the following Happy Clown code. Line numbers are included for \nreference only. \n01 import math \n02 #default motion for happy clown \n03 power = True \n04 move = 0 \n05 while(power): \n06   if move == 0: \n07     turnValue = math.pi/move \n08     move+=5 \n09   else: \n10     turnValue = 0 \n11     move = 0",
+    "options": [
+      "A) Line 05 has a syntax error because it should read (power == True).",
+      "B) Line 08 has a syntax error because + = is an invalid statement.",
+      "C) Line 07 causes a runtime error due to division by zero.",
+      "D) Line 05 causes a runtime error because the expression is incomplete."
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Для исправления ошибки бесконечного цикла необходимо убедиться, что счетчик цикла корректно обновляется на каждой итерации."
+  },
+  {
+    "id": 197,
+    "number": 197,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.1 Analyze, detect, and fix code segments that have errors",
+    "type": "single",
+    "question": "Consider the code \n \ndef area(b,w): \n   return B*w \nprint(area(10,20)) \n \nWhat is the result?",
+    "options": [
+      "A) AttributeError will be raised at runtime",
+      "B) IndentationError will be raised at runtime",
+      "C) NameError will be raised at runtime",
+      "D) 200"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 198,
+    "number": 198,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.1 Analyze, detect, and fix code segments that have errors",
+    "type": "single",
+    "question": "Consider the code: \n \n1) data=[] \n2) def get_data(): \n3)   for i in range(1,5): \n4)     marks=input('Enter Marks:') \n5)     data.append(marks) \n6) \n7) def get_avg(): \n8)   sum=0 \n9)   for mark in data: \n10)    sum += mark \n11)  return sum/len(data) \n12) get_data() \n13) print(get_avg()) \n \nFor the input: 10,20,30,40 what is the result?",
+    "options": [
+      "A) 25",
+      "B) 25.0",
+      "C) NameError is thrown at runtime",
+      "D) TypeError is thrown at runtime"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 199,
+    "number": 199,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.1 Analyze, detect, and fix code segments that have errors",
+    "type": "single",
+    "question": "Consider the code: \n \n1) a=10 \n2) b=0 \n3) try: \n4)   print(a/b) \n \nWhich of the following except block print the name of exception which is raised,i.e exception class name?",
+    "options": [
+      "A) 1) except ZeroDivisionError as e: \n2) print('Exception Type:',e.__class__.__name__)",
+      "C) 1) except ZeroDivisionError as e: \n2) print('Exception Type:',e)",
+      "B) 1) except ZeroDivisionError as e: \n2) print('Exception Type:',type(e).__name__)",
+      "D) All of these \n \n \nAnswers : A,B"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Операция с несовместимыми типами данных (например, сложение числа и строки) вызывает исключение TypeError."
+  },
+  {
+    "id": 200,
+    "number": 200,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.1 Analyze, detect, and fix code segments that have errors",
+    "type": "single",
+    "question": "Which of the following is valid way of creating our own custom exception?",
+    "options": [
+      "A) B)",
+      "C) D)  \nclass MyException: \npass \n \nclass MyException(): \npass \n \nclass MyException(Exception): \npass \n \nIt is not possible to define custom \nexceptions in python"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 201,
+    "number": 201,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "Consider the code \n \n1) x=int(input('Enter First Number:')) \n2) y=int(input('Enter Second Number:')) \n3) try: \n4) print(x/y) \n \nWhich of the following is valid except block that handles both ZeroDivisionError and ValueError",
+    "options": [
+      "A) except(ZeroDivisionError,ValueError) from e: \nprint(e)",
+      "C) except(ZeroDivisionError | ValueError) as e: \nprint(e)",
+      "B) except(ZeroDivisionError,ValueError) as e: \nprint(e)",
+      "D) except(ZeroDivisionError, ValueError as e): \nprint(e)"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 202,
+    "number": 202,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "You write the following code: \nimport sys \ntry: \nfile_in = open(\"in.txt\", 'r') \nfile_out = open(\"out.txt\", 'w+') \nexcept IOError: \nprint('cannot open', file_name) \nelse: \ni = 1 \nfor line in file_in: \nprint(line. rstrip()) \nfile_out.write(\"line \" + str(i) + \": \" + line) \ni = i + 1 \nfile_in.close() \nfile_out.close () \nThe out.txt file does not exist. You run the code. The code will execute without error. Review the underlined text. If it \nmakes the statement correct, select “No change is needed.” If the statement is incorrect, select the answer choice that \nmakes the statement correct.",
+    "options": [
+      "A) No change is needed.",
+      "B) The code runs but generates a logic error.",
+      "C) The code will generate a runtime error.",
+      "D) The code will generate a syntax error."
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Блок try-except перехватывает исключение и позволяет программе продолжить выполнение без аварийного завершения."
+  },
+  {
+    "id": 203,
+    "number": 203,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "yes_no",
+    "question": "For each of the following statements about exception handling in Python, select Yes if the statement is true. Otherwise, select No.",
+    "images": [],
+    "answer_display": "1: Yes, 2: Yes, 3: Yes, 4: No",
+    "explanation": "Конструкция try может содержать произвольное количество блоков except, может использоваться в виде try...finally без except, а также может комбинировать except и finally. Однако блок finally в одной конструкции try может быть только один.",
+    "statements": [
+      "A try statement can have one or more except clauses.",
+      "A try statement can have a finally clause without an except clause.",
+      "A try statement can have a finally clause and an except clause.",
+      "A try statement can have one or more finally clauses."
+    ],
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "correct_answer": [
+      "Yes",
+      "Yes",
+      "Yes",
+      "No"
+    ]
+  },
+  {
+    "id": 204,
+    "number": 204,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "dropdown",
+    "question": "You are creating a program that accepts user input. The program must cast the input into an integer. You must properly handle the error if the code cannot cast the input to an integer.\n\nwhile True:\n   [1]\n      x = int(input('Please enter a number: '))\n      break\n   [2] ValueError:\n      print('Not a valid number. Try again...')\n\nHow should you complete lines 02 and 05?",
+    "options": [
+      "Line 02: try:",
+      "Line 05: except:"
+    ],
+    "correct_answer": [
+      0,
+      2
+    ],
+    "answer_display": "Line 02: try:, Line 05: except:",
+    "images": [
+      "images/qimg_p67_2_318.png"
+    ],
+    "explanation": "Код, способный вызвать ошибку int(...), помещается в защищенный блок try:. Перехват конкретного исключения ValueError осуществляется ключевым словом except:.",
+    "dropdowns": [
+      {
+        "prompt": "Line 02 [1]:",
+        "options": [
+          "try:",
+          "else:",
+          "except:",
+          "raise:",
+          "finally:"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Line 05 [2]:",
+        "options": [
+          "try:",
+          "else:",
+          "except:",
+          "raise:",
+          "finally:"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "number": 205,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "When will the else part of try-except-else be executed?",
+    "options": [
+      "A) always",
+      "B) when no exception occurs",
+      "C) when error exception",
+      "D) when an exception occurs in to except block"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Блок else в конструкции try-except-else выполняется только тогда, когда в блоке try НЕ возникло никаких исключений."
+  },
+  {
+    "id": 206,
+    "number": 206,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "Is the following Python code valid? \n \ntry : \n   Try block \nexcept: \n   Except block \nfinally : \n   Finally Block",
+    "options": [
+      "A) no, there is no such thing as finally",
+      "B) no, finally cannot be used with except",
+      "C) no, finally must come before except",
+      "D) yes"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Конструкция try-finally без except в Python является полностью валидной (Yes)."
+  },
+  {
+    "id": 207,
+    "number": 207,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "What will be the output of the following python code? \ndef foo(): \n  try: \n    return 1 \n  finally: \n    return 2 \nk = foo() \nprint(k)",
+    "options": [
+      "A) 1",
+      "B) 2",
+      "C) 3",
+      "D) error, there is more than one return statement in a single try-finally block"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "При делении на 0 возбуждается ZeroDivisionError, выполняется соответствующий блок except, а затем блок finally."
+  },
+  {
+    "id": 208,
+    "number": 208,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "Consider the code \n \ndef f1(): \n    try: \n        return 1 \n    finally: \n        return 2   \n     \nx = f1() \nprint(x) \n \nWhat is the result?",
+    "options": [
+      "A) 1",
+      "B) 2",
+      "C) print both 1 and 2",
+      "D) Error, because more than one return statement is not allowed"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Блок finally выполняется ВСЕГДА, независимо от того, произошло исключение или нет."
+  },
+  {
+    "id": 209,
+    "number": 209,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "Consider the code: \nf = open('abc.txt') \nprint(f.read()) \nf.close() \n \nWe required to add exception handling code to handle FileNotFoundError. \nWe of the following is appropriate code for this requirement? \nCode A: \nCode B: \nCode C: \nf = None \ntry: \n    f = open('abc.txt') \nexcept FileNotFoundError:   \n    print(\"File does not exist\") \nelse: \n    print(f.read()) \nfinally: \n    if f is not None:   \n        f.close() \nf = None \ntry: \n    f = open('abc.txt') \nexcept FileNotFoundException:   \n    print(\"File does not exist\") \nelse: \n    print(f.read()) \nfinally: \n    if f is not None: \n        f.close() \nf = None \ntry: \n    f = open('abc.txt') \nelse:   \n    print(f.read()) \nexcept FileNotFoundError: \n    print(\"File does not exist\") \nfinally: \n    if f is not None: \n        f.close()",
+    "options": [
+      "A) Code A",
+      "B) Code B",
+      "C) Code C",
+      "D) None of these"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 210,
+    "number": 210,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "Consider the code: \n \nimport sys \n \ntry: \n    file_in = open('in.txt', 'r') \n    file_out = open('out.txt', 'w+') \nexcept IOError: \n    print('Cannot open file:', 'in.txt') \nelse: \n    i = 1 \n    for line in file_in: \n        print(line.rstrip())   \n        file_out.write(str(i) + \": \" + line)   \n        i += 1   \n    file_in.close() \n    file_out.close() \n \nAssume that in.txt file is available but out.txt file does not exist. \nWhich of the following is true about this code?",
+    "options": [
+      "A) The code runs, but generates logical error",
+      "B) This program will copy data from in.txt to out.txt",
+      "C) The code will generates a runtime error",
+      "D) The code will generate a syntax error"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 211,
+    "number": 211,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "Consider the file abc.txt has the following content: \n \nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna \naliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n \nWe have to write python code to read total data and print to the console. \n \ntry: \n  f=open('abc.txt','r') \n  //Line-1 \nexcept: \n  print('Unable to open the file') \n  print(data) \n \nWhich code should be inserted at Line-1 to meet the given requirement?",
+    "options": [
+      "A) data = f.readlines()",
+      "B) data = f.readline()",
+      "C) data = f.read()",
+      "D) data = f.load()"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 212,
+    "number": 212,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "The base class for all exceptions in python is:",
+    "options": [
+      "A) Exception",
+      "B) ExceptioNBase",
+      "C) BaseException",
+      "D) ArithmeticError"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Базовым классом для всех стандартных исключений является BaseException (или Exception для обычных исключений прикладного кода)."
+  },
+  {
+    "id": 213,
+    "number": 213,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "Consider the code: \n \na=10 \nb=20 \nc='30' \nresult=a+b+c \n \nWhat is the result?",
+    "options": [
+      "A) 102030",
+      "B) 3030",
+      "C) TypeError",
+      "D) ArithmeticError"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 214,
+    "number": 214,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "Consider the code: \n1) try: \n2)   print('try') \n3) except: \n4)   print('except') \n5) else: \n6)   print('else') \n7) finally: \n8)   print('finally') \n \nWhat is the result?",
+    "options": [
+      "A) B)",
+      "C) D) \ntry \nexcept \nelse \nfinally \n \ntry \nelse \nfinally \n \ntry \nexcept \nfinally \n \ntry \nfinally"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 215,
+    "number": 215,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "Consider the code \n \n1) try: \n2)   print('try') \n3)   print(10/0) \n4) except: \n5)   print('except') \n6) else: \n7)   print('else') \n8) finally: \n9)   print('finally') \n \nWhat is the result?",
+    "options": [
+      "A) B)",
+      "C) D) \ntry \nexcept \nelse \nfinally \n \ntry \nelse \nfinally \n \ntry \nexcept \nfinally \n \ntry \nfinally"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 216,
+    "number": 216,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "Consider the code \n1) try: \n2)   print('try') \n3)   print(10/0) \n4) else: \n5)   print('else') \n6) except: \n7)   print('except') \n8) finally: \n9)   print('finally') \n \nWhat is the result?",
+    "options": [
+      "A) B)",
+      "C) D) \ntry \nexcept \nelse \nfinally \ntry \nelse \nfinally \n \ntry \nexcept \nfinally \n \nSyntaxError: invalid syntax"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 217,
+    "number": 217,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "Consider the code: \n \n1) prices=[30.5,'40.5',10.5] \n2) total=0 \n3) for price in prices: \n4)    total += price \n5) print(total) \n \nWhile executing this code we are getting the following error: \n \nTraceback (most recent call last): \nFile \"test.py\", line 4, in <module> \ntotal += price \nTypeError: unsupported operand type(s) for +=: 'float' and 'str' \n \nWhich of the following code should be used to fix this error?",
+    "options": [
+      "A) total += str(price)",
+      "B) total += int(price)",
+      "C) total += float(price)",
+      "D) total = total+price"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 218,
+    "number": 218,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "multiple",
+    "question": "Consider the code: \n \n1) prices=[10,'20',30,'40'] \n2) total=0 \n3) for price in prices: \n4)   total +=price \n5) print(total) \n \nWhile executing this code we are getting the following error \n \nTraceback (most recent call last): \nFile \"test.py\", line 4, in <module> \ntotal +=price \nTypeError: unsupported operand type(s) for +=: 'int' and 'str' \n \nBy using which of the following code segments we can fix this problem(Choose 2)?",
+    "options": [
+      "A) total += str(price)",
+      "B) total += int(price)",
+      "C) total += float(price)",
+      "D) total = total+price"
+    ],
+    "correct_answer": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "answer_display": "B and C",
+    "images": [],
+    "explanation": "Правильный ответ: B and C."
+  },
+  {
+    "id": 219,
+    "number": 219,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.2 Analyze and construct code segments that handle exceptions",
+    "type": "single",
+    "question": "Consider the code:\n1) courses = {1: 'Java', 2: 'Scala', 3: 'Python'}\n2) for i in range(1, 5):\n3)     print(courses[i])\n\nWhile executing this code we are getting the following error:\nKeyError: 4\n\nBy using which of the following code segments we can fix this problem?",
+    "options": [
+      "A) courses = {1: 'Java', 2: 'Scala', 3: 'Python'}\nfor i in range(1, 5):\n    if i in courses:\n        print(courses[i])",
+      "B) courses = {1: 'Java', 2: 'Scala', 3: 'Python'}\nfor i in courses:\n    print(courses[i])",
+      "C) courses = {1: 'Java', 2: 'Scala', 3: 'Python'}\nfor i in range(1, 4):\n    print(courses[i])",
+      "D) All of these"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D) All of these",
+    "images": [],
+    "explanation": "В словаре courses есть только ключи 1, 2, 3. Все три варианта предотвращают ошибку KeyError: 4: вариант A проверяет наличие ключа if i in courses, вариант B итерируется только по ключам самого словаря, вариант C ограничивает диапазон чисел до 3 (range(1, 4))."
+  },
+  {
+    "id": 220,
+    "number": 220,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.3 Perform unit testing",
+    "type": "single",
+    "question": "What will be the output of the following python code? \n \nx =30 \ny = 10 \nassert x > y ,’x is smaller than y’",
+    "options": [
+      "A) Assertion Error",
+      "B) 10 8",
+      "C) No output",
+      "D) 108"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Условие assert x > y истинно (30 > 10). Когда условие в assert истинно, инструкция ничего не выводит и выполнение продолжается без ошибок."
+  },
+  {
+    "id": 221,
+    "number": 221,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.3 Perform unit testing",
+    "type": "single",
+    "question": "Which type of exception will be raised if we are trying to call a method on the inappropriate object?",
+    "options": [
+      "A) IndexError",
+      "B) TypeError",
+      "C) AttributeError",
+      "D) None of these"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 222,
+    "number": 222,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.3 Perform unit testing",
+    "type": "single",
+    "question": "Consider the code: \nf=open('abc.txt') \nf.readall() \n \nWhich exception will be raised?",
+    "options": [
+      "A) AttributeError",
+      "B) EOFError",
+      "C) SystemError",
+      "D) SyntaxError"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 223,
+    "number": 223,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.3 Perform unit testing",
+    "type": "single",
+    "question": "You write a function that reads a data file and prints each line of the file. You write the following code. Line numbers are \nincluded for reference only. \n01 def read_file(file): \n02     line = None \n03     if os.path.isfile(file): \n04         data = open(file, 'r')  \n05         for line in data: \n06             print(line) \nWhen you run the program, you receive an error on line 03. \nWhat is causing the error?",
+    "options": [
+      "A) The path method does not exist in the os object.",
+      "B) The isfile method does not exist in the path object.",
+      "C) You need to import the os library.",
+      "D) The isfile method does not accept one parameter."
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Для перехвата ошибок при работе с файлами используется FileNotFoundError или OSError."
+  },
+  {
+    "id": 224,
+    "number": 224,
+    "section": "5. Troubleshooting and Error Handling",
+    "subtopic": "5.3 Perform unit testing",
+    "type": "single",
+    "question": "What is the type of sys.argv?",
+    "options": [
+      "A) set",
+      "B) list",
+      "C) tuple",
+      "D) string"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "sys.argv в Python — это список строк (list of str), содержащий аргументы командной строки."
+  },
+  {
+    "id": 225,
+    "number": 225,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules",
+    "type": "single",
+    "question": "Which of the following isn‟t true about main modules?",
+    "options": [
+      "A) When a python file is directly executed, it is considered main module of a program",
+      "B) Main modules may import any number of modules",
+      "C) Special name given to main modules is: _main_",
+      "D) Other main modules can import main modules"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Когда модуль запускается напрямую как главный скрипт, специальная переменная __name__ принимает значение '__main__' (а не имя файла)."
+  },
+  {
+    "id": 226,
+    "number": 226,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules",
+    "type": "single",
+    "question": "From sys module, by using which variable we can access command line arguments?",
+    "options": [
+      "A) argv",
+      "B) argsv",
+      "C) args",
+      "D) arguments"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Список аргументов командной строки доступен через sys.argv."
+  },
+  {
+    "id": 227,
+    "number": 227,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules",
+    "type": "single",
+    "question": "Given the command invocation: \n \npython tests.py Itvedant \n \nWhich of the following code prints 'Itvedant' to the console?",
+    "options": [
+      "A) from sys import argv; print(argv[1])",
+      "B) from sys import argv; print(argv[0])",
+      "C) from sys import args; print(args[0])",
+      "D) from sys import args; print(args[1])"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 228,
+    "number": 228,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules",
+    "type": "single",
+    "question": "Consider the code: \n \n1) from sys import argv \n2) print(argv[0]) \n \nand given the command invocation: \n \npy test.py DURGASOFT \n \nWhat is the result?",
+    "options": [
+      "A) DURGASOFT",
+      "B) test.py",
+      "C) IndexError will be thrown at runtime",
+      "D) ImportError will be thrown at runtime"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 229,
+    "number": 229,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules",
+    "type": "single",
+    "question": "Consider the code: \n \n1) from sys import argv \n2) print(argv[1]+argv[2]) \n \nand given the command invocation: \n \npy test.py 10 20 \n \nWhat is the result?",
+    "options": [
+      "A) 30",
+      "B) 1020",
+      "C) IndexError will be thrown at runtime",
+      "D) ImportError will be thrown at runtime"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  },
+  {
+    "id": 230,
+    "number": 230,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules",
+    "type": "single",
+    "question": "Consider the code : \n \n1) from sys import argv \n2) sum=0 \n3) for i in range(2,len(argv)): \n4) sum += float(argv[i]) \n5) print(\"The Average for {0} is {1:.2f}\".format(argv[1],sum/(len(argv)-2))) \n \nWhich of the following command invocations will generate the output: \n \nThe Average for Durga is 20.00",
+    "options": [
+      "A) py test.py Durga 10 20 30",
+      "B) py test.py Durga 10 20",
+      "C) py test.py Durga 10",
+      "D) py test.py 20"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 231,
+    "number": 231,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules",
+    "type": "single",
+    "question": "You need to write code that generates a random float with a minimum value of 0.0 and a maximum value of 1.0. \nWhich statement should you use?",
+    "options": [
+      "A) random.randrange()",
+      "B) random.randrange(0.0, 1.0)",
+      "C) random.random()",
+      "D) random.randint(0, 1)"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "random.uniform(a, b) генерирует случайное вещественное число float в диапазоне от a до b включительно."
+  },
+  {
+    "id": 232,
+    "number": 232,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.1 Perform basic file system and command-line operations by using built-in modules",
+    "type": "multiple",
+    "question": "You are writing code that generates a random integer with a minimum value of 5 and a maximum value of 11. \nWhich two functions should you use? Each correct answer presents a complete solution. Choose two.",
+    "options": [
+      "A) random.randint(5, 11)",
+      "B) random.randrange(5, 12, 1)",
+      "C) random.randint(5, 12)",
+      "D) random.randrange(5, 11, 1)"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "random.randint(a, b) генерирует случайное целое число в диапазоне [a, b] включительно."
+  },
+  {
+    "id": 233,
+    "number": 233,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.2 Solve complex computing problems by using built-in modules",
+    "type": "multiple",
+    "question": "You work on a team that is developing a game for AdventureWorks. You need to write code that generates a random \nnumber that meets the following requirements: \n \nThe number is a multiple of 5. \n \nThe lowest number is 5. \n \nThe highest number is 100. \nWhich two code segments will meet the requirements? Each correct answer presents a complete solution. Choose two.",
+    "options": [
+      "A) from random import randrange \n          print(randrange(5, 100, 5))",
+      "B) from random import randint \n          print(randint(1, 20) * 5)",
+      "C) from random import randint \n          print(randint(0, 20) * 5)",
+      "D) from random import randrange \n         print(randrange(0, 100, 5))"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "random.choice(sequence) возвращает случайный элемент из переданной непустой последовательности."
+  },
+  {
+    "id": 234,
+    "number": 234,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.2 Solve complex computing problems by using built-in modules",
+    "type": "multiple",
+    "question": "You are creating a function that manipulates a number. The function has the following requirements: \n \nA float is passed into the function \n \nThe function must take the absolute value of the float \n \nAny decimal points after the integer must be removed \nWhich two math functions should you use? Each correct answer is part of the solution. Choose two.",
+    "options": [
+      "A) math.ceil(x)",
+      "B) math.fmod(x)",
+      "C) math.floor(x)",
+      "D) math.frexp(x)",
+      "E) math.fabs(x)"
+    ],
+    "correct_answer": [
+      4,
+      0,
+      3,
+      2
+    ],
+    "answer_display": "E and C",
+    "images": [],
+    "explanation": "Правильный ответ: E and C."
+  },
+  {
+    "id": 235,
+    "number": 235,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.2 Solve complex computing problems by using built-in modules",
+    "type": "single",
+    "question": "What will be the output of the following Python code? \n \nfrom math import factorial \nprint(math.factorial(5))",
+    "options": [
+      "A) 120",
+      "B) Nothing is printed",
+      "C) Error, method factorial doesn‟t exist in math module",
+      "D) Error, the statement should be: print(factorial(5))"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Была выполнена инструкция from math import factorial. Функция была импортирована напрямую в текущую область видимости, поэтому вызов должен быть print(factorial(5)), а вызов math.factorial(5) вызовет NameError, так как имя 'math' не было импортировано."
+  },
+  {
+    "id": 236,
+    "number": 236,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.2 Solve complex computing problems by using built-in modules",
+    "type": "single",
+    "question": "You are writing an application that uses the pow() function. The program must reference the function using the name \npower. You need to import the function. \nWhich code segment should you use?",
+    "options": [
+      "A) import math.pow as power",
+      "B) import pow from math as power",
+      "C) from math import pow as power",
+      "D) from math.pow as power."
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный синтаксис импорта с переименованием: from math import pow as power."
+  },
+  {
+    "id": 237,
+    "number": 237,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.2 Solve complex computing problems by using built-in modules",
+    "type": "single",
+    "question": "What is returned by the math.ceil(10.4)?",
+    "options": [
+      "A) 11",
+      "B) 10",
+      "C) 11.0",
+      "D) 10.0"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Функция math.ceil(x) округляет число вверх до ближайшего целого. math.ceil(10.4) возвращает 11 (тип int в Python 3)."
+  },
+  {
+    "id": 238,
+    "number": 238,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.2 Solve complex computing problems by using built-in modules",
+    "type": "single",
+    "question": "What will be the output of the following Python code if the system date is 23rd September, 2020? \nt=datetime.date.today() \nprint(t.month())",
+    "options": [
+      "A) September",
+      "B) Sept",
+      "C) 09",
+      "D) 9"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "t = datetime.date.today(). Атрибут month является свойством (числом int), а не методом: t.month вернет 9 (для сентября)."
+  },
+  {
+    "id": 239,
+    "number": 239,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.2 Solve complex computing problems by using built-in modules",
+    "type": "single",
+    "question": "Consider the code: \n \n1) import math \n2) l =[str(round(math.pi)) for i in range (1, 6)] \n3) print(l) \n \nWhat is the result?",
+    "options": [
+      "A) ['3', '3', '3', '3', '3']",
+      "B) ['3', '3', '3', '3', '3','3']",
+      "C) ['1', '2', '3', '4', '5']",
+      "D) ['1', '2', '3', '4', '5','6']"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 240,
+    "number": 240,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.2 Solve complex computing problems by using built-in modules",
+    "type": "multiple",
+    "question": "Consider the code: \n \n1) import random \n2) fruits=['Apple','Mango','Orange','Lemon'] \n \nWhich of the following will print some random value from the list?",
+    "options": [
+      "A) print(random.sample(fruits))",
+      "B) print(random.sample(fruits,3)[0])",
+      "C) print(random.choice(fruits))",
+      "D) print(random.choice(fruits)[0])"
+    ],
+    "correct_answer": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "answer_display": "B and C",
+    "images": [],
+    "explanation": "Правильный ответ: B and C."
+  },
+  {
+    "id": 241,
+    "number": 241,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.2 Solve complex computing problems by using built-in modules",
+    "type": "single",
+    "question": "We are developing an application for the client requirement.As the part of that we have to create a list of 7 random \nintegers between 1 and 7 inclusive. Which of the following code should be used?",
+    "options": [
+      "A) 1) import random \n2) randints=[random.randint(1,7) for i in range(1,8)]",
+      "C) 1) import random \n2) randints=random.randrange(1,7)",
+      "B) 1) import random \n2) randints=[random.randint(1,8) for i in range(1,8)]",
+      "D) 1) import random \n2) randints=random.randint(1,7)"
+    ],
+    "correct_answer": [
+      0
+    ],
+    "answer_display": "A",
+    "images": [],
+    "explanation": "Правильный ответ: A."
+  },
+  {
+    "id": 242,
+    "number": 242,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.2 Solve complex computing problems by using built-in modules",
+    "type": "multiple",
+    "question": "Consider the code: \n \n1) import random \n2) fruits=['Apple','Mango','Orange','Lemon'] \n3) random_list=[random.choice(fruits)[:2] for i in range(3)] \n4) print(''.join(random_list)) \n \nWhich of the following are possible outputs?",
+    "options": [
+      "A) ApApAp",
+      "B) ApMaOr",
+      "C) LeMaOr",
+      "D) OrOraM"
+    ],
+    "correct_answer": [
+      0,
+      1,
+      2
+    ],
+    "answer_display": "A,B,C",
+    "images": [],
+    "explanation": "Правильный ответ: A,B,C."
+  },
+  {
+    "id": 243,
+    "number": 243,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.2 Solve complex computing problems by using built-in modules",
+    "type": "single",
+    "question": "We are developing a mathematical function to find area for the given circle. if r is the radius then area is : pi*r**2 \nWhich of the following is valid function for this requirement?",
+    "options": [
+      "A) 1) import math \n2) def find_area(r): \n3)    return math.pi*math.fmod(r,2)",
+      "B) 1) import math \n2) def find_area(r): \n3)    return math.pi*math.fabs(r)",
+      "C) 1) import math \n2) def find_area(r): \n3)    return math.pi*math.pow(r,2)",
+      "D) None of these"
+    ],
+    "correct_answer": [
+      2
+    ],
+    "answer_display": "C",
+    "images": [],
+    "explanation": "Правильный ответ: C."
+  },
+  {
+    "id": 244,
+    "number": 244,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.2 Solve complex computing problems by using built-in modules",
+    "type": "single",
+    "question": "Consider the python code: \n \n1) import random \n2) print(int(random.random()*5)) \n \nWhich of the following is true?",
+    "options": [
+      "A) It will print a random int value from 0 to 5",
+      "B) It will print a random int value from 1 to 5",
+      "C) It will print a random int value from 0 to 5",
+      "D) It will print a random int value from 0 to 4",
+      "E) It will print 5"
+    ],
+    "correct_answer": [
+      3
+    ],
+    "answer_display": "D",
+    "images": [],
+    "explanation": "Правильный ответ: D."
+  },
+  {
+    "id": 245,
+    "number": 245,
+    "section": "6. Operations using Modules and Tools",
+    "subtopic": "6.2 Solve complex computing problems by using built-in modules",
+    "type": "single",
+    "question": "Consider the code \n \n1) import random \n2) print(random.sample(range(10), 7)) \n \nWhich of the following is valid?",
+    "options": [
+      "A) It will print list of 10 unique random numbers from 0 to 6",
+      "B) It will print list of 7 unique random numbers from 0 to 9",
+      "C) It will print list of 7 unique random numbers from 0 to 10",
+      "D) It will print list of 7 unique random numbers from 1 to 10"
+    ],
+    "correct_answer": [
+      1
+    ],
+    "answer_display": "B",
+    "images": [],
+    "explanation": "Правильный ответ: B."
+  }
+];
