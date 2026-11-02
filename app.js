@@ -774,6 +774,31 @@ class App {
     this.renderCurrentQuestion();
   }
 
+  resetAllProgress() {
+    if (!confirm('Вы уверены, что хотите полностью сбросить весь прогресс (все ответы, ошибки и статистику)?')) {
+      return;
+    }
+
+    this.practiceAnswers = {};
+    this.mistakes.clear();
+    localStorage.removeItem('python_trainer_practice_answers');
+    localStorage.removeItem('python_trainer_mistakes');
+
+    if (this.exam.active) {
+      this.stopExamTimer();
+      this.exam.active = false;
+      this.exam.answers = {};
+    }
+
+    this.currentIndex = 0;
+    this.applyFilter('all');
+    this.updateStatsCounters();
+    this.renderQuestionPalette();
+    this.renderCurrentQuestion();
+    this.renderSectionsList();
+    sounds.click();
+  }
+
   // UI Rendering
   renderCurrentQuestion() {
     const container = document.getElementById('question-card-container');
